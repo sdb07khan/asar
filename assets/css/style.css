@@ -172,13 +172,12 @@ body {
         align-items: center;
         width: 100%;
         justify-content: space-between; } }
-    .header .headerContainer .headerLogo img {
-      height: 2.8rem;
-      width: auto;
-      display: block; }
-      @media only screen and (max-width: 1100px) {
-        .header .headerContainer .headerLogo img {
-          height: 3.5rem; } }
+    .header .headerContainer .headerLogo a {
+      text-decoration: none; }
+      .header .headerContainer .headerLogo a img {
+        height: 2.8rem;
+        width: auto;
+        display: block; }
     .header .headerContainer .headerNav ul {
       list-style: none;
       display: flex;
