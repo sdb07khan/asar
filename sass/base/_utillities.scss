@@ -16,8 +16,11 @@
   }
 }
 
+.heroMarginTop {
+}
+
 .maroonBtn {
-  padding: 2rem 4rem;
+  padding: 1.6rem 3.2rem;
   border-radius: 1rem;
   background-color: var(--maroon);
   color: #fff;
@@ -34,6 +37,7 @@
   align-items: center;
   transition: all 0.3s ease-in-out;
   text-decoration: none;
+  width: fit-content;
 
   @media only screen and (max-width: 769px) {
     padding: 1.6rem 4rem;

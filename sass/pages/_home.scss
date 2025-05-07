@@ -1,2 +1,104 @@
+// Home Banner Section
+.homeBanner {
+  &.heroMarginTop {
+    // Main container styles
+    .homeBannerContainer {
+      background: transparent;
 
+      .homeBannerContent {
+        // Title with snowflake
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 2rem;
 
+        .topTitle {
+          display: flex;
+          align-items: center;
+          gap: 2.6rem;
+
+          h2 {
+            // Individual heading styles
+            font-family: var(--manrope);
+            font-size: var(--font16);
+            font-weight: 500;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.63;
+            letter-spacing: 4px;
+            text-align: left;
+            color: #171a17;
+            text-transform: uppercase;
+
+            &:first-child {
+            }
+
+            &:last-child {
+            }
+          }
+
+          // Snowflake image
+          img {
+            height: 4rem;
+            width: 4rem;
+            object-fit: contain;
+            display: block;
+          }
+        }
+
+        // Main heading
+        h1 {
+          font-family: var(--nunito);
+          font-size: var(--font64);
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: normal;
+          letter-spacing: -1.28px;
+          text-align: center;
+          color: #171a17;
+
+          span {
+            white-space: nowrap;
+          }
+        }
+
+        // Description text
+        p {
+          font-family: var(--manrope);
+          font-size: var(--font16);
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.5;
+          letter-spacing: normal;
+          text-align: center;
+          color: rgba(23, 26, 23, 0.8);
+          width: 80%;
+        }
+
+        // Maroon button
+        .maroonBtn {
+          // Button hover state
+          &:hover {
+          }
+        }
+      }
+    }
+
+    // Banner image container
+    .homeBannerImage {
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        transform: translateY(-8rem);
+        position: relative;
+        z-index: -1;
+      }
+    }
+  }
+}
