@@ -1,0 +1,254 @@
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: transparent;
+  transition: all 0.3s ease-in-out;
+  border-bottom: 0.5px solid rgba(23, 26, 23, 0.5);
+
+  //   @media only screen and (max-width: 769px) {
+  //     padding-top: 2.4rem;
+  //   }
+
+  .headerContainer {
+    // Logo styles
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+    padding: 2rem 0;
+    background-color: #fff;
+
+    @media only screen and (max-width: 1100px) {
+      gap: 2rem;
+    }
+
+    @media only screen and (max-width: 769px) {
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100vh;
+      width: 100%;
+      // display: none;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 4rem;
+      border-radius: 0;
+      transform: translateX(100%);
+      transition: all 0.3s ease-in-out;
+    }
+
+    .headerLogo {
+      //   margin-right: auto;
+
+      @media only screen and (max-width: 769px) {
+        margin-bottom: 4rem;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+      }
+
+      img {
+        height: 2.8rem;
+        width: auto;
+        display: block;
+
+        @media only screen and (max-width: 1100px) {
+          height: 3.5rem;
+        }
+      }
+
+      //   .closeIcon {
+      //     display: none;
+
+      //     @media only screen and (max-width: 769px) {
+      //       display: block;
+      //       height: 2.2rem;
+      //       width: 2.2rem;
+      //       cursor: pointer;
+
+      //       @media only screen and (max-width: 575px) {
+      //         height: 2rem;
+      //         width: 2rem;
+      //       }
+      //     }
+      //   }
+    }
+
+    // Navigation styles
+    .headerNav {
+      ul {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        gap: 2.4rem;
+
+        @media only screen and (max-width: 850px) {
+          gap: 2rem;
+        }
+
+        @media only screen and (max-width: 769px) {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        li {
+          // display: flex;
+          // align-items: center;
+          // gap: 5px;
+          cursor: pointer;
+          position: relative; /* Ensure li is relative so the dropdown is positioned correctly */
+
+          @media only screen and (max-width: 769px) {
+            gap: 1rem;
+          }
+
+          .dropNav {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+
+            @media only screen and (max-width: 769px) {
+              gap: 1rem;
+            }
+          }
+
+          a {
+            font-size: var(--font16);
+            font-weight: 500;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.5;
+            letter-spacing: normal;
+            text-align: left;
+            color: #000;
+            text-decoration: none;
+
+            @media only screen and (max-width: 769px) {
+              font-size: 2.4rem;
+            }
+
+            &:hover {
+              opacity: 0.6;
+
+              @media only screen and (max-width: 769px) {
+                opacity: 1;
+              }
+            }
+          }
+
+          span {
+            display: flex;
+
+            svg {
+              width: 1.2rem;
+              height: 1.2rem;
+              transition: all 0.3s ease-in-out;
+
+              @media only screen and (max-width: 769px) {
+                width: 1.5rem;
+                height: 1.5rem;
+              }
+            }
+          }
+
+          /* Dropdown styling */
+          //   .dropdown {
+          //     position: absolute;
+          //     top: 100%;
+          //     left: 0;
+          //     width: fit-content;
+          //     background: #fff;
+          //     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          //     border-radius: 2rem;
+          //     padding: 1rem 0;
+          //     opacity: 0;
+          //     visibility: hidden;
+          //     transform: translateY(10px);
+          //     transition: opacity 0.3s ease, transform 0.3s ease,
+          //       visibility 0.3s ease;
+          //     display: flex;
+          //     flex-direction: column;
+          //     gap: 0;
+          //     align-items: flex-start;
+          //     list-style: none;
+
+          //     @media only screen and (max-width: 769px) {
+          //       position: relative;
+          //       opacity: 1;
+          //       visibility: visible;
+          //       padding: 0;
+          //       box-shadow: none;
+          //       border-radius: 0;
+          //       transform: translateY(0);
+          //       gap: 2rem;
+          //       max-height: 0;
+          //       overflow: hidden;
+          //       transition: all 0.5s ease-in-out;
+          //     }
+          //   }
+
+          /* Fix: Show dropdown only when the specific parent li is hovered */
+          //   &:hover > .dropdown {
+          //     opacity: 1;
+          //     visibility: visible;
+          //     transform: translateY(0);
+          //   }
+
+          /* Dropdown list items */
+          //   .dropdown li {
+          //     display: block;
+          //     padding: 1rem 2rem;
+          //     white-space: nowrap;
+
+          //     @media only screen and (max-width: 769px) {
+          //       padding: 0;
+          //     }
+          //   }
+
+          //   .dropdown li a {
+          //     font-size: var(--font14);
+          //     font-weight: normal;
+          //     font-style: normal;
+          //     line-height: normal;
+          //     text-align: left;
+          //     color: rgba(36, 36, 36, 0.8);
+          //     text-decoration: none;
+
+          //     &:hover {
+          //       opacity: 0.6;
+
+          //       @media only screen and (max-width: 769px) {
+          //         opacity: 1;
+          //       }
+          //     }
+          //   }
+        }
+
+        li:hover .dropNav a {
+          opacity: 0.6;
+
+          @media only screen and (max-width: 769px) {
+            opacity: 1;
+          }
+        }
+
+        li:hover span svg {
+          transform: rotate(180deg);
+          opacity: 0.6;
+
+          @media only screen and (max-width: 769px) {
+            transform: none;
+          }
+        }
+      }
+    }
+
+    // Contact button styles
+    .contactBtn {
+    }
+  }
+}

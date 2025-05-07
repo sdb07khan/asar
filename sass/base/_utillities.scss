@@ -1,0 +1,45 @@
+.sectionWrapper {
+  margin: 0 auto;
+  padding-left: 7.5vw;
+  padding-right: 7.5vw;
+  max-width: calc(1600px + 15vw);
+  background-color: #fff;
+}
+
+@media (max-width: 575px) {
+  .sectionWrapper {
+    margin: 0 auto;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    max-width: calc(1400px + 10vw);
+    // overflow: hidden;
+  }
+}
+
+.maroonBtn {
+  padding: 2rem 4rem;
+  border-radius: 1rem;
+  background-color: var(--maroon);
+  color: #fff;
+  font-size: var(--font16);
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.63;
+  letter-spacing: normal;
+  text-align: left;
+  white-space: nowrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+
+  @media only screen and (max-width: 769px) {
+    padding: 1.6rem 4rem;
+  }
+
+  &:hover {
+    background-color: rgba(36, 36, 36, 0.6);
+  }
+}
