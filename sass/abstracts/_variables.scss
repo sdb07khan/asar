@@ -20,6 +20,7 @@
   /* font sizes */
   --font64: clamp(3.6rem, 4vw, 6.4rem);
   --font48: clamp(3.2rem, 2.8vw, 4.8rem);
+  --font40: 4rem;
   --font36: 3.6rem;
   --font32: 3.2rem;
   --font24: 2.4rem;
@@ -50,6 +51,7 @@
     --padding8: 6rem 0;
     --padding12: 8rem 0;
     --padding16: 12rem 0;
+    --font40: 2.8rem;
     --font36: 2.4rem;
     --font32: 2.2rem;
     --font24: 2rem;
@@ -63,6 +65,7 @@
     --padding4: 3rem 0;
     --padding12: 6rem 0;
     --font48: clamp(2rem, 2vw, 4.8rem);
+    --font40: 2.2rem;
     --font36: 2rem;
     --font32: 2rem;
     --font24: 1.6rem;

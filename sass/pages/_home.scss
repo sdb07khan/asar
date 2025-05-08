@@ -90,6 +90,9 @@
 
     // Banner image container
     .homeBannerImage {
+      position: relative;
+      width: 100%;
+
       img {
         width: 100%;
         height: 100%;
@@ -98,6 +101,117 @@
         transform: translateY(-8rem);
         position: relative;
         z-index: -1;
+      }
+
+      .bannerCard {
+        border-radius: 1.5rem;
+        padding: 2.6rem;
+        border: solid 0.5px rgba(23, 26, 23, 0.5);
+        background-color: #fff;
+        position: absolute;
+        right: 7.5vw;
+        bottom: 8.5rem;
+
+        @media (max-width: 575px) {
+          right: 5vw;
+        }
+
+        .pointsWrapper {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 2rem;
+          margin-bottom: 2rem;
+
+          .point {
+            p {
+              font-family: var(--manrope);
+              font-size: var(--font14);
+              font-weight: normal;
+              font-stretch: normal;
+              font-style: normal;
+              line-height: 1.71;
+              letter-spacing: normal;
+              text-align: left;
+              color: #171a17;
+            }
+
+            h4 {
+              font-family: var(--nunito);
+              font-size: var(--font36);
+              font-weight: 600;
+              font-stretch: normal;
+              font-style: normal;
+              line-height: normal;
+              letter-spacing: -0.8px;
+              text-align: left;
+              color: #0d3b66;
+            }
+          }
+        }
+
+        .btnWrapper {
+          a {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Home Marquee Section
+.homeMarquee {
+  // Marquee container
+  .homeMarqueeContainer {
+    // Marquee wrapper
+    overflow: hidden;
+    padding-bottom: var(--paddingB8);
+
+    .marquee {
+      // Marquee content (looping items)
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      border-bottom: 0.5px solid rgba(23, 26, 23, 0.5);
+      border-top: 0.5px solid rgba(23, 26, 23, 0.5);
+      display: flex;
+      align-items: center;
+      gap: 4rem;
+
+      .marqueeContent {
+        // All direct children (icons and text)
+        padding: 2.6rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4rem;
+        white-space: nowrap;
+        will-change: transform;
+        animation: marqueeAnim linear infinite;
+
+        > * {
+          // Shared styles for both icons and text
+        }
+
+        // Individual icon styling
+        img {
+          height: 3rem;
+          width: auto;
+          display: block;
+        }
+
+        // Text paragraph styling
+        p {
+          font-family: var(--nunito);
+          font-size: var(--font32);
+          font-weight: 300;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.06;
+          letter-spacing: -0.64px;
+          text-align: left;
+          color: #171a17;
+        }
       }
     }
   }

@@ -36,4 +36,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Update on resize
   window.addEventListener("resize", updateHeroMargins);
+
+  // home marquee animation HIGHLIGHT
+  const marquee = document.querySelector(".marqueeContent");
+  const clone = marquee.cloneNode(true);
+  clone.classList.add("marquee-clone");
+  marquee.parentNode.appendChild(clone);
+
+  const totalWidth = marquee.offsetWidth;
+  const animationDuration = totalWidth / 100; // adjust speed factor
+
+  marquee.style.animationDuration = `${animationDuration}s`;
+  clone.style.animationDuration = `${animationDuration}s`;
 });

@@ -44,6 +44,38 @@
   }
 
   &:hover {
-    background-color: rgba(36, 36, 36, 0.6);
+    background-color: #c7222a;
+  }
+}
+
+.maroonTrBtn {
+  padding: 1.6rem 3.2rem;
+  border-radius: 1rem;
+  background-color: transparent;
+  color: #66101f;
+  border: 1px solid var(--maroon);
+  font-size: var(--font16);
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.63;
+  letter-spacing: normal;
+  text-align: left;
+  white-space: nowrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  width: fit-content;
+
+  @media only screen and (max-width: 769px) {
+    padding: 1.6rem 4rem;
+  }
+
+  &:hover {
+    background-color: #c7222a;
+    border: 1px solid #c7222a;
+    color: #fff;
   }
 }
