@@ -1,0 +1,190 @@
+// Footer Section
+.footer {
+  // Main container
+  .footerContainer {
+    // Left content column
+    background-image: linear-gradient(107deg, #0d3b66 0%, #2c7bc4 100%);
+    border-radius: 6rem;
+    padding: 6rem 6rem 14rem 6rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem;
+    margin: var(--paddingB4) 0;
+    position: relative;
+    overflow: hidden;
+
+    .footerShape {
+      position: absolute;
+      right: -8rem;
+      top: -2rem;
+      width: auto;
+    }
+
+    .left {
+      // Logo container
+      width: 40%;
+      position: relative;
+
+      .footerLogo {
+        margin-bottom: 2rem;
+
+        img {
+          height: 7rem;
+          width: auto;
+          display: block;
+        }
+      }
+
+      // Description text
+      p {
+        font-family: var(--manrope);
+        font-size: var(--font16);
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.5;
+        letter-spacing: normal;
+        text-align: left;
+        color: rgba(255, 255, 255, 0.8);
+        margin-bottom: 2rem;
+        width: 90%;
+      }
+
+      // Email subscription
+      .subscribeContainer {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+
+        input[type="email"] {
+          padding: 1.6rem;
+          border-radius: 1rem;
+          background-color: #efefef;
+          outline: none;
+          border: none;
+          font-family: var(--manrope);
+          font-size: var(--font12);
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.5;
+          letter-spacing: normal;
+          text-align: left;
+          color: #242424;
+          width: 100%;
+
+          &::placeholder {
+            color: rgba(36, 36, 36, 0.6);
+          }
+        }
+
+        button {
+          padding: 1.6rem 2rem;
+          border-radius: 1rem;
+          background-color: #fff;
+          font-family: var(--manrope);
+          font-size: var(--font12);
+          font-weight: 500;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: normal;
+          letter-spacing: normal;
+          text-align: left;
+          color: #242424;
+          outline: none;
+          border: none;
+          cursor: pointer;
+          transition: all 0.3s ease-in-out;
+
+          &:hover {
+          }
+        }
+      }
+    }
+
+    // Right links column
+    .right {
+      // Footer links groups
+      display: flex;
+      justify-content: space-around;
+      gap: 4vw;
+      width: 50%;
+      position: relative;
+
+      .footerLinks {
+        ul {
+          list-style: none;
+          display: flex;
+          flex-direction: column;
+          gap: 1.6rem;
+
+          li {
+            transition: all 0.3s ease-in-out;
+
+            a {
+              font-family: var(--manrope);
+              font-size: var(--font14);
+              font-weight: normal;
+              font-stretch: normal;
+              font-style: normal;
+              line-height: 1;
+              letter-spacing: normal;
+              text-align: left;
+              color: #fff;
+            }
+
+            &:hover {
+              opacity: 0.6;
+            }
+          }
+        }
+      }
+
+      .footerSocial {
+        li {
+          display: flex;
+          align-items: center;
+          gap: 0.6rem;
+
+          span {
+            display: flex;
+
+            svg {
+              width: 2.4rem;
+              height: 2.4rem;
+              transition: all 0.3s ease-in-out;
+            }
+          }
+        }
+      }
+    }
+
+    .footerBottom {
+      position: absolute;
+      bottom: 6rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      text-align: center;
+
+      .footerBottomLinks {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+
+        a {
+          font-family: var(--manrope);
+          font-size: var(--font14);
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.5;
+          letter-spacing: normal;
+          text-align: left;
+          color: rgba(255, 255, 255, 0.6);
+        }
+      }
+    }
+  }
+}

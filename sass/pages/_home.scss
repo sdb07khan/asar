@@ -165,7 +165,6 @@
   .homeMarqueeContainer {
     // Marquee wrapper
     overflow: hidden;
-    padding-bottom: var(--paddingB8);
 
     .marquee {
       // Marquee content (looping items)
@@ -222,7 +221,7 @@
   // Main container
   .spotlightContainer {
     // Section heading
-    padding-bottom: var(--paddingB8);
+    padding: var(--padding8);
 
     h2 {
       font-family: var(--nunito);
@@ -370,6 +369,515 @@
             }
           }
         }
+      }
+    }
+  }
+}
+
+// Home Stories Section
+.homeStories {
+  padding-bottom: var(--paddingB8);
+
+  &.sectionWrapper {
+    // Main container
+
+    .storiesContainer {
+      // Header container
+      border-radius: 6rem;
+      background-image: linear-gradient(123deg, #992035 3%, #590a18 98%);
+      padding: 6rem;
+      position: relative;
+      overflow: hidden;
+
+      .storiesShape {
+        position: absolute;
+        right: -30rem;
+        top: -2rem;
+        width: auto;
+      }
+
+      .headContainer {
+        // Main heading
+        display: flex;
+        justify-content: space-between;
+        gap: 4rem;
+        margin-bottom: 4rem;
+        position: relative;
+
+        h2 {
+          font-family: var(--nunito);
+          font-size: var(--font48);
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: normal;
+          letter-spacing: -0.96px;
+          text-align: left;
+          color: #f1efee;
+          flex-basis: 50%;
+        }
+
+        // Right content
+        .right {
+          flex-basis: 50%;
+          p {
+            font-family: var(--manrope);
+            font-size: var(--font16);
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.5;
+            letter-spacing: normal;
+            text-align: left;
+            color: #f1efee;
+            margin-bottom: 2rem;
+          }
+
+          // White button
+          .whiteBtn {
+            &:hover {
+            }
+          }
+        }
+      }
+
+      // Slider container
+      .sliderContainer {
+        position: relative;
+
+        // Navigation buttons wrapper
+        .btnWrapper {
+          // Left arrow button
+          display: flex;
+          align-items: center;
+          gap: 8px;
+
+          svg {
+            width: 4rem;
+            height: 4rem;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+              circle,
+              path {
+                opacity: 0.6;
+                transition: all 0.3s ease-in-out;
+              }
+            }
+          }
+        }
+
+        // Slides wrapper
+        .slidesWrapper {
+          // Individual slide
+          display: flex;
+          gap: 3.2rem;
+          margin-top: 2rem;
+
+          .slide {
+            // Image container with clip path
+            margin: 0 1rem;
+
+            .imgContainer {
+              // SVG clip path
+              position: relative;
+              margin-bottom: 1rem;
+
+              .tagsContainer {
+                position: absolute;
+                top: 1rem;
+                left: 1rem;
+                display: flex;
+                align-items: center;
+                gap: 0.6rem;
+                z-index: 1;
+
+                .cardTag {
+                  background-color: #f0e8e9;
+                }
+              }
+
+              .arrow {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                width: 7rem;
+                height: 7rem;
+                z-index: 1;
+              }
+
+              .svg {
+                position: absolute;
+                width: 0;
+                height: 0;
+
+                clipPath {
+                }
+              }
+
+              // Slide image
+              img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+              }
+            }
+
+            // Text content
+            .cardTextContent {
+              h4 {
+                font-family: var(--manrope);
+                font-size: var(--font28);
+                font-weight: 600;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 1.2;
+                letter-spacing: normal;
+                text-align: left;
+                color: #f1efee;
+                margin-bottom: 1rem;
+              }
+
+              p {
+                font-family: var(--manrope);
+                font-size: var(--font16);
+                font-weight: normal;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 1.5;
+                letter-spacing: normal;
+                text-align: left;
+                color: #f1efee;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Home Network Section
+.homeNetwork {
+  &.sectionWrapper {
+    // Main container
+    .networkContainer {
+      padding: var(--padding8);
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+
+      // Left content column
+      .left {
+        flex-basis: 35%;
+
+        h2 {
+          font-family: var(--nunito);
+          font-size: var(--font48);
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: normal;
+          letter-spacing: -0.96px;
+          text-align: left;
+          color: #171a17;
+          margin-bottom: 2rem;
+        }
+
+        p {
+          font-family: var(--manrope);
+          font-size: var(--font16);
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.5;
+          letter-spacing: normal;
+          text-align: left;
+          color: #171a17;
+        }
+      }
+
+      // Right map column
+      .right {
+        flex-basis: 65%;
+
+        // Map container
+        .mapContainer {
+          img {
+            height: 100%;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Home Impact Section
+.homeImpact {
+  position: relative;
+  margin: var(--padding8);
+
+  &.sectionWrapper {
+    // Main container
+    .impactContainer {
+      // Section heading
+
+      h2 {
+        font-family: var(--nunito);
+        font-size: var(--font48);
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: -0.96px;
+        text-align: left;
+        color: #171a17;
+        margin-bottom: 2.4rem;
+      }
+
+      .rightImg {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        max-width: 35%;
+      }
+
+      // Cards container
+      .impactCardsContainer {
+        // Individual impact card
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.6rem;
+        width: 75%;
+        position: relative;
+
+        .card {
+          // Impact icon
+          padding: 2.4rem;
+          border-radius: 1.5rem;
+          border: solid 0.5px rgba(23, 26, 23, 0.5);
+          background-color: #fff;
+
+          img {
+            height: 3.2rem;
+            width: auto;
+            margin-bottom: 2.4rem;
+          }
+
+          // Statistic number
+          h3 {
+            font-family: var(--manrope);
+            font-size: var(--font36);
+            font-weight: 600;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.28;
+            letter-spacing: normal;
+            text-align: left;
+            color: #171a17;
+            margin-bottom: 0.8rem;
+          }
+
+          // Impact description
+          p {
+            font-family: var(--manrope);
+            font-size: var(--font16);
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.5;
+            letter-spacing: normal;
+            text-align: left;
+            color: rgba(23, 26, 23, 0.8);
+          }
+        }
+      }
+    }
+  }
+}
+
+// Home Events Section
+.homeEvents {
+  // Main container
+  position: relative;
+  padding-top: 4rem;
+
+  .waveImg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    max-width: 100%;
+  }
+
+  .eventsContainer {
+    // Section heading
+    padding: var(--padding8);
+    position: relative;
+
+    .headContainer {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 2rem;
+
+      h2 {
+        font-family: var(--nunito);
+        font-size: var(--font48);
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: -0.96px;
+        text-align: left;
+        color: #171a17;
+      }
+    }
+
+    // Tab buttons container
+    .eventsTabConatiner {
+      // Event filter buttons
+      display: flex;
+      justify-content: flex-end;
+      gap: 2rem;
+      margin-bottom: 2rem;
+
+      .eventBtn {
+        // Active state
+        padding: 2rem 4rem;
+        border-radius: 4rem;
+        font-family: var(--manrope);
+        font-size: var(--font16);
+        font-weight: 500;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.63;
+        letter-spacing: normal;
+        color: #171a17;
+        transition: all 0.3s ease-in-out;
+        outline: none;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #0d3b66;
+          color: #f1efee;
+        }
+
+        &.active {
+          color: #f1efee;
+          background-color: #0d3b66;
+        }
+      }
+    }
+
+    // Events cards container
+    .eventsCardsContainer {
+      // Individual event card
+      display: flex;
+      justify-content: space-between;
+      gap: 2.5rem;
+      padding: 2rem 0;
+
+      .card {
+        // Event icon
+        padding: 3.2rem;
+        border-radius: 15px;
+        border: solid 0.5px rgba(23, 26, 23, 0.5);
+        background-color: #fff;
+
+        img {
+          height: 6rem;
+          width: auto;
+          margin-bottom: 2rem;
+        }
+
+        // Tags container
+        .tagsContainer {
+          // Individual tag
+          display: flex;
+          align-items: center;
+          gap: 0.6rem;
+          margin-bottom: 2rem;
+
+          .cardTag {
+            p {
+            }
+          }
+        }
+
+        // Card content
+        .cardContent {
+          // Event title
+          h5 {
+            font-family: var(--manrope);
+            font-size: var(--font28);
+            font-weight: 500;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.43;
+            letter-spacing: normal;
+            text-align: left;
+            color: #171a17;
+            margin-bottom: 1rem;
+          }
+
+          // Date container
+          .dateTime {
+            margin-bottom: 1.6rem;
+
+            p {
+              font-family: var(--manrope);
+              font-size: var(--font16);
+              font-weight: 300;
+              font-stretch: normal;
+              font-style: normal;
+              line-height: 1;
+              letter-spacing: normal;
+              text-align: left;
+              color: rgba(23, 26, 23, 0.8);
+            }
+          }
+
+          // Event description
+          .cardDescription {
+            font-family: var(--manrope);
+            font-size: var(--font16);
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.5;
+            letter-spacing: normal;
+            text-align: left;
+            color: rgba(23, 26, 23, 0.8);
+            margin-bottom: 2.4rem;
+          }
+        }
+
+        // Button container
+        .btnBox {
+          // Register button
+          .maroonBtn {
+            width: 100%;
+
+            &:hover {
+            }
+          }
+        }
+      }
+    }
+
+    .viewMoreBox {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin-top: 2.4rem;
+
+      a {
       }
     }
   }

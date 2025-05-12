@@ -38,14 +38,41 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("resize", updateHeroMargins);
 
   // home marquee animation HIGHLIGHT
-  const marquee = document.querySelector(".marqueeContent");
-  const clone = marquee.cloneNode(true);
-  clone.classList.add("marquee-clone");
-  marquee.parentNode.appendChild(clone);
+  const marquees = document.querySelectorAll(".marqueeContent");
 
-  const totalWidth = marquee.offsetWidth;
-  const animationDuration = totalWidth / 100; // adjust speed factor
+  marquees.forEach((marquee) => {
+    // Clone the marquee content
+    const clone = marquee.cloneNode(true);
+    clone.classList.add("marquee-clone");
+    marquee.parentNode.appendChild(clone);
 
-  marquee.style.animationDuration = `${animationDuration}s`;
-  clone.style.animationDuration = `${animationDuration}s`;
+    // Calculate the width of original marquee
+    const totalWidth = marquee.offsetWidth;
+
+    // Duration based on speed factor (adjust as needed)
+    const speed = 100; // pixels per second
+    const duration = totalWidth / speed;
+
+    // Apply animation duration to both original and clone
+    marquee.style.animationDuration = `${duration}s`;
+    clone.style.animationDuration = `${duration}s`;
+  });
+
+  // stories section slider HIGHLIGHT
+  $(".homeStories .slidesWrapper").slick({
+    dots: false,
+    arrows: false,
+    infinite: false,
+    speed: 800,
+    slidesToShow: 2.1,
+    adaptiveHeight: true,
+  });
+});
+
+$(".homeStories .leftBtn").click(function () {
+  $(".homeStories .slidesWrapper").slick("slickPrev");
+});
+
+$(".homeStories .rightBtn").click(function () {
+  $(".homeStories .slidesWrapper").slick("slickNext");
 });
