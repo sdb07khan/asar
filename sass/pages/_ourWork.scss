@@ -1,0 +1,76 @@
+// Home Network Section (Groundwork in Action)
+.ourWork {
+  &.sectionWrapper {
+    // Main container
+    .ourWorkContainer {
+      // Header container
+      .headContainer {
+        h2 {
+          font-family: var(--nunito);
+          font-size: var(--font64);
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: normal;
+          letter-spacing: -1.28px;
+          text-align: left;
+          color: #171a17;
+          margin-bottom: 1rem;
+        }
+
+        p {
+          font-family: var(--manrope);
+          font-size: var(--font16);
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.5;
+          letter-spacing: normal;
+          text-align: left;
+          color: rgba(23, 26, 23, 0.8);
+        }
+      }
+
+      // Projects listing container
+      .listingContainer {
+        // Individual project block
+        padding: var(--padding8);
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 6vw;
+
+        a {
+          .block {
+            // Project image
+            img {
+              height: auto;
+              width: 100%;
+              margin-bottom: 2rem;
+            }
+
+            // Project title
+            h5 {
+              font-family: var(--manrope);
+              font-size: var(--font28);
+              font-weight: 600;
+              font-stretch: normal;
+              font-style: normal;
+              line-height: 1.2;
+              letter-spacing: normal;
+              text-align: center;
+              color: #171a17;
+            }
+
+            // Hover effects can be added here
+            &:hover {
+              img {
+              }
+              h5 {
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
