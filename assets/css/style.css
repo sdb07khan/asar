@@ -249,6 +249,20 @@ a {
     border: 1px solid #f1efee;
     color: #66101f; }
 
+.aboutOurVision {
+  display: flex; }
+  .aboutOurVision .sectionWrapper {
+    display: flex;
+    gap: 7rem; }
+    .aboutOurVision .sectionWrapper .c1 {
+      display: flex;
+      flex-direction: column;
+      width: 60%; }
+    .aboutOurVision .sectionWrapper .c2 {
+      display: flex;
+      flex-direction: column;
+      width: 40%; }
+
 .header {
   width: 100%;
   position: fixed;
@@ -1089,3 +1103,475 @@ a {
     letter-spacing: normal;
     text-align: center;
     color: #171a17; }
+
+.about_banner {
+  display: flex;
+  padding-top: 10rem;
+  background-image: linear-gradient(113deg, #992035 2%, #590a18 99%), linear-gradient(112deg, #0d3b66 0%, #2c7bc4 100%); }
+  .about_banner .c1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%; }
+    .about_banner .c1 h1 {
+      font-family: var(--nunito);
+      font-size: var(--font64);
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: -1.28px;
+      text-align: left;
+      color: #f1efee;
+      margin-bottom: 1rem; }
+    .about_banner .c1 p {
+      font-family: var(--manrope);
+      font-size: var(--font16);
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.5;
+      letter-spacing: normal;
+      text-align: left;
+      color: rgba(241, 239, 238, 0.8);
+      margin-bottom: 3.2rem; }
+    .about_banner .c1 .links {
+      display: flex;
+      gap: 1.6rem; }
+      .about_banner .c1 .links a:nth-child(2) {
+        border: 1px solid #fff !important; }
+        .about_banner .c1 .links a:nth-child(2):hover {
+          border: 1px solid transparent !important; }
+  .about_banner .c2 {
+    width: 50%;
+    display: flex; }
+    .about_banner .c2 img {
+      width: 100%;
+      height: auto; }
+
+.aboutOurApproach {
+  display: flex;
+  padding: var(--padding8);
+  justify-content: center;
+  background-color: #f1efee; }
+  .aboutOurApproach .head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 40%;
+    margin: 0 auto;
+    margin-bottom: 2.4rem; }
+    .aboutOurApproach .head h1 {
+      font-family: var(--nunito);
+      font-size: var(--font48);
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: -0.96px;
+      text-align: center;
+      color: #171a17; }
+    .aboutOurApproach .head p {
+      font-family: var(--manrope);
+      font-size: var(--font16);
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.5;
+      letter-spacing: normal;
+      text-align: center;
+      color: rgba(23, 26, 23, 0.8); }
+  .aboutOurApproach .content {
+    display: flex;
+    gap: 2rem; }
+    .aboutOurApproach .content .c1 {
+      display: flex;
+      flex-direction: column;
+      gap: 23%;
+      justify-content: center;
+      width: 30%; }
+      .aboutOurApproach .content .c1 p {
+        font-family: var(--manrope);
+        font-size: var(--font20);
+        font-weight: 600;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.2;
+        letter-spacing: normal;
+        text-align: left;
+        color: #171a17; }
+    .aboutOurApproach .content .c2 {
+      display: flex;
+      width: 40%; }
+      .aboutOurApproach .content .c2 img {
+        width: 100%;
+        height: auto; }
+    .aboutOurApproach .content .c3 {
+      display: flex;
+      flex-direction: column;
+      gap: 44%;
+      justify-content: center;
+      width: 30%; }
+      .aboutOurApproach .content .c3 p {
+        font-family: var(--manrope);
+        font-size: var(--font20);
+        font-weight: 600;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.2;
+        letter-spacing: normal;
+        text-align: left;
+        color: #171a17; }
+
+.aboutKeyPillars {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--padding8); }
+  .aboutKeyPillars .head {
+    align-self: flex-start;
+    margin-bottom: 3.2rem; }
+    .aboutKeyPillars .head h1 {
+      font-family: var(--nunito);
+      font-size: var(--font48);
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: -0.96px;
+      text-align: left;
+      color: #171a17; }
+  .aboutKeyPillars .content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4.3rem; }
+    .aboutKeyPillars .content .block {
+      display: flex;
+      flex-direction: column; }
+      .aboutKeyPillars .content .block img {
+        width: fit-content;
+        height: auto;
+        margin-bottom: 3.2rem; }
+      .aboutKeyPillars .content .block h1 {
+        font-family: var(--manrope);
+        font-size: var(--font28);
+        font-weight: 600;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.2;
+        letter-spacing: normal;
+        text-align: left;
+        color: #171a17;
+        margin-bottom: 0.8rem; }
+      .aboutKeyPillars .content .block p {
+        font-family: var(--manrope);
+        font-size: var(--font16);
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.5;
+        letter-spacing: normal;
+        text-align: left;
+        color: rgba(23, 26, 23, 0.8); }
+
+.aboutBuildingBridges {
+  max-width: 55%;
+  padding: var(--padding8); }
+  .aboutBuildingBridges .sectionWrapper h1 {
+    font-family: var(--nunito);
+    font-size: var(--font48);
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -0.96px;
+    text-align: left;
+    color: #171a17;
+    margin-bottom: 2.4rem; }
+  .aboutBuildingBridges .sectionWrapper p {
+    font-family: var(--manrope);
+    font-size: var(--font16);
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: left;
+    color: #171a17; }
+
+.aboutTextImageBlock {
+  padding: var(--padding4); }
+  .aboutTextImageBlock .sectionWrapper .head {
+    margin-bottom: 2.4rem; }
+    .aboutTextImageBlock .sectionWrapper .head h1 {
+      font-family: var(--manrope);
+      font-size: var(--font28);
+      font-weight: 600;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.2;
+      letter-spacing: normal;
+      text-align: left;
+      color: #171a17; }
+  .aboutTextImageBlock .sectionWrapper .content {
+    display: flex;
+    gap: 2.5rem; }
+  .aboutTextImageBlock .sectionWrapper .c1 {
+    width: 60%;
+    border-radius: 1.5rem;
+    border: solid 1px rgba(13, 59, 102, 0.5);
+    padding: 2.4rem; }
+    .aboutTextImageBlock .sectionWrapper .c1 img {
+      max-width: 7rem;
+      height: auto;
+      margin-bottom: 2.4rem; }
+    .aboutTextImageBlock .sectionWrapper .c1 h1 {
+      font-family: var(--manrope);
+      font-size: var(--font20);
+      font-weight: 600;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.2;
+      letter-spacing: normal;
+      text-align: left;
+      color: #171a17;
+      margin-bottom: 0.8rem; }
+    .aboutTextImageBlock .sectionWrapper .c1 p {
+      font-family: var(--manrope);
+      font-size: var(--font16);
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.5;
+      letter-spacing: normal;
+      text-align: left;
+      color: #171a17; }
+  .aboutTextImageBlock .sectionWrapper .c2 {
+    width: 40%; }
+    .aboutTextImageBlock .sectionWrapper .c2 img {
+      width: 100%;
+      height: 100%;
+      border-radius: 1.5rem;
+      object-fit: cover; }
+
+.aboutTextImageBlock.flip {
+  padding: var(--padding4); }
+  .aboutTextImageBlock.flip .sectionWrapper .head {
+    margin-bottom: 2.4rem; }
+    .aboutTextImageBlock.flip .sectionWrapper .head h1 {
+      font-family: var(--manrope);
+      font-size: var(--font28);
+      font-weight: 600;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.2;
+      letter-spacing: normal;
+      text-align: left;
+      color: #171a17; }
+  .aboutTextImageBlock.flip .sectionWrapper .content {
+    display: flex;
+    gap: 2.5rem;
+    flex-direction: row-reverse; }
+  .aboutTextImageBlock.flip .sectionWrapper .c1 {
+    width: 60%;
+    border-radius: 1.5rem;
+    border: solid 1px rgba(13, 59, 102, 0.5);
+    padding: 2.4rem; }
+    .aboutTextImageBlock.flip .sectionWrapper .c1 img {
+      max-width: 7rem;
+      height: auto;
+      margin-bottom: 2.4rem; }
+    .aboutTextImageBlock.flip .sectionWrapper .c1 h1 {
+      font-family: var(--manrope);
+      font-size: var(--font20);
+      font-weight: 600;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.2;
+      letter-spacing: normal;
+      text-align: left;
+      color: #171a17;
+      margin-bottom: 0.8rem; }
+    .aboutTextImageBlock.flip .sectionWrapper .c1 p {
+      font-family: var(--manrope);
+      font-size: var(--font16);
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.5;
+      letter-spacing: normal;
+      text-align: left;
+      color: #171a17; }
+  .aboutTextImageBlock.flip .sectionWrapper .c2 {
+    width: 40%; }
+    .aboutTextImageBlock.flip .sectionWrapper .c2 img {
+      width: 100%;
+      height: 100%;
+      border-radius: 1.5rem;
+      object-fit: cover; }
+
+.aboutOurVision {
+  display: flex;
+  padding: var(--padding8); }
+  .aboutOurVision .sectionWrapper {
+    display: flex;
+    gap: 10%; }
+    .aboutOurVision .sectionWrapper .c1 {
+      display: flex;
+      flex-direction: column;
+      width: 50%; }
+      .aboutOurVision .sectionWrapper .c1 h1 {
+        font-family: var(--nunito);
+        font-size: var(--font48);
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: -0.96px;
+        text-align: left;
+        color: #171a17;
+        margin-bottom: 2.4rem; }
+      .aboutOurVision .sectionWrapper .c1 p {
+        font-family: var(--manrope);
+        font-size: var(--font16);
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.5;
+        letter-spacing: normal;
+        text-align: left;
+        color: rgba(23, 26, 23, 0.8); }
+    .aboutOurVision .sectionWrapper .c2 {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      align-items: center;
+      justify-content: center; }
+      .aboutOurVision .sectionWrapper .c2 img {
+        max-width: 34rem; }
+
+.aboutOurJourney {
+  padding: var(--padding8); }
+  .aboutOurJourney .sectionWrapper {
+    display: flex;
+    flex-direction: column; }
+    .aboutOurJourney .sectionWrapper .head {
+      margin-bottom: 2.4rem; }
+      .aboutOurJourney .sectionWrapper .head h1 {
+        font-family: var(--nunito);
+        font-size: var(--font48);
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: -0.96px;
+        text-align: left;
+        color: #171a17; }
+    .aboutOurJourney .sectionWrapper .content {
+      display: flex;
+      gap: 2rem; }
+      .aboutOurJourney .sectionWrapper .content .block {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        background-color: #ffffff;
+        padding: 2.4rem;
+        border-radius: 1.5rem;
+        position: relative; }
+        .aboutOurJourney .sectionWrapper .content .block h1 {
+          font-family: var(--manrope);
+          font-size: var(--font28);
+          font-weight: 500;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.43;
+          letter-spacing: normal;
+          text-align: left;
+          color: #171a17;
+          margin-bottom: 1.4rem; }
+        .aboutOurJourney .sectionWrapper .content .block p {
+          font-family: var(--manrope);
+          font-size: var(--font16);
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.5;
+          letter-spacing: normal;
+          text-align: left;
+          color: rgba(23, 26, 23, 0.8); }
+        .aboutOurJourney .sectionWrapper .content .block .bg {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          width: 16rem; }
+
+.aboutMeetPeople {
+  padding: var(--padding8); }
+  .aboutMeetPeople .sectionWrapper {
+    display: flex;
+    flex-direction: column; }
+    .aboutMeetPeople .sectionWrapper .head {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      .aboutMeetPeople .sectionWrapper .head h1 {
+        font-family: var(--nunito);
+        font-size: var(--font48);
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: -0.96px;
+        text-align: center;
+        color: #171a17;
+        margin-bottom: 2.4rem;
+        width: 50rem; }
+      .aboutMeetPeople .sectionWrapper .head p {
+        font-family: var(--manrope);
+        font-size: var(--font16);
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.5;
+        letter-spacing: normal;
+        text-align: center;
+        color: #171a17;
+        margin-bottom: 4rem;
+        width: 50rem; }
+    .aboutMeetPeople .sectionWrapper .content {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 2rem;
+      margin-bottom: 3.2rem; }
+      .aboutMeetPeople .sectionWrapper .content .block {
+        display: flex;
+        flex-direction: column; }
+        .aboutMeetPeople .sectionWrapper .content .block img {
+          width: 100%;
+          height: auto;
+          margin-bottom: 1.6rem;
+          border-radius: 1.5rem; }
+        .aboutMeetPeople .sectionWrapper .content .block h1 {
+          font-family: var(--manrope);
+          font-size: 2.4rem;
+          font-weight: 600;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.67;
+          letter-spacing: normal;
+          text-align: left;
+          color: #171a17; }
+        .aboutMeetPeople .sectionWrapper .content .block p {
+          font-family: var(--manrope);
+          font-size: var(--font16);
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.5;
+          letter-spacing: normal;
+          text-align: left;
+          color: rgba(23, 26, 23, 0.8); }
+    .aboutMeetPeople .sectionWrapper a {
+      align-self: center; }

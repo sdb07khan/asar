@@ -75,4 +75,32 @@ $(".homeStories .leftBtn").click(function () {
 
 $(".homeStories .rightBtn").click(function () {
   $(".homeStories .slidesWrapper").slick("slickNext");
+
+  const marquees = document.querySelectorAll(".marqueeContent");
+
+  if (marquees.length > 0) {
+    marquees.forEach((marquee) => {
+      const clone = marquee.cloneNode(true);
+      clone.classList.add("marquee-clone");
+      marquee.parentNode.appendChild(clone);
+
+      const totalWidth = marquee.offsetWidth;
+      const animationDuration = totalWidth / 100;
+
+      marquee.style.animationDuration = `${animationDuration}s`;
+      clone.style.animationDuration = `${animationDuration}s`;
+
+
+      if (marquee.classList.contains("reverse")) {
+        marquee.style.animationDirection = "reverse";
+        clone.style.animationDirection = "reverse";
+      } else {
+        marquee.style.animationDirection = "normal";
+        clone.style.animationDirection = "normal";
+      }
+    });
+  }
+
+
+
 });
