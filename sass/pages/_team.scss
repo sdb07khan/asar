@@ -1,0 +1,256 @@
+// !team page
+
+.teamBanner {
+  position: relative;
+
+  padding: var(--padding8);
+  padding-top: 15rem;
+  .bg {
+    position: absolute;
+    right: 0;
+    top: 5%;
+    z-index: 4;
+    max-width: 50rem;
+  }
+  .sectionWrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    .head {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 3.2rem;
+      max-width: 50rem;
+      h1 {
+        font-family: var(--nunito);
+        font-size: var(--font48);
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: -0.96px;
+        text-align: left;
+        color: #171a17;
+        margin-bottom: 2.4rem;
+      }
+
+      p {
+        font-family: var(--manrope);
+        font-size: var(--font16);
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.5;
+        letter-spacing: normal;
+        text-align: left;
+        color: #171a17;
+      }
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      column-gap: 2rem;
+      row-gap: 4rem;
+
+      .block {
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          opacity: 0.7;
+        }
+        img {
+          width: 100%;
+          height: auto;
+          border-radius: 1.5rem;
+          margin-bottom: 1.6rem;
+        }
+
+        h1 {
+          font-family: var(--manrope);
+          font-size: var(--font24);
+          font-weight: 600;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.67;
+          letter-spacing: normal;
+          text-align: left;
+          color: #171a17;
+          margin-bottom: 0.4rem;
+        }
+        p {
+          font-family: var(--manrope);
+          font-size: var(--font16);
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.5;
+          letter-spacing: normal;
+          text-align: left;
+          color: rgba(23, 26, 23, 0.8);
+        }
+      }
+    }
+  }
+}
+
+// !team single page
+
+.teamSingle_banner {
+  position: relative;
+
+  padding: var(--padding8);
+  padding-top: 15rem;
+
+  .bg {
+    position: absolute;
+    right: 0;
+    top: 0%;
+    z-index: 4;
+    max-width: 50rem;
+  }
+  .sectionWrapper {
+    display: flex;
+    flex-direction: column;
+
+    .back {
+      margin-bottom: 3.2rem;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        opacity: 0.7;
+      }
+      a {
+        display: flex;
+        align-items: center;
+
+        gap: 1.5rem;
+        font-size: var(--font20);
+        font-weight: 600;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.2;
+        letter-spacing: normal;
+        text-align: center;
+        color: #171a17;
+
+        svg {
+          max-width: 1rem;
+        }
+      }
+    }
+
+    .head {
+      h1 {
+        font-family: var(--manrope);
+        font-size: var(--font48);
+        font-weight: 600;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: -0.96px;
+        text-align: left;
+        color: #171a17;
+        margin-bottom: 0.5rem;
+      }
+      p {
+        font-family: var(--manrope);
+        font-size: var(--font28);
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.2;
+        letter-spacing: normal;
+        text-align: left;
+        color: #171a17;
+        margin-bottom: 3.6rem;
+      }
+    }
+
+    .profile {
+      display: flex;
+      gap: 2.6rem;
+      margin-bottom: 2.4rem;
+
+      .c1 {
+        img {
+          width: 100%;
+          height: auto;
+          border-radius: 1.5rem;
+          object-fit: cover;
+        }
+      }
+
+      .c2 {
+        display: flex;
+        flex-direction: column;
+
+        .social {
+          display: flex;
+          align-items: center;
+          gap: 2rem;
+          transition: all 0.3s ease-in-out;
+
+          &:hover {
+            opacity: 0.7;
+          }
+
+          a {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+
+            svg {
+              max-width: 2.4rem;
+            }
+          }
+          margin-bottom: 2.5rem;
+        }
+        .content {
+          display: flex;
+          flex-direction: column;
+          gap: 1.6rem;
+
+          h1 {
+            font-family: var(--manrope);
+            font-size: var(--font20);
+            font-weight: bold;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.4;
+            letter-spacing: normal;
+            text-align: left;
+            color: #171a17;
+          }
+          p {
+            font-family: var(--manrope);
+            font-size: var(--font16);
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.5;
+            letter-spacing: normal;
+            text-align: left;
+            color: #171a17;
+          }
+        }
+      }
+    }
+
+    .para {
+      max-width: 55%;
+      p {
+        font-family: var(--manrope);
+        font-size: var(--font16);
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.5;
+        letter-spacing: normal;
+        text-align: left;
+        color: #171a17;
+      }
+    }
+  }
+}

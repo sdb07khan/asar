@@ -1575,3 +1575,196 @@ a {
           color: rgba(23, 26, 23, 0.8); }
     .aboutMeetPeople .sectionWrapper a {
       align-self: center; }
+
+.teamBanner {
+  position: relative;
+  padding: var(--padding8);
+  padding-top: 15rem; }
+  .teamBanner .bg {
+    position: absolute;
+    right: 0;
+    top: 5%;
+    z-index: 4;
+    max-width: 50rem; }
+  .teamBanner .sectionWrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column; }
+    .teamBanner .sectionWrapper .head {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 3.2rem;
+      max-width: 50rem; }
+      .teamBanner .sectionWrapper .head h1 {
+        font-family: var(--nunito);
+        font-size: var(--font48);
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: -0.96px;
+        text-align: left;
+        color: #171a17;
+        margin-bottom: 2.4rem; }
+      .teamBanner .sectionWrapper .head p {
+        font-family: var(--manrope);
+        font-size: var(--font16);
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.5;
+        letter-spacing: normal;
+        text-align: left;
+        color: #171a17; }
+    .teamBanner .sectionWrapper .content {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      column-gap: 2rem;
+      row-gap: 4rem; }
+      .teamBanner .sectionWrapper .content .block {
+        transition: all 0.3s ease-in-out; }
+        .teamBanner .sectionWrapper .content .block:hover {
+          opacity: 0.7; }
+        .teamBanner .sectionWrapper .content .block img {
+          width: 100%;
+          height: auto;
+          border-radius: 1.5rem;
+          margin-bottom: 1.6rem; }
+        .teamBanner .sectionWrapper .content .block h1 {
+          font-family: var(--manrope);
+          font-size: var(--font24);
+          font-weight: 600;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.67;
+          letter-spacing: normal;
+          text-align: left;
+          color: #171a17;
+          margin-bottom: 0.4rem; }
+        .teamBanner .sectionWrapper .content .block p {
+          font-family: var(--manrope);
+          font-size: var(--font16);
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.5;
+          letter-spacing: normal;
+          text-align: left;
+          color: rgba(23, 26, 23, 0.8); }
+
+.teamSingle_banner {
+  position: relative;
+  padding: var(--padding8);
+  padding-top: 15rem; }
+  .teamSingle_banner .bg {
+    position: absolute;
+    right: 0;
+    top: 0%;
+    z-index: 4;
+    max-width: 50rem; }
+  .teamSingle_banner .sectionWrapper {
+    display: flex;
+    flex-direction: column; }
+    .teamSingle_banner .sectionWrapper .back {
+      margin-bottom: 3.2rem;
+      transition: all 0.3s ease-in-out; }
+      .teamSingle_banner .sectionWrapper .back:hover {
+        opacity: 0.7; }
+      .teamSingle_banner .sectionWrapper .back a {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        font-size: var(--font20);
+        font-weight: 600;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.2;
+        letter-spacing: normal;
+        text-align: center;
+        color: #171a17; }
+        .teamSingle_banner .sectionWrapper .back a svg {
+          max-width: 1rem; }
+    .teamSingle_banner .sectionWrapper .head h1 {
+      font-family: var(--manrope);
+      font-size: var(--font48);
+      font-weight: 600;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: -0.96px;
+      text-align: left;
+      color: #171a17;
+      margin-bottom: 0.5rem; }
+    .teamSingle_banner .sectionWrapper .head p {
+      font-family: var(--manrope);
+      font-size: var(--font28);
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.2;
+      letter-spacing: normal;
+      text-align: left;
+      color: #171a17;
+      margin-bottom: 3.6rem; }
+    .teamSingle_banner .sectionWrapper .profile {
+      display: flex;
+      gap: 2.6rem;
+      margin-bottom: 2.4rem; }
+      .teamSingle_banner .sectionWrapper .profile .c1 img {
+        width: 100%;
+        height: auto;
+        border-radius: 1.5rem;
+        object-fit: cover; }
+      .teamSingle_banner .sectionWrapper .profile .c2 {
+        display: flex;
+        flex-direction: column; }
+        .teamSingle_banner .sectionWrapper .profile .c2 .social {
+          display: flex;
+          align-items: center;
+          gap: 2rem;
+          transition: all 0.3s ease-in-out;
+          margin-bottom: 2.5rem; }
+          .teamSingle_banner .sectionWrapper .profile .c2 .social:hover {
+            opacity: 0.7; }
+          .teamSingle_banner .sectionWrapper .profile .c2 .social a {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem; }
+            .teamSingle_banner .sectionWrapper .profile .c2 .social a svg {
+              max-width: 2.4rem; }
+        .teamSingle_banner .sectionWrapper .profile .c2 .content {
+          display: flex;
+          flex-direction: column;
+          gap: 1.6rem; }
+          .teamSingle_banner .sectionWrapper .profile .c2 .content h1 {
+            font-family: var(--manrope);
+            font-size: var(--font20);
+            font-weight: bold;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.4;
+            letter-spacing: normal;
+            text-align: left;
+            color: #171a17; }
+          .teamSingle_banner .sectionWrapper .profile .c2 .content p {
+            font-family: var(--manrope);
+            font-size: var(--font16);
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.5;
+            letter-spacing: normal;
+            text-align: left;
+            color: #171a17; }
+    .teamSingle_banner .sectionWrapper .para {
+      max-width: 55%; }
+      .teamSingle_banner .sectionWrapper .para p {
+        font-family: var(--manrope);
+        font-size: var(--font16);
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.5;
+        letter-spacing: normal;
+        text-align: left;
+        color: #171a17; }
