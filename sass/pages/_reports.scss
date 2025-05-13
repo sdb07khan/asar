@@ -149,3 +149,208 @@
     }
   }
 }
+
+// !report single
+
+.reportSingle_banner {
+  position: relative;
+
+  padding: var(--padding8);
+  padding-top: 15rem;
+
+  .bg {
+    position: absolute;
+    right: 0;
+    top: 30%;
+    z-index: 4;
+    max-width: 50rem;
+  }
+  .sectionWrapper {
+    display: flex;
+    flex-direction: column;
+
+    .back {
+      margin-bottom: 3.2rem;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        opacity: 0.7;
+      }
+      a {
+        display: flex;
+        align-items: center;
+
+        gap: 1.5rem;
+        font-size: var(--font20);
+        font-weight: 600;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.2;
+        letter-spacing: normal;
+        text-align: center;
+        color: #171a17;
+
+        svg {
+          max-width: 1rem;
+        }
+      }
+    }
+
+    .head {
+      display: flex;
+      gap: 5rem;
+      margin-bottom: 6.5rem;
+      .c1 {
+        width: 35rem;
+        display: flex;
+        img {
+          width: 100%;
+          height: auto;
+          border-radius: 1.5rem;
+        }
+      }
+      .c2 {
+        display: flex;
+        flex-direction: column;
+
+        .tag {
+          display: flex;
+          gap: 0.7rem;
+          margin-bottom: 0.8rem;
+          h1 {
+            font-family: var(--manrope);
+            font-size: var(--font12);
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.2;
+            letter-spacing: normal;
+            text-align: left;
+            color: #66101f;
+          }
+        }
+        h1 {
+          font-family: var(--nunito);
+          font-size: var(--font48);
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: normal;
+          letter-spacing: -0.96px;
+          text-align: left;
+          color: #171a17;
+          margin-bottom: 1.6rem;
+          max-width: 72%;
+        }
+      }
+    }
+
+    .para {
+      max-width: 55%;
+      p {
+        font-family: var(--manrope);
+        font-size: var(--font16);
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.5;
+        letter-spacing: normal;
+        text-align: left;
+        color: #171a17;
+      }
+    }
+  }
+}
+
+.reportSingle_relatedReports {
+  position: relative;
+  padding: var(--padding4);
+
+  .sectionWrapper {
+    .head {
+      display: flex;
+      position: relative;
+      margin-bottom: 2.4rem;
+      h1 {
+        font-family: var(--nunito);
+        font-size: var(--font48);
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: -0.96px;
+        text-align: left;
+        color: #171a17;
+      }
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      row-gap: 6rem;
+      column-gap: 2rem;
+      margin-bottom: 5rem;
+      .block {
+        display: flex;
+        flex-direction: column;
+
+        .image {
+          position: relative;
+
+          .tag {
+            position: absolute;
+            top: 2rem;
+            left: 2rem;
+            display: flex;
+            gap: 0.7rem;
+
+            h1 {
+              background-color: #f0e8e9;
+            }
+          }
+
+          img {
+            width: 100%;
+            height: auto;
+            border-radius: 1.5rem;
+            object-fit: cover;
+            margin-bottom: 3rem;
+          }
+        }
+
+        .content {
+          display: flex;
+          flex-direction: column;
+
+          h1 {
+            font-family: var(--manrope);
+            font-size: var(--font28);
+            font-weight: 600;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.2;
+            letter-spacing: normal;
+            text-align: left;
+            color: #171a17;
+            margin-bottom: 1.2rem;
+          }
+          p {
+            font-family: var(--manrope);
+            font-size: var(--font16);
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.5;
+            letter-spacing: normal;
+            text-align: left;
+            color: #171a17;
+            margin-bottom: 1.6rem;
+          }
+          a {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
