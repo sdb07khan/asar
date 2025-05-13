@@ -38,25 +38,25 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("resize", updateHeroMargins);
 
   // home marquee animation HIGHLIGHT
-  const marquees = document.querySelectorAll(".marqueeContent");
+  // const marquees = document.querySelectorAll(".marqueeContent");
 
-  marquees.forEach((marquee) => {
-    // Clone the marquee content
-    const clone = marquee.cloneNode(true);
-    clone.classList.add("marquee-clone");
-    marquee.parentNode.appendChild(clone);
+  // marquees.forEach((marquee) => {
+  //   // Clone the marquee content
+  //   const clone = marquee.cloneNode(true);
+  //   clone.classList.add("marquee-clone");
+  //   marquee.parentNode.appendChild(clone);
 
-    // Calculate the width of original marquee
-    const totalWidth = marquee.offsetWidth;
+  //   // Calculate the width of original marquee
+  //   const totalWidth = marquee.offsetWidth;
 
-    // Duration based on speed factor (adjust as needed)
-    const speed = 100; // pixels per second
-    const duration = totalWidth / speed;
+  //   // Duration based on speed factor (adjust as needed)
+  //   const speed = 100; // pixels per second
+  //   const duration = totalWidth / speed;
 
-    // Apply animation duration to both original and clone
-    marquee.style.animationDuration = `${duration}s`;
-    clone.style.animationDuration = `${duration}s`;
-  });
+  //   // Apply animation duration to both original and clone
+  //   marquee.style.animationDuration = `${duration}s`;
+  //   clone.style.animationDuration = `${duration}s`;
+  // });
 
   // stories section slider HIGHLIGHT
   $(".homeStories .slidesWrapper").slick({
@@ -67,40 +67,32 @@ document.addEventListener("DOMContentLoaded", function () {
     slidesToShow: 2.1,
     adaptiveHeight: true,
   });
-});
 
-$(".homeStories .leftBtn").click(function () {
-  $(".homeStories .slidesWrapper").slick("slickPrev");
-});
+  $(".homeStories .leftBtn").click(function () {
+    $(".homeStories .slidesWrapper").slick("slickPrev");
+  });
 
-$(".homeStories .rightBtn").click(function () {
-  $(".homeStories .slidesWrapper").slick("slickNext");
+  $(".homeStories .rightBtn").click(function () {
+    $(".homeStories .slidesWrapper").slick("slickNext");
+  });
 
-  const marquees = document.querySelectorAll(".marqueeContent");
+  // work single page section slider HIGHLIGHT
+  $(".workSingleBanner .slidesWrapper").slick({
+    dots: false,
+    arrows: false,
+    infinite: false,
+    speed: 800,
+    slidesToShow: 2.1,
+    adaptiveHeight: true,
+  });
 
-  if (marquees.length > 0) {
-    marquees.forEach((marquee) => {
-      const clone = marquee.cloneNode(true);
-      clone.classList.add("marquee-clone");
-      marquee.parentNode.appendChild(clone);
+  $(".workSingleBanner .leftBtn").click(function () {
+    $(".workSingleBanner .slidesWrapper").slick("slickPrev");
+  });
 
-      const totalWidth = marquee.offsetWidth;
-      const animationDuration = totalWidth / 100;
+  $(".workSingleBanner .rightBtn").click(function () {
+    $(".workSingleBanner .slidesWrapper").slick("slickNext");
+  });
 
-      marquee.style.animationDuration = `${animationDuration}s`;
-      clone.style.animationDuration = `${animationDuration}s`;
-
-
-      if (marquee.classList.contains("reverse")) {
-        marquee.style.animationDirection = "reverse";
-        clone.style.animationDirection = "reverse";
-      } else {
-        marquee.style.animationDirection = "normal";
-        clone.style.animationDirection = "normal";
-      }
-    });
-  }
-
-
-
+  ////////////////////////////////////// END HIGHLIGHT ///////////////////////////////////////////////////
 });
