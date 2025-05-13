@@ -1,0 +1,370 @@
+// Work Single Banner Section
+.workSingleBanner {
+  position: relative;
+
+  .belowHeader {
+    position: absolute;
+    right: 0;
+    top: -7rem;
+    width: auto;
+  }
+
+  &.heroMarginTop {
+    // Main container
+    .workSingleContainer {
+      padding-bottom: var(--paddingB8);
+
+      &.sectionWrapper {
+        // Back button/link
+        .backBtn {
+          a {
+            // Arrow icon
+            font-family: var(--manrope);
+            font-size: var(--font20);
+            font-weight: 600;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.2;
+            letter-spacing: normal;
+            text-align: center;
+            color: #171a17;
+            display: flex;
+            align-items: center;
+            gap: 1.6rem;
+            text-decoration: none;
+            margin-bottom: 4rem;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            width: fit-content;
+
+            svg {
+              height: 1.6rem;
+              width: auto;
+
+              path {
+              }
+            }
+
+            // Text span
+            span {
+            }
+
+            // Hover state
+            &:hover {
+              svg path {
+              }
+              span {
+              }
+            }
+          }
+        }
+
+        // Content container
+        .headContainer {
+          // Page title
+          margin-bottom: 8rem;
+
+          h2 {
+            font-family: var(--nunito);
+            font-size: var(--font48);
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: -0.96px;
+            text-align: left;
+            color: #171a17;
+            margin-bottom: 1rem;
+          }
+
+          // Description text
+          p {
+            font-family: var(--manrope);
+            font-size: var(--font16);
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.5;
+            letter-spacing: normal;
+            text-align: left;
+            color: rgba(23, 26, 23, 0.8);
+            width: 50%;
+          }
+        }
+
+        .storiesContainer {
+          // Header container
+          border-radius: 6rem;
+          background-image: linear-gradient(123deg, #992035 3%, #590a18 98%);
+          padding: 6rem;
+          position: relative;
+          overflow: hidden;
+
+          .storiesShape {
+            position: absolute;
+            right: -30rem;
+            top: -2rem;
+            width: auto;
+          }
+
+          .headContainer {
+            // Main heading
+            display: flex;
+            justify-content: space-between;
+            gap: 4rem;
+            margin-bottom: 4rem;
+            position: relative;
+
+            h2 {
+              font-family: var(--nunito);
+              font-size: var(--font48);
+              font-weight: normal;
+              font-stretch: normal;
+              font-style: normal;
+              line-height: normal;
+              letter-spacing: -0.96px;
+              text-align: left;
+              color: #f1efee;
+              flex-basis: 50%;
+            }
+
+            // Right content
+            .right {
+              flex-basis: 50%;
+              p {
+                font-family: var(--manrope);
+                font-size: var(--font16);
+                font-weight: normal;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 1.5;
+                letter-spacing: normal;
+                text-align: left;
+                color: #f1efee;
+                margin-bottom: 2rem;
+              }
+
+              // White button
+              .whiteBtn {
+                &:hover {
+                }
+              }
+            }
+          }
+
+          // Slider container
+          .sliderContainer {
+            position: relative;
+
+            // Navigation buttons wrapper
+            .btnWrapper {
+              // Left arrow button
+              display: flex;
+              align-items: center;
+              gap: 8px;
+
+              svg {
+                width: 4rem;
+                height: 4rem;
+                cursor: pointer;
+                transition: all 0.3s ease-in-out;
+
+                &:hover {
+                  circle,
+                  path {
+                    opacity: 0.6;
+                    transition: all 0.3s ease-in-out;
+                  }
+                }
+              }
+            }
+
+            // Slides wrapper
+            .slidesWrapper {
+              // Individual slide
+              display: flex;
+              gap: 3.2rem;
+              margin-top: 2rem;
+
+              .slide {
+                // Image container with clip path
+                margin: 0 1rem;
+
+                .imgContainer {
+                  // SVG clip path
+                  position: relative;
+                  margin-bottom: 1rem;
+
+                  .tagsContainer {
+                    position: absolute;
+                    top: 1rem;
+                    left: 1rem;
+                    display: flex;
+                    align-items: center;
+                    gap: 0.6rem;
+                    z-index: 1;
+
+                    .cardTag {
+                      background-color: #f0e8e9;
+                    }
+                  }
+
+                  .arrow {
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    width: 7rem;
+                    height: 7rem;
+                    z-index: 1;
+                  }
+
+                  .svg {
+                    position: absolute;
+                    width: 0;
+                    height: 0;
+
+                    clipPath {
+                    }
+                  }
+
+                  // Slide image
+                  img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                  }
+                }
+
+                // Text content
+                .cardTextContent {
+                  h4 {
+                    font-family: var(--manrope);
+                    font-size: var(--font28);
+                    font-weight: 600;
+                    font-stretch: normal;
+                    font-style: normal;
+                    line-height: 1.2;
+                    letter-spacing: normal;
+                    text-align: left;
+                    color: #f1efee;
+                    margin-bottom: 1rem;
+                  }
+
+                  p {
+                    font-family: var(--manrope);
+                    font-size: var(--font16);
+                    font-weight: normal;
+                    font-stretch: normal;
+                    font-style: normal;
+                    line-height: 1.5;
+                    letter-spacing: normal;
+                    text-align: left;
+                    color: #f1efee;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.workRelatedProjects {
+  .workRelatedContainer {
+    padding: var(--padding8);
+
+    .listingsContainer {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 4rem;
+
+      .slide {
+        // Image container with clip path
+        margin: 0 1rem;
+
+        .imgContainer {
+          // SVG clip path
+          position: relative;
+          margin-bottom: 1rem;
+
+          .tagsContainer {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            z-index: 1;
+
+            .cardTag {
+              background-color: #f0e8e9;
+            }
+          }
+
+          .arrow {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 5vw;
+            height: auto;
+            z-index: 1;
+          }
+
+          .svg {
+            position: absolute;
+            width: 0;
+            height: 0;
+
+            clipPath {
+            }
+          }
+
+          // Slide image
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+
+        // Text content
+        .cardTextContent {
+          h4 {
+            font-family: var(--manrope);
+            font-size: var(--font28);
+            font-weight: 600;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.2;
+            letter-spacing: normal;
+            text-align: left;
+            color: #171a17;
+            margin-bottom: 1rem;
+          }
+
+          p {
+            font-family: var(--manrope);
+            font-size: var(--font16);
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.5;
+            letter-spacing: normal;
+            text-align: left;
+            color: #171a17;
+          }
+        }
+      }
+    }
+
+    .viewMoreBox {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 4rem;
+      width: 100%;
+    }
+  }
+}
