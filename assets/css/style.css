@@ -1582,9 +1582,11 @@ a {
     .about_banner .c1 {
       width: 100%; }
       .about_banner .c1 h1 {
-        margin-bottom: 0.8rem; }
+        margin-bottom: 0.8rem;
+        font-size: 2.4rem; }
       .about_banner .c1 p {
-        margin-bottom: 2.4rem; }
+        margin-bottom: 2.4rem;
+        font-size: 1.2rem; }
       .about_banner .c1 .links {
         gap: 0.9rem; }
         .about_banner .c1 .links a {
@@ -1599,9 +1601,11 @@ a {
     max-width: 100%;
     margin-bottom: 2.4rem; }
     .aboutOurApproach .head h1 {
-      margin-bottom: 1rem; }
+      margin-bottom: 1rem;
+      font-size: 2.4rem; }
     .aboutOurApproach .head p {
       width: 90%;
+      font-size: 1.2rem;
       margin-bottom: 1.6rem; }
   .aboutOurApproach .content {
     display: flex;
@@ -1614,6 +1618,7 @@ a {
       .aboutOurApproach .content .c1 p,
       .aboutOurApproach .content .c2 p,
       .aboutOurApproach .content .c3 p {
+        font-size: 2rem;
         display: flex;
         gap: 3rem;
         align-items: center; }
@@ -1624,6 +1629,8 @@ a {
           height: 100%; }
   .aboutKeyPillars .sectionWrapper .head {
     margin-bottom: 2.4rem; }
+    .aboutKeyPillars .sectionWrapper .head h1 {
+      font-size: 2.4rem; }
   .aboutKeyPillars .sectionWrapper .content {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 1.7rem;
@@ -1633,14 +1640,23 @@ a {
       height: auto;
       object-fit: contain;
       aspect-ratio: 1/1; }
+    .aboutKeyPillars .sectionWrapper .content .block h1 {
+      font-size: 1.6rem;
+      margin-bottom: 0.8rem; }
+    .aboutKeyPillars .sectionWrapper .content .block p {
+      font-size: 1.2rem; }
   .aboutBuildingBridges {
     max-width: 100%; }
     .aboutBuildingBridges .sectionWrapper h1 {
-      margin-bottom: 0.8rem; }
+      margin-bottom: 0.8rem;
+      font-size: 2.4rem; }
     .aboutBuildingBridges .sectionWrapper p {
-      width: 90%; }
+      width: 90%;
+      font-size: 1.2rem; }
   .aboutTextImageBlock .sectionWrapper .head {
     margin-bottom: 2.4rem; }
+    .aboutTextImageBlock .sectionWrapper .head h1 {
+      font-size: 2rem; }
   .aboutTextImageBlock .sectionWrapper .content {
     gap: 1.6rem;
     flex-direction: column-reverse; }
@@ -1650,10 +1666,17 @@ a {
       .aboutTextImageBlock .sectionWrapper .content .c1 img {
         max-width: 3.6rem;
         margin-bottom: 1.6rem; }
+      .aboutTextImageBlock .sectionWrapper .content .c1 h1 {
+        font-size: 1.6rem;
+        margin-bottom: 0.8rem; }
+      .aboutTextImageBlock .sectionWrapper .content .c1 p {
+        font-size: 1.2rem; }
     .aboutTextImageBlock .sectionWrapper .content .c2 {
       width: 100%; }
   .aboutTextImageBlock.flip .sectionWrapper .head {
     margin-bottom: 2.4rem; }
+    .aboutTextImageBlock.flip .sectionWrapper .head h1 {
+      font-size: 2rem; }
   .aboutTextImageBlock.flip .sectionWrapper .content {
     gap: 1.6rem;
     flex-direction: column-reverse; }
@@ -1663,6 +1686,11 @@ a {
       .aboutTextImageBlock.flip .sectionWrapper .content .c1 img {
         max-width: 3.6rem;
         margin-bottom: 1.6rem; }
+      .aboutTextImageBlock.flip .sectionWrapper .content .c1 h1 {
+        font-size: 1.6rem;
+        margin-bottom: 0.8rem; }
+      .aboutTextImageBlock.flip .sectionWrapper .content .c1 p {
+        font-size: 1.2rem; }
     .aboutTextImageBlock.flip .sectionWrapper .content .c2 {
       width: 100%; }
   .aboutOurVision .sectionWrapper {
@@ -1671,16 +1699,23 @@ a {
       width: 100%; }
       .aboutOurVision .sectionWrapper .c1 h1 {
         margin-bottom: 2.4rem;
-        width: 40%; }
+        width: 50%;
+        font-size: 2.4rem; }
       .aboutOurVision .sectionWrapper .c1 img {
         width: 50%;
         align-self: center;
         margin-bottom: 2.4rem; }
+      .aboutOurVision .sectionWrapper .c1 p {
+        font-size: 1.2rem;
+        width: 80%; }
     .aboutOurVision .sectionWrapper .c2 {
       width: 100%;
       display: none; }
   .aboutOurJourney .sectionWrapper .head {
-    width: 30%; }
+    width: 40%; }
+    .aboutOurJourney .sectionWrapper .head h1 {
+      font-size: 2.4rem;
+      margin-bottom: 2.4rem; }
   .aboutOurJourney .sectionWrapper .content {
     display: grid;
     grid-template-columns: repeat(1, 1fr); }
@@ -1690,27 +1725,32 @@ a {
       .aboutOurJourney .sectionWrapper .content .block .bg {
         width: 8.5rem; }
       .aboutOurJourney .sectionWrapper .content .block h1 {
-        margin-bottom: 0.8rem; }
+        margin-bottom: 0.8rem;
+        font-size: 1.6rem; }
+      .aboutOurJourney .sectionWrapper .content .block p {
+        font-size: 1.2rem; }
   .aboutMeetPeople .sectionWrapper .head {
-    width: 60%; }
+    width: 70%; }
     .aboutMeetPeople .sectionWrapper .head h1 {
       width: unset;
       text-align: left;
-      margin-bottom: .8rem; }
+      margin-bottom: 0.8rem;
+      font-size: 2.4rem; }
     .aboutMeetPeople .sectionWrapper .head p {
       width: unset;
       text-align: left;
-      margin-bottom: 3.2rem; }
+      margin-bottom: 3.2rem;
+      font-size: 1.2rem; }
   .aboutMeetPeople .sectionWrapper .nav {
     display: flex;
-    gap: .8rem;
+    gap: 0.8rem;
     margin-bottom: 1.6rem; }
     .aboutMeetPeople .sectionWrapper .nav svg {
       width: 2.8rem;
-      transition: all .3s ease-in-out;
+      transition: all 0.3s ease-in-out;
       cursor: pointer; }
       .aboutMeetPeople .sectionWrapper .nav svg:hover {
-        opacity: .7; }
+        opacity: 0.7; }
   .aboutMeetPeople .sectionWrapper .content {
     grid-template-columns: repeat(1, 1fr); }
     .aboutMeetPeople .sectionWrapper .content .slick-slide {
@@ -1722,7 +1762,12 @@ a {
     .aboutMeetPeople .sectionWrapper .content .block img {
       margin-bottom: 1.6rem; }
     .aboutMeetPeople .sectionWrapper .content .block h1 {
-      margin-bottom: 0.4rem; } }
+      margin-bottom: 0.4rem;
+      font-size: 2rem; }
+    .aboutMeetPeople .sectionWrapper .content .block p {
+      font-size: 1.2rem; }
+    .aboutMeetPeople .sectionWrapper .content .block a {
+      font-size: 1.2rem; } }
 
 .teamBanner {
   position: relative;
@@ -1917,6 +1962,70 @@ a {
         letter-spacing: normal;
         text-align: left;
         color: #171a17; }
+
+@media (max-width: 768px) {
+  .teamBanner .bg {
+    display: none; }
+  .teamBanner .sectionWrapper .head h1 {
+    width: 20rem;
+    font-size: 2.4rem;
+    margin-bottom: 0.8rem; }
+  .teamBanner .sectionWrapper .head p {
+    font-size: 1.2rem;
+    max-width: 70%; }
+  .teamBanner .sectionWrapper .content {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1.1rem;
+    row-gap: 2.4rem; }
+    .teamBanner .sectionWrapper .content .block img {
+      margin-bottom: 1.6rem; }
+    .teamBanner .sectionWrapper .content .block h1 {
+      margin-bottom: 0.4rem; }
+  .teamSingle_banner .bg {
+    display: none; }
+  .teamSingle_banner .sectionWrapper .back {
+    order: 1;
+    gap: 0.8rem;
+    margin-bottom: 1.6rem; }
+    .teamSingle_banner .sectionWrapper .back svg {
+      width: 0.7rem; }
+    .teamSingle_banner .sectionWrapper .back a {
+      font-size: 1.2rem; }
+  .teamSingle_banner .sectionWrapper .head {
+    order: 3;
+    flex-direction: column; }
+    .teamSingle_banner .sectionWrapper .head h1 {
+      font-size: 2rem;
+      margin-bottom: 0.8rem; }
+    .teamSingle_banner .sectionWrapper .head p {
+      font-size: 1.2rem;
+      margin-bottom: 1.6rem; }
+  .teamSingle_banner .sectionWrapper .profile {
+    order: 2;
+    flex-direction: column;
+    gap: 0; }
+    .teamSingle_banner .sectionWrapper .profile .c1 {
+      display: flex;
+      flex-direction: column;
+      gap: 2.4rem; }
+    .teamSingle_banner .sectionWrapper .profile .c2 .social {
+      gap: 1.1rem; }
+      .teamSingle_banner .sectionWrapper .profile .c2 .social a {
+        font-size: 1.2rem; }
+        .teamSingle_banner .sectionWrapper .profile .c2 .social a svg {
+          width: 1.8rem; }
+    .teamSingle_banner .sectionWrapper .profile .c2 .content {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); }
+      .teamSingle_banner .sectionWrapper .profile .c2 .content .block h1 {
+        font-size: 1.6rem; }
+      .teamSingle_banner .sectionWrapper .profile .c2 .content .block p {
+        font-size: 1.2rem; }
+  .teamSingle_banner .sectionWrapper .para {
+    order: 4;
+    max-width: 90%; }
+    .teamSingle_banner .sectionWrapper .para p {
+      font-size: 1.2rem; } }
 
 .workSingleBanner {
   position: relative; }
@@ -2160,6 +2269,7 @@ a {
     max-width: 50rem;
     transform: translate(32%, 10%); }
   .reports_banner .sectionWrapper {
+    background-color: transparent;
     display: flex;
     flex-direction: column; }
     .reports_banner .sectionWrapper .head {
@@ -2190,7 +2300,10 @@ a {
         margin-bottom: 2.4rem; }
     .reports_banner .sectionWrapper .filter {
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      row-gap: 1rem;
+      align-items: center;
       margin-bottom: 3.4rem;
       transition: all 0.3s ease-in-out; }
       .reports_banner .sectionWrapper .filter h1 {
@@ -2421,3 +2534,87 @@ a {
           margin-bottom: 1.6rem; }
         .reportSingle_relatedReports .sectionWrapper .container .block .content a {
           width: 100%; }
+
+@media (max-width: 768px) {
+  .reports_banner .bg {
+    z-index: -1;
+    width: 30rem; }
+  .reports_banner .sectionWrapper .head h1 {
+    font-size: 2.4rem;
+    margin-bottom: 0.8rem; }
+  .reports_banner .sectionWrapper .head p {
+    font-size: 1.2rem;
+    margin-bottom: 1.6rem; }
+  .reports_banner .sectionWrapper .filter {
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    margin-bottom: 2.4rem; }
+    .reports_banner .sectionWrapper .filter h1 {
+      text-align: center;
+      font-size: 1.2rem;
+      padding: 1.2rem 2rem;
+      white-space: nowrap; }
+  .reports_banner .sectionWrapper .container {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 3.2rem; }
+    .reports_banner .sectionWrapper .container .block .image .tag {
+      left: 1.6rem;
+      top: 1.6rem; }
+    .reports_banner .sectionWrapper .container .block .content h1 {
+      font-size: 2rem; }
+    .reports_banner .sectionWrapper .container .block .content p {
+      font-size: 1.2rem;
+      margin-bottom: 2.4rem; }
+  .reports_banner .sectionWrapper h2 {
+    font-size: 1.2rem; }
+  .reportSingle_banner .bg {
+    z-index: -1;
+    width: 15rem;
+    top: 0%; }
+  .reportSingle_banner .sectionWrapper {
+    background-color: transparent; }
+    .reportSingle_banner .sectionWrapper .back {
+      gap: 0.8rem;
+      margin-bottom: 1.6rem; }
+      .reportSingle_banner .sectionWrapper .back svg {
+        width: 0.7rem; }
+      .reportSingle_banner .sectionWrapper .back a {
+        font-size: 1.2rem; }
+    .reportSingle_banner .sectionWrapper .head {
+      flex-direction: column;
+      gap: 2.4rem;
+      margin-bottom: 0; }
+      .reportSingle_banner .sectionWrapper .head .c1 {
+        width: 100%; }
+      .reportSingle_banner .sectionWrapper .head .c2 .tag {
+        margin-bottom: 1.6rem; }
+        .reportSingle_banner .sectionWrapper .head .c2 .tag h1 {
+          margin-bottom: 0; }
+      .reportSingle_banner .sectionWrapper .head .c2 h1 {
+        max-width: 63%;
+        font-size: 2rem;
+        margin-bottom: 0.8rem; }
+    .reportSingle_banner .sectionWrapper .para {
+      max-width: 90%;
+      margin-bottom: 2.4rem; }
+      .reportSingle_banner .sectionWrapper .para p {
+        font-size: 1.2rem; }
+    .reportSingle_banner .sectionWrapper .download {
+      width: 100%; }
+  .reportSingle_relatedReports .sectionWrapper .head {
+    margin-bottom: 2.4rem; }
+    .reportSingle_relatedReports .sectionWrapper .head h1 {
+      font-size: 2.4rem; }
+  .reportSingle_relatedReports .sectionWrapper .container {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 3.2rem; }
+    .reportSingle_relatedReports .sectionWrapper .container .block .image img {
+      margin-bottom: 1.6rem; }
+    .reportSingle_relatedReports .sectionWrapper .container .block .image .tag {
+      top: 1.6rem;
+      left: 1.6rem; }
+    .reportSingle_relatedReports .sectionWrapper .container .block .content h1 {
+      font-size: 2rem; }
+    .reportSingle_relatedReports .sectionWrapper .container .block .content p {
+      font-size: 1.2rem;
+      margin-bottom: 2.4rem; } }

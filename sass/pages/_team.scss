@@ -253,3 +253,121 @@
     }
   }
 }
+
+// !mobile
+
+@media (max-width: 768px) {
+  .teamBanner {
+    .bg {
+      display: none;
+    }
+
+    .sectionWrapper {
+      .head {
+        h1 {
+          width: 20rem;
+          font-size: 2.4rem;
+          margin-bottom: 0.8rem;
+        }
+        p {
+          font-size: 1.2rem;
+          max-width: 70%;
+        }
+      }
+      .content {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 1.1rem;
+        row-gap: 2.4rem;
+        .block {
+          img {
+            margin-bottom: 1.6rem;
+          }
+          h1 {
+            margin-bottom: 0.4rem;
+          }
+        }
+      }
+    }
+  }
+
+  .teamSingle_banner {
+    .bg {
+      display: none;
+    }
+    .sectionWrapper {
+      .back {
+        order: 1;
+        gap: 0.8rem;
+        margin-bottom: 1.6rem;
+        svg {
+          width: 0.7rem;
+        }
+        a {
+          font-size: 1.2rem;
+        }
+      }
+
+      .head {
+        order: 3;
+        flex-direction: column;
+        h1 {
+          font-size: 2rem;
+          margin-bottom: 0.8rem;
+        }
+        p {
+          font-size: 1.2rem;
+          margin-bottom: 1.6rem;
+        }
+      }
+
+      .profile {
+        order: 2;
+        flex-direction: column;
+        gap: 0;
+        .c1 {
+          display: flex;
+          flex-direction: column;
+          gap: 2.4rem;
+        }
+        .c2 {
+          .social {
+            // flex-direction: column;
+            gap: 1.1rem;
+            // margin-bottom: ;
+            a {
+              font-size: 1.2rem;
+              svg {
+                width: 1.8rem;
+              }
+            }
+          }
+
+          .content{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            
+            .block{
+
+              h1{
+                font-size: 1.6rem;
+              }
+              p{
+                font-size: 1.2rem;
+              }
+            }
+          }
+        }
+      }
+
+      .para {
+        order: 4;
+        max-width: 90%;
+        p{
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+
+  // !============================
+}
