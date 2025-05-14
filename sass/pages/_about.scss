@@ -9,7 +9,7 @@
     flex-direction: column;
     justify-content: center;
     width: 50%;
-
+    padding: 5rem 0;
     h1 {
       font-family: var(--nunito);
       font-size: var(--font64);
@@ -494,7 +494,7 @@
 }
 
 .aboutMeetPeople {
-    padding: var(--padding8);
+  padding: var(--padding8);
   .sectionWrapper {
     display: flex;
     flex-direction: column;
@@ -572,8 +572,262 @@
       }
     }
 
-    a{
-        align-self: center;
+    a {
+      align-self: center;
     }
   }
+}
+
+// !mobile
+
+@media (max-width: 768px) {
+  .about_banner {
+    flex-direction: column-reverse;
+
+    .c1 {
+      width: 100%;
+
+      h1 {
+        margin-bottom: 0.8rem;
+      }
+
+      p {
+        margin-bottom: 2.4rem;
+      }
+
+      .links {
+        gap: 0.9rem;
+        a {
+          padding: 2.3rem 3rem;
+        }
+      }
+    }
+    .c2 {
+      width: 100%;
+      justify-content: flex-end;
+      img {
+        width: 60%;
+        margin-bottom: -8rem;
+      }
+    }
+  }
+
+  .aboutOurApproach {
+    .head {
+      max-width: 100%;
+      margin-bottom: 2.4rem;
+      h1 {
+        margin-bottom: 1rem;
+      }
+      p {
+        width: 90%;
+        margin-bottom: 1.6rem;
+      }
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+
+      .c1,
+      .c2,
+      .c3 {
+        width: 100%;
+        gap: 2.4rem;
+        p {
+          display: flex;
+          gap: 3rem;
+          align-items: center;
+          svg {
+            width: 2.1rem !important;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .aboutKeyPillars {
+    .sectionWrapper {
+      .head {
+        margin-bottom: 2.4rem;
+      }
+      .content {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 1.7rem;
+        row-gap: 3.2rem;
+        .block {
+          img {
+            max-width: 5rem;
+            height: auto;
+            object-fit: contain;
+            aspect-ratio: 1/1;
+          }
+        }
+      }
+    }
+  }
+
+  .aboutBuildingBridges {
+    max-width: 100%;
+    .sectionWrapper {
+      h1 {
+        margin-bottom: 0.8rem;
+      }
+      p {
+        width: 90%;
+      }
+    }
+  }
+
+  .aboutTextImageBlock {
+    .sectionWrapper {
+      .head {
+        margin-bottom: 2.4rem;
+      }
+      .content {
+        gap: 1.6rem;
+        flex-direction: column-reverse;
+        .c1 {
+          width: 100%;
+          padding: 1.6rem;
+          img {
+            max-width: 3.6rem;
+            margin-bottom: 1.6rem;
+          }
+        }
+        .c2 {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .aboutTextImageBlock.flip {
+    .sectionWrapper {
+      .head {
+        margin-bottom: 2.4rem;
+      }
+      .content {
+        gap: 1.6rem;
+        flex-direction: column-reverse;
+        .c1 {
+          width: 100%;
+          padding: 1.6rem;
+          img {
+            max-width: 3.6rem;
+            margin-bottom: 1.6rem;
+          }
+        }
+        .c2 {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .aboutOurVision {
+    .sectionWrapper {
+      flex-direction: column;
+      .c1 {
+        width: 100%;
+        h1 {
+          margin-bottom: 2.4rem;
+          width: 40%;
+        }
+        img {
+          width: 50%;
+          align-self: center;
+          margin-bottom: 2.4rem;
+        }
+      }
+      .c2 {
+        width: 100%;
+        display: none;
+      }
+    }
+  }
+
+  .aboutOurJourney {
+    .sectionWrapper {
+      .head {
+        width: 30%;
+      }
+
+      .content {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        .block {
+          width: 100%;
+          padding: 3rem 1.6rem;
+
+          .bg {
+            width: 8.5rem;
+          }
+          h1 {
+            margin-bottom: 0.8rem;
+          }
+        }
+      }
+    }
+  }
+
+  .aboutMeetPeople {
+    .sectionWrapper {
+
+
+      .head{
+        width: 60%;
+        h1{
+          width: unset;
+          text-align: left;
+          margin-bottom: .8rem;
+        }
+        p{
+          width: unset;
+          text-align: left;
+          margin-bottom: 3.2rem;
+        }
+      }
+
+
+      .nav{
+        display: flex;
+        gap: .8rem;
+        margin-bottom: 1.6rem;
+
+        svg{
+          width: 2.8rem;
+          transition: all .3s ease-in-out;
+          cursor: pointer;
+          &:hover{
+            opacity: .7;
+          }
+        }
+      }
+
+      .content {
+        grid-template-columns: repeat(1, 1fr);
+
+        .slick-slide {
+          margin-right: 20px !important; /* Adjust gap as needed */
+        }
+
+        .slick-list {
+          margin-right: -20px !important; /* Negative of the above to fix layout */
+        }
+
+        .block {
+          img {
+            margin-bottom: 1.6rem;
+          }
+          h1 {
+            margin-bottom: 0.4rem;
+          }
+        }
+      }
+    }
+  }
+
+  // !=======================
 }

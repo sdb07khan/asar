@@ -161,3 +161,19 @@
   }
 }
 
+.desktop,
+.mobile {
+  display: none !important;
+}
+
+@media (min-width: 769px) {
+  .desktop {
+    display: flex !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .mobile {
+    display: flex !important;
+  }
+}

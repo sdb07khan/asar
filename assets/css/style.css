@@ -249,6 +249,18 @@ a {
     border: 1px solid #f1efee;
     color: #66101f; }
 
+.desktop,
+.mobile {
+  display: none !important; }
+
+@media (min-width: 769px) {
+  .desktop {
+    display: flex !important; } }
+
+@media (max-width: 768px) {
+  .mobile {
+    display: flex !important; } }
+
 .header {
   width: 100%;
   position: fixed;
@@ -1099,7 +1111,8 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 50%; }
+    width: 50%;
+    padding: 5rem 0; }
     .about_banner .c1 h1 {
       font-family: var(--nunito);
       font-size: var(--font64);
@@ -1562,6 +1575,154 @@ a {
           color: rgba(23, 26, 23, 0.8); }
     .aboutMeetPeople .sectionWrapper a {
       align-self: center; }
+
+@media (max-width: 768px) {
+  .about_banner {
+    flex-direction: column-reverse; }
+    .about_banner .c1 {
+      width: 100%; }
+      .about_banner .c1 h1 {
+        margin-bottom: 0.8rem; }
+      .about_banner .c1 p {
+        margin-bottom: 2.4rem; }
+      .about_banner .c1 .links {
+        gap: 0.9rem; }
+        .about_banner .c1 .links a {
+          padding: 2.3rem 3rem; }
+    .about_banner .c2 {
+      width: 100%;
+      justify-content: flex-end; }
+      .about_banner .c2 img {
+        width: 60%;
+        margin-bottom: -8rem; }
+  .aboutOurApproach .head {
+    max-width: 100%;
+    margin-bottom: 2.4rem; }
+    .aboutOurApproach .head h1 {
+      margin-bottom: 1rem; }
+    .aboutOurApproach .head p {
+      width: 90%;
+      margin-bottom: 1.6rem; }
+  .aboutOurApproach .content {
+    display: flex;
+    flex-direction: column; }
+    .aboutOurApproach .content .c1,
+    .aboutOurApproach .content .c2,
+    .aboutOurApproach .content .c3 {
+      width: 100%;
+      gap: 2.4rem; }
+      .aboutOurApproach .content .c1 p,
+      .aboutOurApproach .content .c2 p,
+      .aboutOurApproach .content .c3 p {
+        display: flex;
+        gap: 3rem;
+        align-items: center; }
+        .aboutOurApproach .content .c1 p svg,
+        .aboutOurApproach .content .c2 p svg,
+        .aboutOurApproach .content .c3 p svg {
+          width: 2.1rem !important;
+          height: 100%; }
+  .aboutKeyPillars .sectionWrapper .head {
+    margin-bottom: 2.4rem; }
+  .aboutKeyPillars .sectionWrapper .content {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1.7rem;
+    row-gap: 3.2rem; }
+    .aboutKeyPillars .sectionWrapper .content .block img {
+      max-width: 5rem;
+      height: auto;
+      object-fit: contain;
+      aspect-ratio: 1/1; }
+  .aboutBuildingBridges {
+    max-width: 100%; }
+    .aboutBuildingBridges .sectionWrapper h1 {
+      margin-bottom: 0.8rem; }
+    .aboutBuildingBridges .sectionWrapper p {
+      width: 90%; }
+  .aboutTextImageBlock .sectionWrapper .head {
+    margin-bottom: 2.4rem; }
+  .aboutTextImageBlock .sectionWrapper .content {
+    gap: 1.6rem;
+    flex-direction: column-reverse; }
+    .aboutTextImageBlock .sectionWrapper .content .c1 {
+      width: 100%;
+      padding: 1.6rem; }
+      .aboutTextImageBlock .sectionWrapper .content .c1 img {
+        max-width: 3.6rem;
+        margin-bottom: 1.6rem; }
+    .aboutTextImageBlock .sectionWrapper .content .c2 {
+      width: 100%; }
+  .aboutTextImageBlock.flip .sectionWrapper .head {
+    margin-bottom: 2.4rem; }
+  .aboutTextImageBlock.flip .sectionWrapper .content {
+    gap: 1.6rem;
+    flex-direction: column-reverse; }
+    .aboutTextImageBlock.flip .sectionWrapper .content .c1 {
+      width: 100%;
+      padding: 1.6rem; }
+      .aboutTextImageBlock.flip .sectionWrapper .content .c1 img {
+        max-width: 3.6rem;
+        margin-bottom: 1.6rem; }
+    .aboutTextImageBlock.flip .sectionWrapper .content .c2 {
+      width: 100%; }
+  .aboutOurVision .sectionWrapper {
+    flex-direction: column; }
+    .aboutOurVision .sectionWrapper .c1 {
+      width: 100%; }
+      .aboutOurVision .sectionWrapper .c1 h1 {
+        margin-bottom: 2.4rem;
+        width: 40%; }
+      .aboutOurVision .sectionWrapper .c1 img {
+        width: 50%;
+        align-self: center;
+        margin-bottom: 2.4rem; }
+    .aboutOurVision .sectionWrapper .c2 {
+      width: 100%;
+      display: none; }
+  .aboutOurJourney .sectionWrapper .head {
+    width: 30%; }
+  .aboutOurJourney .sectionWrapper .content {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); }
+    .aboutOurJourney .sectionWrapper .content .block {
+      width: 100%;
+      padding: 3rem 1.6rem; }
+      .aboutOurJourney .sectionWrapper .content .block .bg {
+        width: 8.5rem; }
+      .aboutOurJourney .sectionWrapper .content .block h1 {
+        margin-bottom: 0.8rem; }
+  .aboutMeetPeople .sectionWrapper .head {
+    width: 60%; }
+    .aboutMeetPeople .sectionWrapper .head h1 {
+      width: unset;
+      text-align: left;
+      margin-bottom: .8rem; }
+    .aboutMeetPeople .sectionWrapper .head p {
+      width: unset;
+      text-align: left;
+      margin-bottom: 3.2rem; }
+  .aboutMeetPeople .sectionWrapper .nav {
+    display: flex;
+    gap: .8rem;
+    margin-bottom: 1.6rem; }
+    .aboutMeetPeople .sectionWrapper .nav svg {
+      width: 2.8rem;
+      transition: all .3s ease-in-out;
+      cursor: pointer; }
+      .aboutMeetPeople .sectionWrapper .nav svg:hover {
+        opacity: .7; }
+  .aboutMeetPeople .sectionWrapper .content {
+    grid-template-columns: repeat(1, 1fr); }
+    .aboutMeetPeople .sectionWrapper .content .slick-slide {
+      margin-right: 20px !important;
+      /* Adjust gap as needed */ }
+    .aboutMeetPeople .sectionWrapper .content .slick-list {
+      margin-right: -20px !important;
+      /* Negative of the above to fix layout */ }
+    .aboutMeetPeople .sectionWrapper .content .block img {
+      margin-bottom: 1.6rem; }
+    .aboutMeetPeople .sectionWrapper .content .block h1 {
+      margin-bottom: 0.4rem; } }
 
 .teamBanner {
   position: relative;
