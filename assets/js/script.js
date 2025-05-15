@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", function () {
     arrows: false,
     infinite: false,
     speed: 800,
-    slidesToShow: 2.1,
+    slidesToShow: 2.7,
     adaptiveHeight: true,
   });
 
@@ -121,6 +121,343 @@ document.addEventListener("DOMContentLoaded", function () {
   $(".workSingleBanner .rightBtn").click(function () {
     $(".workSingleBanner .slidesWrapper").slick("slickNext");
   });
+
+  // social section slider HIGHLIGHT
+  $(".linkedInListings .listingsWrapper").slick({
+    dots: false,
+    arrows: false,
+    infinite: false,
+    speed: 800,
+    slidesToShow: 4.2,
+    adaptiveHeight: true,
+  });
+
+  $(".linkedInListings .leftBtn").click(function () {
+    $(".linkedInListings .listingsWrapper").slick("slickPrev");
+  });
+
+  $(".linkedInListings .rightBtn").click(function () {
+    $(".linkedInListings .listingsWrapper").slick("slickNext");
+  });
+
+  // social section slider HIGHLIGHT
+  $(".instagramListings .listingsWrapper").slick({
+    dots: false,
+    arrows: false,
+    infinite: false,
+    speed: 800,
+    slidesToShow: 4.2,
+    adaptiveHeight: true,
+  });
+
+  $(".instagramListings .leftBtn").click(function () {
+    $(".instagramListings .listingsWrapper").slick("slickPrev");
+  });
+
+  $(".instagramListings .rightBtn").click(function () {
+    $(".instagramListings .listingsWrapper").slick("slickNext");
+  });
+
+  // Fade-in text  HIGHLIGHT
+  gsap.utils.toArray(".fade-in").forEach((item, index) => {
+    gsap.set(item, { opacity: 0, y: 60 });
+
+    gsap.to(item, {
+      opacity: 1,
+      y: 0,
+      duration: 1.5,
+      ease: "power3.out",
+      delay: index * 0.01,
+      scrollTrigger: {
+        trigger: item,
+        start: "top 90%",
+        toggleActions: "play none none none",
+      },
+    });
+  });
+
+  gsap.utils.toArray(".op").forEach((item, index) => {
+    gsap.set(item, { opacity: 0 });
+
+    gsap.to(item, {
+      opacity: 1,
+      duration: 1.5,
+      ease: "power3.out",
+      delay: index * 0.01,
+      scrollTrigger: {
+        trigger: item,
+        start: "top 90%",
+        toggleActions: "play none none none",
+      },
+    });
+  });
+
+  // Image animations with directional clip path effect HIGHLIGHT
+  gsap.utils
+    .toArray(".img-left, .img-right, .img-center, .img-door")
+    .forEach((img, index) => {
+      let clipPathValue = "polygon(0% 110%, 100% 110%, 100% 210%, 0% 210%)";
+
+      if (img.classList.contains("img-left")) {
+        clipPathValue = "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)";
+      } else if (img.classList.contains("img-right")) {
+        clipPathValue = "polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%)";
+      } else if (img.classList.contains("img-center")) {
+        clipPathValue = "polygon(0% 50%, 100% 50%, 100% 50%, 0% 50%)";
+      } else if (img.classList.contains("img-door")) {
+        clipPathValue = "polygon(50% 0%, 50% 0%, 50% 100%, 50% 100%)";
+      }
+
+      gsap.set(img, {
+        opacity: 0,
+        clipPath: clipPathValue,
+      });
+
+      let finalClipPath = "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)";
+      if (img.classList.contains("img-left")) {
+        finalClipPath = "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)";
+      } else if (img.classList.contains("img-right")) {
+        finalClipPath = "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)";
+      } else if (img.classList.contains("img-center")) {
+        finalClipPath = "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)";
+      } else if (img.classList.contains("img-door")) {
+        finalClipPath = "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)";
+      }
+
+      gsap.to(img, {
+        opacity: 1,
+        clipPath: finalClipPath,
+        duration: 1.5,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: img,
+          start: "top 90%",
+          toggleActions: "play none none none",
+        },
+      });
+    });
+
+  ///////////////////////////////////////////////////////////////////////////////////////// Home Page Map code HIGHLIGHT
+
+  // Themes begin
+  am4core.useTheme(am4themes_animated);
+  // Themes end
+
+  am4core.options.commercialLicense = true;
+
+  // Create map instance
+  var chart = am4core.create("chartdiv", am4maps.MapChart);
+
+  // Set map definition
+  chart.geodata = am4geodata_india2019High;
+
+  // Disable all zoom interactions
+  chart.chartContainer.wheelable = false;
+  chart.seriesContainer.draggable = false;
+  chart.seriesContainer.resizable = false;
+  chart.maxZoomLevel = 1;
+  // chart.zoomControl = new am4maps.ZoomControl();
+  // chart.zoomControl.slider.height = 0;
+
+  // Create map polygon series
+  var polygonSeries = chart.series.push(new am4maps.MapPolygonSeries());
+
+  // Set default fill color
+  polygonSeries.mapPolygons.template.fill = am4core.color("#668CB0");
+
+  //Set min/max fill color for each area
+  polygonSeries.heatRules.push({
+    property: "fill",
+    target: polygonSeries.mapPolygons.template,
+    min: chart.colors.getIndex(0).brighten(1),
+    min: chart.colors.getIndex(1).brighten(0.3),
+    // logarithmic: true
+    // "min": am4core.color("#ffd7b1"),
+  });
+
+  // Make map load polygon data (state shapes and names) from GeoJSON
+  polygonSeries.useGeodata = true;
+
+  // Set heatmap values for each state
+  polygonSeries.data = [
+    {
+      id: "IN-JK",
+      value: 10,
+    },
+    {
+      id: "IN-MH",
+      value: 12,
+      description: "Urban clean air pilots & community climate labs.",
+    },
+    {
+      id: "IN-UP",
+      value: 10,
+    },
+    {
+      id: "US-AR",
+      value: 13,
+    },
+    {
+      id: "IN-RJ",
+      value: 30,
+    },
+    {
+      id: "IN-AP",
+      value: 40,
+    },
+    {
+      id: "IN-MP",
+      value: 90,
+    },
+    {
+      id: "IN-TN",
+      value: 40,
+    },
+    {
+      id: "IN-JH",
+      value: 3,
+    },
+    {
+      id: "IN-WB",
+      value: 0,
+    },
+    {
+      id: "IN-GJ",
+      value: 0,
+    },
+    {
+      id: "IN-BR",
+      value: 0,
+    },
+    {
+      id: "IN-TG",
+      value: 0,
+    },
+    {
+      id: "IN-GA",
+      value: 0,
+    },
+    {
+      id: "IN-DN",
+      value: 0,
+    },
+    {
+      id: "IN-DL",
+      value: 0,
+    },
+    {
+      id: "IN-DD",
+      value: 0,
+    },
+    {
+      id: "IN-CH",
+      value: 0,
+    },
+    {
+      id: "IN-CT",
+      value: 0,
+    },
+    {
+      id: "IN-AS",
+      value: 0,
+    },
+    {
+      id: "IN-AR",
+      value: 0,
+    },
+    {
+      id: "IN-AN",
+      value: 0,
+    },
+    {
+      id: "IN-KA",
+      value: 0,
+    },
+    {
+      id: "IN-KL",
+      value: 0,
+    },
+    {
+      id: "IN-OR",
+      value: 0,
+    },
+    {
+      id: "IN-SK",
+      value: 0,
+    },
+    {
+      id: "IN-HP",
+      value: 15,
+    },
+    {
+      id: "IN-PB",
+      value: 14,
+    },
+    {
+      id: "IN-HR",
+      value: 13,
+    },
+    {
+      id: "IN-UT",
+      value: 12,
+    },
+    {
+      id: "IN-LK",
+      value: 12,
+    },
+    {
+      id: "IN-MN",
+      value: 5,
+    },
+    {
+      id: "IN-TR",
+      value: 4,
+    },
+    {
+      id: "IN-MZ",
+      value: 3,
+    },
+    {
+      id: "IN-NL",
+      value: 2,
+    },
+    {
+      id: "IN-ML",
+      value: 1,
+    },
+  ];
+
+  // Configure series tooltip
+  var polygonTemplate = polygonSeries.mapPolygons.template;
+  // polygonTemplate.tooltipText = "{name}: {value}";
+  // Use HTML instead of plain text
+  polygonTemplate.tooltipHTML = `
+  <div style="background:#650F1C; padding:12px 16px; border-radius:15px; color:white; font-family:manrope; max-width:220px; white-space:normal; word-wrap:break-word; overflow-wrap:break-word;">
+    <div style="font-size:var(--font20); font-weight:300; margin-bottom:6px;">{name}</div>
+    <div style="font-size:var(--font12); font-weight:normal; line-height:normal; white-space:normal; word-wrap:break-word; overflow-wrap:break-word;">{description}</div>
+  </div>
+`;
+
+  // Optional: clear the plain text version to avoid conflict
+  polygonTemplate.tooltipText = "";
+
+  // Apply styling safely after tooltip is ready
+  polygonTemplate.adapter.add("tooltipHTML", function (html, target) {
+    if (target.tooltip && target.tooltip.background) {
+      target.tooltip.background.fillOpacity = 0;
+      target.tooltip.background.strokeOpacity = 0;
+      target.tooltip.filters.clear();
+      target.tooltip.pointerOrientation = "down";
+    }
+    return html;
+  });
+
+  polygonTemplate.nonScalingStroke = true;
+  polygonTemplate.strokeWidth = 0.5;
+
+  // Create hover state and set alternative fill color
+  var hs = polygonTemplate.states.create("hover");
+  hs.properties.fill = am4core.color("#B82A2A");
 
   ////////////////////////////////////// END HIGHLIGHT ///////////////////////////////////////////////////
 });

@@ -15,9 +15,10 @@
 
     .footerShape {
       position: absolute;
-      right: -4rem;
+      right: -40rem;
       top: -2rem;
       width: auto;
+      animation: rotate360 60s linear infinite;
     }
 
     .left {

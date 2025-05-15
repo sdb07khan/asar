@@ -20,6 +20,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="https://www.amcharts.com/lib/4/core.js"></script>
+    <script src="https://www.amcharts.com/lib/4/maps.js"></script>
+    <script src="https://www.amcharts.com/lib/4/geodata/india2019High.js"></script>
+    <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
 
     <script src="assets/js/script.js" defer></script>
 
@@ -29,13 +33,13 @@
     <header class="header">
       <div class="headerContainer sectionWrapper">
         <div class="headerLogo">
-          <a href="">
+          <a href="/index.html">
             <img src="assets/images/home/logo.svg" alt="Asar Logo" />
           </a>
         </div>
         <nav class="headerNav">
           <ul>
-            <li><a href="">About</a></li>
+            <li><a href="/about-us.html">About</a></li>
             <li><a href="/ourWork.html">Our work</a></li>
             <li><a href="">Knowledge hub</a></li>
             <li><a href="">Engage with us</a></li>
@@ -44,7 +48,7 @@
           </ul>
         </nav>
         <div class="contactBtn">
-          <a href="/contact-us.html" class="maroonBtn">Contact us</a>
+          <a href="/contactUs.html" class="maroonBtn">Contact us</a>
         </div>
       </div>
     </header>
@@ -52,16 +56,16 @@
     <section class="homeBanner heroMarginTop">
       <div class="homeBannerContainer sectionWrapper">
         <div class="homeBannerContent">
-          <div class="topTitle">
+          <div class="topTitle fade-in">
             <h2>Together</h2>
             <img src="assets/images/home/snowFlake.svg" alt="" />
             <h2>Climate futures</h2>
           </div>
-          <h1>
+          <h1 class="fade-in">
             <span>Connecting actions</span>
             <span>Co-powering change</span>
           </h1>
-          <p>
+          <p class="fade-in">
             Asar Social Impact Advisors is a startup in the environment and
             social justice impact space with a commitment to building climate
             resilience and ambitious climate action. We identify challenges and
@@ -71,13 +75,17 @@
             helps build relationships between various key actors to be able to
             sustain collaborations essential to deliver real-world impact.
           </p>
-          <a href="" class="maroonBtn">Explore our work</a>
+          <a href="/ourWork.html" class="maroonBtn op">Explore our work</a>
         </div>
       </div>
       <div class="homeBannerImage">
-        <img src="assets/images/home/homeBannerImage.webp" alt="" />
+        <img
+          class="img-door"
+          src="assets/images/home/homeBannerImage.webp"
+          alt=""
+        />
 
-        <div class="bannerCard sectionWrapper">
+        <div class="bannerCard sectionWrapper fade-in">
           <div class="pointsWrapper">
             <div class="point">
               <p>Engaging with partners in</p>
@@ -118,10 +126,10 @@
 
     <section class="homeSpotlight sectionWrapper">
       <div class="spotlightContainer">
-        <h2>Spotlight</h2>
+        <h2 class="fade-in">Spotlight</h2>
 
         <div class="cardsContainer">
-          <div class="card">
+          <div class="card fade-in">
             <div class="tagsContainer">
               <div class="cardTag">
                 <p>Upcoming Events</p>
@@ -161,7 +169,7 @@
             </div>
           </div>
 
-          <div class="card">
+          <div class="card fade-in">
             <div class="tagsContainer">
               <div class="cardTag">
                 <p>Upcoming Events</p>
@@ -268,229 +276,253 @@
           </div>
 
           <div class="slidesWrapper">
-            <div class="slide">
-              <div class="imgContainer">
-                <div class="tagsContainer">
-                  <div class="cardTag">
-                    <p>Air Quality</p>
+            <a href="" class="slideLink">
+              <div class="slide">
+                <div class="imgContainer">
+                  <div class="tagsContainer">
+                    <div class="cardTag">
+                      <p>Air Quality</p>
+                    </div>
+                    <div class="cardTag">
+                      <p>Urban Action</p>
+                    </div>
                   </div>
-                  <div class="cardTag">
-                    <p>Urban Action</p>
-                  </div>
+
+                  <svg
+                    class="arrow"
+                    width="83"
+                    height="83"
+                    viewBox="0 0 83 83"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      cx="41.1035"
+                      cy="41.1035"
+                      r="41.1035"
+                      fill="#F1EFEE"
+                    />
+                    <path
+                      d="M31.7963 47.3461C31.1677 47.9748 31.1677 48.994 31.7963 49.6226C32.425 50.2513 33.4442 50.2513 34.0728 49.6226L31.7963 47.3461ZM50.097 32.9317C50.097 32.0427 49.3763 31.322 48.4873 31.322H33.9996C33.1106 31.322 32.3899 32.0427 32.3899 32.9317C32.3899 33.8207 33.1106 34.5414 33.9996 34.5414H46.8775V47.4194C46.8775 48.3084 47.5982 49.0291 48.4873 49.0291C49.3763 49.0291 50.097 48.3084 50.097 47.4194V32.9317ZM32.9346 48.4844L34.0728 49.6226L49.6255 34.07L48.4873 32.9317L47.349 31.7934L31.7963 47.3461L32.9346 48.4844Z"
+                      fill="#66101F"
+                    />
+                  </svg>
+
+                  <svg class="svg">
+                    <clipPath
+                      id="my-clip-path"
+                      clipPathUnits="objectBoundingBox"
+                    >
+                      <path
+                        d="M1,0.621 C1,0.655,0.982,0.677,0.965,0.672 C0.96,0.671,0.954,0.67,0.949,0.67 C0.886,0.67,0.836,0.77,0.836,0.894 C0.836,0.906,0.836,0.919,0.837,0.931 C0.84,0.964,0.829,1,0.811,1 H0.023 C0.01,1,0,0.982,0,0.957 V0.047 C0,0.022,0.01,0.002,0.023,0.002 H0.977 C0.99,0.002,1,0.022,1,0.047 V0.621"
+                      ></path>
+                    </clipPath>
+                  </svg>
+
+                  <img
+                    src="assets/images/home/spot1.webp"
+                    alt=""
+                    style="clip-path: url(#my-clip-path)"
+                  />
                 </div>
 
-                <svg
-                  class="arrow"
-                  width="83"
-                  height="83"
-                  viewBox="0 0 83 83"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <circle
-                    cx="41.1035"
-                    cy="41.1035"
-                    r="41.1035"
-                    fill="#F1EFEE"
-                  />
-                  <path
-                    d="M31.7963 47.3461C31.1677 47.9748 31.1677 48.994 31.7963 49.6226C32.425 50.2513 33.4442 50.2513 34.0728 49.6226L31.7963 47.3461ZM50.097 32.9317C50.097 32.0427 49.3763 31.322 48.4873 31.322H33.9996C33.1106 31.322 32.3899 32.0427 32.3899 32.9317C32.3899 33.8207 33.1106 34.5414 33.9996 34.5414H46.8775V47.4194C46.8775 48.3084 47.5982 49.0291 48.4873 49.0291C49.3763 49.0291 50.097 48.3084 50.097 47.4194V32.9317ZM32.9346 48.4844L34.0728 49.6226L49.6255 34.07L48.4873 32.9317L47.349 31.7934L31.7963 47.3461L32.9346 48.4844Z"
-                    fill="#66101F"
-                  />
-                </svg>
+                <div class="cardTextContent">
+                  <h4>Clean Air, Collective Voices – Ranchi’s Turnaround</h4>
+                  <p>
+                    Through a participatory air action plan, citizens,
+                    scientists, and city officials in Ranchi co-developed clean
+                    air strategies that led to a 22% reduction in PM2.5 over a
+                    year.
+                  </p>
+                </div>
+              </div>
+            </a>
 
-                <svg class="svg">
-                  <clipPath id="my-clip-path" clipPathUnits="objectBoundingBox">
+            <a href="" class="slideLink">
+              <div class="slide">
+                <div class="imgContainer">
+                  <div class="tagsContainer">
+                    <div class="cardTag">
+                      <p>Air Quality</p>
+                    </div>
+                    <div class="cardTag">
+                      <p>Urban Action</p>
+                    </div>
+                  </div>
+
+                  <svg
+                    class="arrow"
+                    width="83"
+                    height="83"
+                    viewBox="0 0 83 83"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      cx="41.1035"
+                      cy="41.1035"
+                      r="41.1035"
+                      fill="#F1EFEE"
+                    />
                     <path
-                      d="M1,0.621 C1,0.655,0.982,0.677,0.965,0.672 C0.96,0.671,0.954,0.67,0.949,0.67 C0.886,0.67,0.836,0.77,0.836,0.894 C0.836,0.906,0.836,0.919,0.837,0.931 C0.84,0.964,0.829,1,0.811,1 H0.023 C0.01,1,0,0.982,0,0.957 V0.047 C0,0.022,0.01,0.002,0.023,0.002 H0.977 C0.99,0.002,1,0.022,1,0.047 V0.621"
-                    ></path>
-                  </clipPath>
-                </svg>
+                      d="M31.7963 47.3461C31.1677 47.9748 31.1677 48.994 31.7963 49.6226C32.425 50.2513 33.4442 50.2513 34.0728 49.6226L31.7963 47.3461ZM50.097 32.9317C50.097 32.0427 49.3763 31.322 48.4873 31.322H33.9996C33.1106 31.322 32.3899 32.0427 32.3899 32.9317C32.3899 33.8207 33.1106 34.5414 33.9996 34.5414H46.8775V47.4194C46.8775 48.3084 47.5982 49.0291 48.4873 49.0291C49.3763 49.0291 50.097 48.3084 50.097 47.4194V32.9317ZM32.9346 48.4844L34.0728 49.6226L49.6255 34.07L48.4873 32.9317L47.349 31.7934L31.7963 47.3461L32.9346 48.4844Z"
+                      fill="#66101F"
+                    />
+                  </svg>
 
-                <img
-                  src="assets/images/home/spot1.webp"
-                  alt=""
-                  style="clip-path: url(#my-clip-path)"
-                />
-              </div>
+                  <svg class="svg">
+                    <clipPath
+                      id="my-clip-path"
+                      clipPathUnits="objectBoundingBox"
+                    >
+                      <path
+                        d="M1,0.621 C1,0.655,0.982,0.677,0.965,0.672 C0.96,0.671,0.954,0.67,0.949,0.67 C0.886,0.67,0.836,0.77,0.836,0.894 C0.836,0.906,0.836,0.919,0.837,0.931 C0.84,0.964,0.829,1,0.811,1 H0.023 C0.01,1,0,0.982,0,0.957 V0.047 C0,0.022,0.01,0.002,0.023,0.002 H0.977 C0.99,0.002,1,0.022,1,0.047 V0.621"
+                      ></path>
+                    </clipPath>
+                  </svg>
 
-              <div class="cardTextContent">
-                <h4>Clean Air, Collective Voices – Ranchi’s Turnaround</h4>
-                <p>
-                  Through a participatory air action plan, citizens, scientists,
-                  and city officials in Ranchi co-developed clean air strategies
-                  that led to a 22% reduction in PM2.5 over a year.
-                </p>
-              </div>
-            </div>
-
-            <div class="slide">
-              <div class="imgContainer">
-                <div class="tagsContainer">
-                  <div class="cardTag">
-                    <p>Air Quality</p>
-                  </div>
-                  <div class="cardTag">
-                    <p>Urban Action</p>
-                  </div>
+                  <img
+                    src="assets/images/home/spot1.webp"
+                    alt=""
+                    style="clip-path: url(#my-clip-path)"
+                  />
                 </div>
 
-                <svg
-                  class="arrow"
-                  width="83"
-                  height="83"
-                  viewBox="0 0 83 83"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <circle
-                    cx="41.1035"
-                    cy="41.1035"
-                    r="41.1035"
-                    fill="#F1EFEE"
-                  />
-                  <path
-                    d="M31.7963 47.3461C31.1677 47.9748 31.1677 48.994 31.7963 49.6226C32.425 50.2513 33.4442 50.2513 34.0728 49.6226L31.7963 47.3461ZM50.097 32.9317C50.097 32.0427 49.3763 31.322 48.4873 31.322H33.9996C33.1106 31.322 32.3899 32.0427 32.3899 32.9317C32.3899 33.8207 33.1106 34.5414 33.9996 34.5414H46.8775V47.4194C46.8775 48.3084 47.5982 49.0291 48.4873 49.0291C49.3763 49.0291 50.097 48.3084 50.097 47.4194V32.9317ZM32.9346 48.4844L34.0728 49.6226L49.6255 34.07L48.4873 32.9317L47.349 31.7934L31.7963 47.3461L32.9346 48.4844Z"
-                    fill="#66101F"
-                  />
-                </svg>
+                <div class="cardTextContent">
+                  <h4>Clean Air, Collective Voices – Ranchi’s Turnaround</h4>
+                  <p>
+                    Through a participatory air action plan, citizens,
+                    scientists, and city officials in Ranchi co-developed clean
+                    air strategies that led to a 22% reduction in PM2.5 over a
+                    year.
+                  </p>
+                </div>
+              </div>
+            </a>
 
-                <svg class="svg">
-                  <clipPath id="my-clip-path" clipPathUnits="objectBoundingBox">
+            <a href="" class="slideLink">
+              <div class="slide">
+                <div class="imgContainer">
+                  <div class="tagsContainer">
+                    <div class="cardTag">
+                      <p>Air Quality</p>
+                    </div>
+                    <div class="cardTag">
+                      <p>Urban Action</p>
+                    </div>
+                  </div>
+
+                  <svg
+                    class="arrow"
+                    width="83"
+                    height="83"
+                    viewBox="0 0 83 83"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      cx="41.1035"
+                      cy="41.1035"
+                      r="41.1035"
+                      fill="#F1EFEE"
+                    />
                     <path
-                      d="M1,0.621 C1,0.655,0.982,0.677,0.965,0.672 C0.96,0.671,0.954,0.67,0.949,0.67 C0.886,0.67,0.836,0.77,0.836,0.894 C0.836,0.906,0.836,0.919,0.837,0.931 C0.84,0.964,0.829,1,0.811,1 H0.023 C0.01,1,0,0.982,0,0.957 V0.047 C0,0.022,0.01,0.002,0.023,0.002 H0.977 C0.99,0.002,1,0.022,1,0.047 V0.621"
-                    ></path>
-                  </clipPath>
-                </svg>
+                      d="M31.7963 47.3461C31.1677 47.9748 31.1677 48.994 31.7963 49.6226C32.425 50.2513 33.4442 50.2513 34.0728 49.6226L31.7963 47.3461ZM50.097 32.9317C50.097 32.0427 49.3763 31.322 48.4873 31.322H33.9996C33.1106 31.322 32.3899 32.0427 32.3899 32.9317C32.3899 33.8207 33.1106 34.5414 33.9996 34.5414H46.8775V47.4194C46.8775 48.3084 47.5982 49.0291 48.4873 49.0291C49.3763 49.0291 50.097 48.3084 50.097 47.4194V32.9317ZM32.9346 48.4844L34.0728 49.6226L49.6255 34.07L48.4873 32.9317L47.349 31.7934L31.7963 47.3461L32.9346 48.4844Z"
+                      fill="#66101F"
+                    />
+                  </svg>
 
-                <img
-                  src="assets/images/home/spot1.webp"
-                  alt=""
-                  style="clip-path: url(#my-clip-path)"
-                />
-              </div>
+                  <svg class="svg">
+                    <clipPath
+                      id="my-clip-path"
+                      clipPathUnits="objectBoundingBox"
+                    >
+                      <path
+                        d="M1,0.621 C1,0.655,0.982,0.677,0.965,0.672 C0.96,0.671,0.954,0.67,0.949,0.67 C0.886,0.67,0.836,0.77,0.836,0.894 C0.836,0.906,0.836,0.919,0.837,0.931 C0.84,0.964,0.829,1,0.811,1 H0.023 C0.01,1,0,0.982,0,0.957 V0.047 C0,0.022,0.01,0.002,0.023,0.002 H0.977 C0.99,0.002,1,0.022,1,0.047 V0.621"
+                      ></path>
+                    </clipPath>
+                  </svg>
 
-              <div class="cardTextContent">
-                <h4>Clean Air, Collective Voices – Ranchi’s Turnaround</h4>
-                <p>
-                  Through a participatory air action plan, citizens, scientists,
-                  and city officials in Ranchi co-developed clean air strategies
-                  that led to a 22% reduction in PM2.5 over a year.
-                </p>
-              </div>
-            </div>
-
-            <div class="slide">
-              <div class="imgContainer">
-                <div class="tagsContainer">
-                  <div class="cardTag">
-                    <p>Air Quality</p>
-                  </div>
-                  <div class="cardTag">
-                    <p>Urban Action</p>
-                  </div>
+                  <img
+                    src="assets/images/home/spot1.webp"
+                    alt=""
+                    style="clip-path: url(#my-clip-path)"
+                  />
                 </div>
 
-                <svg
-                  class="arrow"
-                  width="83"
-                  height="83"
-                  viewBox="0 0 83 83"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <circle
-                    cx="41.1035"
-                    cy="41.1035"
-                    r="41.1035"
-                    fill="#F1EFEE"
-                  />
-                  <path
-                    d="M31.7963 47.3461C31.1677 47.9748 31.1677 48.994 31.7963 49.6226C32.425 50.2513 33.4442 50.2513 34.0728 49.6226L31.7963 47.3461ZM50.097 32.9317C50.097 32.0427 49.3763 31.322 48.4873 31.322H33.9996C33.1106 31.322 32.3899 32.0427 32.3899 32.9317C32.3899 33.8207 33.1106 34.5414 33.9996 34.5414H46.8775V47.4194C46.8775 48.3084 47.5982 49.0291 48.4873 49.0291C49.3763 49.0291 50.097 48.3084 50.097 47.4194V32.9317ZM32.9346 48.4844L34.0728 49.6226L49.6255 34.07L48.4873 32.9317L47.349 31.7934L31.7963 47.3461L32.9346 48.4844Z"
-                    fill="#66101F"
-                  />
-                </svg>
+                <div class="cardTextContent">
+                  <h4>Clean Air, Collective Voices – Ranchi’s Turnaround</h4>
+                  <p>
+                    Through a participatory air action plan, citizens,
+                    scientists, and city officials in Ranchi co-developed clean
+                    air strategies that led to a 22% reduction in PM2.5 over a
+                    year.
+                  </p>
+                </div>
+              </div>
+            </a>
 
-                <svg class="svg">
-                  <clipPath id="my-clip-path" clipPathUnits="objectBoundingBox">
+            <a href="" class="slideLink">
+              <div class="slide">
+                <div class="imgContainer">
+                  <div class="tagsContainer">
+                    <div class="cardTag">
+                      <p>Air Quality</p>
+                    </div>
+                    <div class="cardTag">
+                      <p>Urban Action</p>
+                    </div>
+                  </div>
+
+                  <svg
+                    class="arrow"
+                    width="83"
+                    height="83"
+                    viewBox="0 0 83 83"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      cx="41.1035"
+                      cy="41.1035"
+                      r="41.1035"
+                      fill="#F1EFEE"
+                    />
                     <path
-                      d="M1,0.621 C1,0.655,0.982,0.677,0.965,0.672 C0.96,0.671,0.954,0.67,0.949,0.67 C0.886,0.67,0.836,0.77,0.836,0.894 C0.836,0.906,0.836,0.919,0.837,0.931 C0.84,0.964,0.829,1,0.811,1 H0.023 C0.01,1,0,0.982,0,0.957 V0.047 C0,0.022,0.01,0.002,0.023,0.002 H0.977 C0.99,0.002,1,0.022,1,0.047 V0.621"
-                    ></path>
-                  </clipPath>
-                </svg>
+                      d="M31.7963 47.3461C31.1677 47.9748 31.1677 48.994 31.7963 49.6226C32.425 50.2513 33.4442 50.2513 34.0728 49.6226L31.7963 47.3461ZM50.097 32.9317C50.097 32.0427 49.3763 31.322 48.4873 31.322H33.9996C33.1106 31.322 32.3899 32.0427 32.3899 32.9317C32.3899 33.8207 33.1106 34.5414 33.9996 34.5414H46.8775V47.4194C46.8775 48.3084 47.5982 49.0291 48.4873 49.0291C49.3763 49.0291 50.097 48.3084 50.097 47.4194V32.9317ZM32.9346 48.4844L34.0728 49.6226L49.6255 34.07L48.4873 32.9317L47.349 31.7934L31.7963 47.3461L32.9346 48.4844Z"
+                      fill="#66101F"
+                    />
+                  </svg>
 
-                <img
-                  src="assets/images/home/spot1.webp"
-                  alt=""
-                  style="clip-path: url(#my-clip-path)"
-                />
-              </div>
+                  <svg class="svg">
+                    <clipPath
+                      id="my-clip-path"
+                      clipPathUnits="objectBoundingBox"
+                    >
+                      <path
+                        d="M1,0.621 C1,0.655,0.982,0.677,0.965,0.672 C0.96,0.671,0.954,0.67,0.949,0.67 C0.886,0.67,0.836,0.77,0.836,0.894 C0.836,0.906,0.836,0.919,0.837,0.931 C0.84,0.964,0.829,1,0.811,1 H0.023 C0.01,1,0,0.982,0,0.957 V0.047 C0,0.022,0.01,0.002,0.023,0.002 H0.977 C0.99,0.002,1,0.022,1,0.047 V0.621"
+                      ></path>
+                    </clipPath>
+                  </svg>
 
-              <div class="cardTextContent">
-                <h4>Clean Air, Collective Voices – Ranchi’s Turnaround</h4>
-                <p>
-                  Through a participatory air action plan, citizens, scientists,
-                  and city officials in Ranchi co-developed clean air strategies
-                  that led to a 22% reduction in PM2.5 over a year.
-                </p>
-              </div>
-            </div>
-
-            <div class="slide">
-              <div class="imgContainer">
-                <div class="tagsContainer">
-                  <div class="cardTag">
-                    <p>Air Quality</p>
-                  </div>
-                  <div class="cardTag">
-                    <p>Urban Action</p>
-                  </div>
+                  <img
+                    src="assets/images/home/spot1.webp"
+                    alt=""
+                    style="clip-path: url(#my-clip-path)"
+                  />
                 </div>
 
-                <svg
-                  class="arrow"
-                  width="83"
-                  height="83"
-                  viewBox="0 0 83 83"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <circle
-                    cx="41.1035"
-                    cy="41.1035"
-                    r="41.1035"
-                    fill="#F1EFEE"
-                  />
-                  <path
-                    d="M31.7963 47.3461C31.1677 47.9748 31.1677 48.994 31.7963 49.6226C32.425 50.2513 33.4442 50.2513 34.0728 49.6226L31.7963 47.3461ZM50.097 32.9317C50.097 32.0427 49.3763 31.322 48.4873 31.322H33.9996C33.1106 31.322 32.3899 32.0427 32.3899 32.9317C32.3899 33.8207 33.1106 34.5414 33.9996 34.5414H46.8775V47.4194C46.8775 48.3084 47.5982 49.0291 48.4873 49.0291C49.3763 49.0291 50.097 48.3084 50.097 47.4194V32.9317ZM32.9346 48.4844L34.0728 49.6226L49.6255 34.07L48.4873 32.9317L47.349 31.7934L31.7963 47.3461L32.9346 48.4844Z"
-                    fill="#66101F"
-                  />
-                </svg>
-
-                <svg class="svg">
-                  <clipPath id="my-clip-path" clipPathUnits="objectBoundingBox">
-                    <path
-                      d="M1,0.621 C1,0.655,0.982,0.677,0.965,0.672 C0.96,0.671,0.954,0.67,0.949,0.67 C0.886,0.67,0.836,0.77,0.836,0.894 C0.836,0.906,0.836,0.919,0.837,0.931 C0.84,0.964,0.829,1,0.811,1 H0.023 C0.01,1,0,0.982,0,0.957 V0.047 C0,0.022,0.01,0.002,0.023,0.002 H0.977 C0.99,0.002,1,0.022,1,0.047 V0.621"
-                    ></path>
-                  </clipPath>
-                </svg>
-
-                <img
-                  src="assets/images/home/spot1.webp"
-                  alt=""
-                  style="clip-path: url(#my-clip-path)"
-                />
+                <div class="cardTextContent">
+                  <h4>Clean Air, Collective Voices – Ranchi’s Turnaround</h4>
+                  <p>
+                    Through a participatory air action plan, citizens,
+                    scientists, and city officials in Ranchi co-developed clean
+                    air strategies that led to a 22% reduction in PM2.5 over a
+                    year.
+                  </p>
+                </div>
               </div>
-
-              <div class="cardTextContent">
-                <h4>Clean Air, Collective Voices – Ranchi’s Turnaround</h4>
-                <p>
-                  Through a participatory air action plan, citizens, scientists,
-                  and city officials in Ranchi co-developed clean air strategies
-                  that led to a 22% reduction in PM2.5 over a year.
-                </p>
-              </div>
-            </div>
+            </a>
           </div>
         </div>
       </div>
@@ -516,11 +548,11 @@
     <section class="homeNetwork sectionWrapper">
       <div class="networkContainer">
         <div class="left">
-          <h2>
+          <h2 class="fade-in">
             Network <br />
             Visualization
           </h2>
-          <p>
+          <p class="fade-in">
             At ASAR, we believe in the power of connection. Our work spans
             across geographies and disciplines — bringing together communities,
             governments, researchers, civil society organizations, and
@@ -530,50 +562,48 @@
           </p>
         </div>
         <div class="right">
-          <div class="mapContainer">
-            <img src="assets/images/home/networkMap.webp" alt="" />
-          </div>
+          <div id="chartdiv"></div>
         </div>
       </div>
     </section>
 
     <section class="homeImpact sectionWrapper">
       <div class="impactContainer">
-        <h2>Our Impact</h2>
+        <h2 class="fade-in">Our Impact</h2>
 
         <img
-          class="rightImg"
+          class="rightImg img-right"
           src="assets/images/home/impactRight.webp"
           alt=""
         />
 
         <div class="impactCardsContainer">
-          <div class="card">
+          <div class="card fade-in">
             <img src="assets/images/home/impactIcon.svg" alt="" />
             <h3>15000+</h3>
             <p>Community members engaged In grassroots climate education</p>
           </div>
-          <div class="card">
+          <div class="card fade-in">
             <img src="assets/images/home/impactIcon.svg" alt="" />
             <h3>42</h3>
             <p>Climate action projects executed</p>
           </div>
-          <div class="card">
+          <div class="card fade-in">
             <img src="assets/images/home/impactIcon.svg" alt="" />
             <h3>29%</h3>
             <p>Improvement in air quality index</p>
           </div>
-          <div class="card">
+          <div class="card fade-in">
             <img src="assets/images/home/impactIcon.svg" alt="" />
             <h3>6+</h3>
             <p>Regional hubs activated</p>
           </div>
-          <div class="card">
+          <div class="card fade-in">
             <img src="assets/images/home/impactIcon.svg" alt="" />
             <h3>20+</h3>
             <p>Policy papers influenced</p>
           </div>
-          <div class="card">
+          <div class="card fade-in">
             <img src="assets/images/home/impactIcon.svg" alt="" />
             <h3>120+</h3>
             <p>Cross-sectoral partners (CSO’s, govt.)</p>
@@ -600,20 +630,20 @@
     </section>
 
     <section class="homeEvents sectionWrapper">
-      <img src="assets/images/home/eventWave.webp" alt="" class="waveImg" />
+      <img src="assets/images/home/eventWave.svg" alt="" class="waveImg" />
 
       <div class="eventsContainer">
         <div class="headContainer">
-          <h2>All Events</h2>
+          <h2 class="fade-in">All Events</h2>
         </div>
 
-        <div class="eventsTabConatiner">
+        <div class="eventsTabConatiner fade-in">
           <button class="eventBtn active">All events</button>
           <button class="eventBtn">Upcoming events</button>
           <button class="eventBtn">Past events</button>
         </div>
         <div class="eventsCardsContainer">
-          <div class="card">
+          <div class="card fade-in">
             <img src="assets/images/home/climate.svg" alt="" />
 
             <div class="tagsContainer">
@@ -643,7 +673,7 @@
             </div>
           </div>
 
-          <div class="card">
+          <div class="card fade-in">
             <img src="assets/images/home/climate.svg" alt="" />
 
             <div class="tagsContainer">
@@ -673,7 +703,7 @@
             </div>
           </div>
 
-          <div class="card">
+          <div class="card fade-in">
             <img src="assets/images/home/climate.svg" alt="" />
 
             <div class="tagsContainer">
@@ -704,7 +734,7 @@
           </div>
         </div>
 
-        <div class="viewMoreBox">
+        <div class="viewMoreBox fade-in">
           <a href="" class="maroonTrBtn">View More</a>
         </div>
       </div>

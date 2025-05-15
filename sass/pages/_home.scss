@@ -45,6 +45,7 @@
             width: 4rem;
             object-fit: contain;
             display: block;
+            animation: rotate360 10s linear infinite;
           }
         }
 
@@ -82,6 +83,7 @@
         // Maroon button
         .maroonBtn {
           // Button hover state
+          opacity: 0;
           &:hover {
           }
         }
@@ -385,15 +387,16 @@
       // Header container
       border-radius: 6rem;
       background-image: linear-gradient(123deg, #992035 3%, #590a18 98%);
-      padding: 6rem;
+      padding: 6rem 0 6rem 6rem;
       position: relative;
       overflow: hidden;
 
       .storiesShape {
         position: absolute;
-        right: -30rem;
-        top: -2rem;
+        right: -50rem;
+        top: 0rem;
         width: auto;
+        animation: rotate360 60s linear infinite;
       }
 
       .headContainer {
@@ -475,82 +478,102 @@
           gap: 3.2rem;
           margin-top: 2rem;
 
-          .slide {
-            // Image container with clip path
-            margin: 0 1rem;
+          .slideLink {
+            text-decoration: none;
 
-            .imgContainer {
-              // SVG clip path
-              position: relative;
-              margin-bottom: 1rem;
+            .slide {
+              // Image container with clip path
+              margin: 0 1rem;
 
-              .tagsContainer {
-                position: absolute;
-                top: 1rem;
-                left: 1rem;
-                display: flex;
-                align-items: center;
-                gap: 0.6rem;
-                z-index: 1;
-
-                .cardTag {
-                  background-color: #f0e8e9;
-                }
-              }
-
-              .arrow {
-                position: absolute;
-                right: 0;
-                bottom: 0;
-                width: 7rem;
-                height: 7rem;
-                z-index: 1;
-              }
-
-              .svg {
-                position: absolute;
-                width: 0;
-                height: 0;
-
-                clipPath {
-                }
-              }
-
-              // Slide image
-              img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-              }
-            }
-
-            // Text content
-            .cardTextContent {
-              h4 {
-                font-family: var(--manrope);
-                font-size: var(--font28);
-                font-weight: 600;
-                font-stretch: normal;
-                font-style: normal;
-                line-height: 1.2;
-                letter-spacing: normal;
-                text-align: left;
-                color: #f1efee;
+              .imgContainer {
+                // SVG clip path
+                position: relative;
                 margin-bottom: 1rem;
+
+                .tagsContainer {
+                  position: absolute;
+                  top: 1rem;
+                  left: 1rem;
+                  display: flex;
+                  align-items: center;
+                  gap: 0.6rem;
+                  z-index: 1;
+
+                  .cardTag {
+                    background-color: #f0e8e9;
+                  }
+                }
+
+                .arrow {
+                  position: absolute;
+                  right: 0;
+                  bottom: 0;
+                  width: 7rem;
+                  height: 7rem;
+                  z-index: 1;
+
+                  circle {
+                    transition: all 0.3s ease-in-out;
+                  }
+
+                  path {
+                    transition: all 0.3s ease-in-out;
+                  }
+                }
+
+                .svg {
+                  position: absolute;
+                  width: 0;
+                  height: 0;
+
+                  clipPath {
+                  }
+                }
+
+                // Slide image
+                img {
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                }
               }
 
-              p {
-                font-family: var(--manrope);
-                font-size: var(--font16);
-                font-weight: normal;
-                font-stretch: normal;
-                font-style: normal;
-                line-height: 1.5;
-                letter-spacing: normal;
-                text-align: left;
-                color: #f1efee;
+              // Text content
+              .cardTextContent {
+                h4 {
+                  font-family: var(--manrope);
+                  font-size: var(--font28);
+                  font-weight: 600;
+                  font-stretch: normal;
+                  font-style: normal;
+                  line-height: 1.2;
+                  letter-spacing: normal;
+                  text-align: left;
+                  color: #f1efee;
+                  margin-bottom: 1rem;
+                }
+
+                p {
+                  font-family: var(--manrope);
+                  font-size: var(--font16);
+                  font-weight: normal;
+                  font-stretch: normal;
+                  font-style: normal;
+                  line-height: 1.5;
+                  letter-spacing: normal;
+                  text-align: left;
+                  color: #f1efee;
+                }
               }
             }
+          }
+
+          .slideLink:hover .arrow circle {
+            fill: #8f0707;
+          }
+          .slideLink:hover .arrow path {
+            fill: #fff;
+            animation: moveDiagonal 1s ease-in-out infinite;
           }
         }
       }
@@ -603,11 +626,9 @@
         flex-basis: 65%;
 
         // Map container
-        .mapContainer {
-          img {
-            height: 100%;
-            width: 100%;
-          }
+        #chartdiv {
+          width: 100%;
+          height: 70rem;
         }
       }
     }
@@ -707,10 +728,12 @@
 
   .waveImg {
     position: absolute;
-    left: -1.5rem;
-    top: 0;
+    left: -11.5rem;
+    top: -4rem;
     z-index: 0;
     max-width: 100%;
+    height: 45rem;
+    animation: rotate360 15s linear infinite;
   }
 
   .eventsContainer {

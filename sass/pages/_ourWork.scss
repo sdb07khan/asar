@@ -34,18 +34,26 @@
       // Projects listing container
       .listingContainer {
         // Individual project block
-        padding: var(--padding8);
+        padding: var(--padding4);
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 6vw;
+        gap: 2.4rem;
 
         a {
           .block {
             // Project image
-            img {
-              height: auto;
-              width: 100%;
-              margin-bottom: 2rem;
+
+            .imgBox {
+              overflow: hidden;
+              margin-bottom: 1rem;
+              border-radius: 1.5rem;
+              display: flex;
+
+              img {
+                height: auto;
+                width: 100%;
+                transition: all 0.3s ease-in-out;
+              }
             }
 
             // Project title
@@ -57,7 +65,20 @@
               font-style: normal;
               line-height: 1.2;
               letter-spacing: normal;
-              text-align: center;
+              text-align: left;
+              color: #171a17;
+              margin-bottom: 1rem;
+            }
+
+            p {
+              font-family: var(--manrope);
+              font-size: var(--font16);
+              font-weight: normal;
+              font-stretch: normal;
+              font-style: normal;
+              line-height: 1.5;
+              letter-spacing: normal;
+              text-align: left;
               color: #171a17;
             }
 
@@ -69,6 +90,10 @@
               }
             }
           }
+        }
+
+        a:hover img {
+          transform: scale(1.1);
         }
       }
     }
