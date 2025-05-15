@@ -1,0 +1,330 @@
+// Contact Banner Section
+.contactBanner {
+  background-image: linear-gradient(112deg, #992035 2%, #590a18 99%),
+    linear-gradient(to bottom, #fff, #fff);
+  border-radius: 0 0 6rem 6rem;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+
+  .bannerContainer {
+    // Background image
+    display: flex;
+
+    .bannerImg {
+      //   position: absolute;
+      //   top: 0;
+      //   left: 0;
+      width: 65%;
+      height: 100%;
+      //   object-fit: cover;
+    }
+
+    // Content container
+    .bannerContent {
+      // Main heading
+      position: absolute;
+      right: 7.5vw;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 35%;
+      margin-top: 2rem;
+
+      h1 {
+        font-family: var(--nunito);
+        font-size: var(--font64);
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.3;
+        letter-spacing: -1.28px;
+        text-align: left;
+        color: #f1efee;
+        margin-bottom: 1rem;
+      }
+
+      // Description text
+      p {
+        font-family: var(--manrope);
+        font-size: var(--font16);
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.5;
+        letter-spacing: normal;
+        text-align: left;
+        color: #f1efee;
+        margin-bottom: 2rem;
+      }
+
+      // Subscription form
+      .subscribeContainer {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+
+        input[type="email"] {
+          padding: 1.6rem;
+          border-radius: 1rem;
+          background-color: #efefef;
+          outline: none;
+          border: none;
+          font-family: var(--manrope);
+          font-size: var(--font12);
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.5;
+          letter-spacing: normal;
+          text-align: left;
+          color: #242424;
+          width: 100%;
+
+          &::placeholder {
+            color: rgba(36, 36, 36, 0.6);
+          }
+        }
+
+        button {
+          padding: 1.6rem 2rem;
+          border-radius: 1rem;
+          background-color: #fff;
+          font-family: var(--manrope);
+          font-size: var(--font12);
+          font-weight: 500;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: normal;
+          letter-spacing: normal;
+          text-align: left;
+          color: #242424;
+          outline: none;
+          border: none;
+          cursor: pointer;
+          transition: all 0.3s ease-in-out;
+
+          &:hover {
+          }
+        }
+      }
+    }
+  }
+}
+
+// Social Listing Section
+.socialListing {
+  // Main container
+  padding-left: 7.5vw;
+  position: relative;
+
+  .bannerShape {
+    position: absolute;
+    right: -10rem;
+    top: -24rem;
+    width: auto;
+    animation: rotate360 60s linear infinite;
+    height: 50rem;
+  }
+
+  .mainContainer {
+    // Section heading
+    padding: var(--padding8);
+
+    h2 {
+      font-family: var(--nunito);
+      font-size: var(--font48);
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: -0.96px;
+      text-align: left;
+      color: #171a17;
+      margin-bottom: 3.2rem;
+    }
+
+    // Social handle container
+    .socialHandleContainer {
+      display: flex;
+      align-items: center;
+      margin-bottom: 3.2rem;
+      // Icon box
+      .socialIconBox {
+        img {
+          height: 5.4rem;
+          width: 5.4rem;
+        }
+      }
+
+      // Name and stats box
+      .socialNameBox {
+        padding: 0 2rem;
+        border-right: 0.9px solid #d6dae4;
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+        justify-content: space-between;
+
+        h3 {
+          font-family: var(--manrope);
+          font-size: var(--font20);
+          font-weight: bold;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: normal;
+          letter-spacing: normal;
+          text-align: left;
+          color: #000;
+        }
+
+        p {
+          font-family: var(--manrope);
+          font-size: var(--font16);
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: normal;
+          letter-spacing: normal;
+          text-align: left;
+          color: #9ca0ac;
+        }
+      }
+
+      // Follow button
+      .maroonBtn {
+        margin-left: 2rem;
+        &:hover {
+        }
+      }
+    }
+
+    // Posts listing container
+    .postsListingContainer {
+      // Navigation buttons wrapper
+      .btnWrapper {
+        // Left arrow button
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 1.2rem;
+
+        svg {
+          width: 4rem;
+          height: 4rem;
+          cursor: pointer;
+          transition: all 0.3s ease-in-out;
+
+          &:hover {
+            circle,
+            path {
+              opacity: 0.6;
+              transition: all 0.3s ease-in-out;
+            }
+          }
+        }
+      }
+
+      // Listings wrapper
+      .listingsWrapper {
+        // Individual post block
+        display: flex;
+        align-items: center;
+
+        a {
+          text-decoration: none;
+          border-radius: 1rem;
+          overflow: hidden;
+          margin: 0 1rem;
+
+          .block {
+            img {
+              height: 100%;
+              width: 100%;
+              aspect-ratio: 1/1;
+            }
+
+            &:hover {
+              img {
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Contact Collaborate Section
+.contactCollaborate {
+  .mainContainer {
+    // Left content column
+    border-radius: 6rem;
+    background-image: linear-gradient(111deg, #992035 2%, #590a18 99%),
+      linear-gradient(to bottom, #fff, #fff);
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    margin: var(--padding8);
+
+    .left {
+      // Heading
+      padding: 8rem 0 8rem 8rem;
+
+      h2 {
+        font-family: var(--nunito);
+        font-size: var(--font48);
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: -0.96px;
+        text-align: left;
+        color: #f1efee;
+        margin-bottom: 1rem;
+      }
+
+      // Description text
+      p {
+        font-family: var(--manrope);
+        font-size: var(--font16);
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.5;
+        letter-spacing: normal;
+        text-align: left;
+        color: #f1efee;
+        margin-bottom: 2rem;
+      }
+
+      // Button container
+      .btnBox {
+        // Solid white button
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+
+        .whiteBtn {
+          &:hover {
+          }
+        }
+
+        // Transparent white button
+        .whiteTrBtn {
+          &:hover {
+          }
+        }
+      }
+    }
+
+    // Right image column
+    .right {
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+        object-position: bottom;
+      }
+    }
+  }
+}
