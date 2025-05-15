@@ -33,6 +33,16 @@
       text-align: left;
       color: rgba(241, 239, 238, 0.8);
       margin-bottom: 3.2rem;
+
+
+// @media (max-width: 768px) {
+
+// }
+
+
+
+
+
     }
     .links {
       display: flex;
@@ -51,9 +61,14 @@
   .c2 {
     width: 50%;
     display: flex;
+       width: 73%;
+    height: 46rem;
+    justify-content: flex-end;
     img {
-      width: 100%;
-      height: auto;
+      width: auto;
+      height: 100%;
+      
+
     }
   }
 }
@@ -606,10 +621,12 @@
     }
     .c2 {
       width: 100%;
+      height: auto;
       justify-content: flex-end;
       img {
         width: 60%;
         margin-bottom: -8rem;
+        height: auto;
       }
     }
   }
