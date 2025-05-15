@@ -274,6 +274,12 @@ a {
   .mobile {
     display: flex !important; } }
 
+@keyframes rotateTranslate {
+  0% {
+    transform: translateX(50%) rotate(0deg); }
+  100% {
+    transform: translateX(50%) rotate(360deg); } }
+
 .header {
   width: 100%;
   position: fixed;
@@ -2362,13 +2368,16 @@ a {
 .teamBanner {
   position: relative;
   padding: var(--padding8);
-  padding-top: 15rem; }
+  padding-top: 15rem;
+  overflow: hidden; }
   .teamBanner .bg {
     position: absolute;
-    right: 0;
     top: 5%;
+    right: 0;
     z-index: 4;
-    max-width: 50rem; }
+    max-width: 50rem;
+    transform-origin: center;
+    animation: rotateTranslate 25s linear infinite; }
   .teamBanner .sectionWrapper {
     position: relative;
     display: flex;
@@ -2441,10 +2450,12 @@ a {
   padding-top: 15rem; }
   .teamSingle_banner .bg {
     position: absolute;
+    top: 10%;
     right: 0;
-    top: 0%;
     z-index: 4;
-    max-width: 50rem; }
+    max-width: 70rem;
+    transform-origin: center;
+    animation: rotateTranslate 35s linear infinite; }
   .teamSingle_banner .sectionWrapper {
     display: flex;
     flex-direction: column; }
@@ -2467,28 +2478,31 @@ a {
         color: #171a17; }
         .teamSingle_banner .sectionWrapper .back a svg {
           max-width: 1rem; }
-    .teamSingle_banner .sectionWrapper .head h1 {
-      font-family: var(--manrope);
-      font-size: var(--font48);
-      font-weight: 600;
-      font-stretch: normal;
-      font-style: normal;
-      line-height: normal;
-      letter-spacing: -0.96px;
-      text-align: left;
-      color: #171a17;
-      margin-bottom: 0.5rem; }
-    .teamSingle_banner .sectionWrapper .head p {
-      font-family: var(--manrope);
-      font-size: var(--font28);
-      font-weight: normal;
-      font-stretch: normal;
-      font-style: normal;
-      line-height: 1.2;
-      letter-spacing: normal;
-      text-align: left;
-      color: #171a17;
-      margin-bottom: 3.6rem; }
+    .teamSingle_banner .sectionWrapper .head {
+      display: flex;
+      flex-direction: column; }
+      .teamSingle_banner .sectionWrapper .head h1 {
+        font-family: var(--manrope);
+        font-size: var(--font48);
+        font-weight: 600;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: -0.96px;
+        text-align: left;
+        color: #171a17;
+        margin-bottom: 0.5rem; }
+      .teamSingle_banner .sectionWrapper .head p {
+        font-family: var(--manrope);
+        font-size: var(--font28);
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.2;
+        letter-spacing: normal;
+        text-align: left;
+        color: #171a17;
+        margin-bottom: 3.6rem; }
     .teamSingle_banner .sectionWrapper .profile {
       display: flex;
       gap: 2.6rem;
@@ -2627,7 +2641,9 @@ a {
     right: 0%;
     top: 0%;
     max-width: 50rem;
-    transform: translate(32%, 10%); }
+    transform: translate(32%, 10%);
+    transform-origin: center;
+    animation: rotateTranslate 25s linear infinite; }
   .reports_banner .sectionWrapper {
     background-color: transparent;
     display: flex;

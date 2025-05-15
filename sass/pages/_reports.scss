@@ -9,6 +9,8 @@
     top: 0%;
     max-width: 50rem;
     transform: translate(32%, 10%);
+    transform-origin: center;
+    animation: rotateTranslate 25s linear infinite;
   }
 
   .sectionWrapper {

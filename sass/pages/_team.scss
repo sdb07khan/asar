@@ -5,12 +5,15 @@
 
   padding: var(--padding8);
   padding-top: 15rem;
+  overflow: hidden;
   .bg {
     position: absolute;
-    right: 0;
     top: 5%;
+    right: 0;
     z-index: 4;
     max-width: 50rem;
+    transform-origin: center;
+    animation: rotateTranslate 25s linear infinite;
   }
   .sectionWrapper {
     position: relative;
@@ -105,10 +108,12 @@
 
   .bg {
     position: absolute;
+    top: 10%;
     right: 0;
-    top: 0%;
     z-index: 4;
-    max-width: 50rem;
+    max-width: 70rem;
+    transform-origin: center;
+    animation: rotateTranslate 35s linear infinite;
   }
   .sectionWrapper {
     display: flex;
@@ -142,6 +147,8 @@
     }
 
     .head {
+      display: flex;
+      flex-direction: column;
       h1 {
         font-family: var(--manrope);
         font-size: var(--font48);
@@ -342,16 +349,15 @@
             }
           }
 
-          .content{
+          .content {
             display: grid;
-            grid-template-columns: repeat(2,1fr);
-            
-            .block{
+            grid-template-columns: repeat(2, 1fr);
 
-              h1{
+            .block {
+              h1 {
                 font-size: 1.6rem;
               }
-              p{
+              p {
                 font-size: 1.2rem;
               }
             }
@@ -362,7 +368,7 @@
       .para {
         order: 4;
         max-width: 90%;
-        p{
+        p {
           font-size: 1.2rem;
         }
       }
