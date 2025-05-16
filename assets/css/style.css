@@ -1347,11 +1347,20 @@ a {
   overflow: hidden;
   position: relative;
   z-index: 1; }
+  @media only screen and (max-width: 768px) {
+    .contactBanner {
+      border-radius: 0 0 2.5rem 2.5rem; } }
   .contactBanner .bannerContainer {
     display: flex; }
     .contactBanner .bannerContainer .bannerImg {
       width: 65%;
       height: 100%; }
+      @media only screen and (max-width: 768px) {
+        .contactBanner .bannerContainer .bannerImg {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          height: auto; } }
     .contactBanner .bannerContainer .bannerContent {
       position: absolute;
       right: 7.5vw;
@@ -1359,6 +1368,12 @@ a {
       transform: translateY(-50%);
       width: 35%;
       margin-top: 2rem; }
+      @media only screen and (max-width: 768px) {
+        .contactBanner .bannerContainer .bannerContent {
+          position: unset;
+          width: 100%;
+          padding: 0 7.5vw;
+          margin-top: 12rem; } }
       .contactBanner .bannerContainer .bannerContent h1 {
         font-family: var(--nunito);
         font-size: var(--font64);
@@ -1385,6 +1400,9 @@ a {
         display: flex;
         align-items: center;
         gap: 0.6rem; }
+        @media only screen and (max-width: 575px) {
+          .contactBanner .bannerContainer .bannerContent .subscribeContainer {
+            flex-direction: column; } }
         .contactBanner .bannerContainer .bannerContent .subscribeContainer input[type="email"] {
           padding: 1.6rem;
           border-radius: 1rem;
@@ -1420,6 +1438,12 @@ a {
           border: none;
           cursor: pointer;
           transition: all 0.3s ease-in-out; }
+          @media only screen and (max-width: 575px) {
+            .contactBanner .bannerContainer .bannerContent .subscribeContainer button {
+              width: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center; } }
 
 .socialListing {
   padding-left: 7.5vw;
@@ -1431,6 +1455,14 @@ a {
     width: auto;
     animation: rotate360 60s linear infinite;
     height: 50rem; }
+    @media only screen and (max-width: 768px) {
+      .socialListing .bannerShape {
+        height: 25rem;
+        right: -16%;
+        top: -10rem; } }
+    @media only screen and (max-width: 575px) {
+      .socialListing .bannerShape {
+        height: 20rem; } }
   .socialListing .mainContainer {
     padding: var(--padding8); }
     .socialListing .mainContainer h2 {
@@ -1514,8 +1546,14 @@ a {
   display: flex;
   justify-content: space-between;
   margin: var(--padding8); }
+  @media only screen and (max-width: 768px) {
+    .contactCollaborate .mainContainer {
+      flex-direction: column; } }
   .contactCollaborate .mainContainer .left {
     padding: 8rem 0 8rem 8rem; }
+    @media only screen and (max-width: 768px) {
+      .contactCollaborate .mainContainer .left {
+        padding: 4rem 4rem 0 4rem; } }
     .contactCollaborate .mainContainer .left h2 {
       font-family: var(--nunito);
       font-size: var(--font48);
@@ -1542,6 +1580,21 @@ a {
       display: flex;
       align-items: center;
       gap: 0.8rem; }
+      @media only screen and (max-width: 480px) {
+        .contactCollaborate .mainContainer .left .btnBox {
+          flex-direction: column; } }
+      @media only screen and (max-width: 480px) {
+        .contactCollaborate .mainContainer .left .btnBox .whiteBtn {
+          width: 100%; } }
+      @media only screen and (max-width: 768px) {
+        .contactCollaborate .mainContainer .left .btnBox .whiteTrBtn {
+          flex: 1; } }
+      @media only screen and (max-width: 480px) {
+        .contactCollaborate .mainContainer .left .btnBox .whiteTrBtn {
+          width: 100%; } }
+  @media only screen and (max-width: 768px) {
+    .contactCollaborate .mainContainer .right {
+      display: flex; } }
   .contactCollaborate .mainContainer .right img {
     height: 100%;
     width: 100%;
@@ -1639,18 +1692,34 @@ a {
       cursor: pointer;
       transition: all 0.3s ease-in-out;
       width: fit-content; }
+      @media only screen and (max-width: 575px) {
+        .workSingleBanner.heroMarginTop .workSingleContainer.sectionWrapper .backBtn a {
+          gap: 1.2rem;
+          margin-bottom: 3.2rem; } }
       .workSingleBanner.heroMarginTop .workSingleContainer.sectionWrapper .backBtn a svg {
         height: 1.6rem;
         width: auto; }
+        @media only screen and (max-width: 575px) {
+          .workSingleBanner.heroMarginTop .workSingleContainer.sectionWrapper .backBtn a svg {
+            height: 1.4rem; } }
     .workSingleBanner.heroMarginTop .workSingleContainer.sectionWrapper .topWrapper {
       display: flex;
       align-items: flex-start;
       gap: 8vw;
       justify-content: space-between;
       width: 100%; }
+      @media only screen and (max-width: 1200px) {
+        .workSingleBanner.heroMarginTop .workSingleContainer.sectionWrapper .topWrapper {
+          gap: 4vw; } }
+      @media only screen and (max-width: 768px) {
+        .workSingleBanner.heroMarginTop .workSingleContainer.sectionWrapper .topWrapper {
+          position: relative; } }
       .workSingleBanner.heroMarginTop .workSingleContainer.sectionWrapper .topWrapper .headContainer {
         margin-bottom: 8rem;
         width: 100%; }
+        @media only screen and (max-width: 768px) {
+          .workSingleBanner.heroMarginTop .workSingleContainer.sectionWrapper .topWrapper .headContainer {
+            margin-bottom: 4rem; } }
         .workSingleBanner.heroMarginTop .workSingleContainer.sectionWrapper .topWrapper .headContainer h2 {
           font-family: var(--nunito);
           font-size: var(--font48);
@@ -1662,6 +1731,9 @@ a {
           text-align: left;
           color: #171a17;
           margin-bottom: 1.2rem; }
+          @media only screen and (max-width: 768px) {
+            .workSingleBanner.heroMarginTop .workSingleContainer.sectionWrapper .topWrapper .headContainer h2 {
+              width: 65%; } }
         .workSingleBanner.heroMarginTop .workSingleContainer.sectionWrapper .topWrapper .headContainer h5 {
           font-family: var(--manrope);
           font-size: var(--font28);
@@ -1673,6 +1745,9 @@ a {
           text-align: left;
           color: rgba(23, 26, 23, 0.8);
           margin-bottom: 0.8rem; }
+          @media only screen and (max-width: 768px) {
+            .workSingleBanner.heroMarginTop .workSingleContainer.sectionWrapper .topWrapper .headContainer h5 {
+              width: 65%; } }
         .workSingleBanner.heroMarginTop .workSingleContainer.sectionWrapper .topWrapper .headContainer p {
           font-family: var(--manrope);
           font-size: var(--font16);
@@ -1686,8 +1761,19 @@ a {
           width: 100%; }
       .workSingleBanner.heroMarginTop .workSingleContainer.sectionWrapper .topWrapper .imgContainer {
         margin-top: 4rem; }
-        .workSingleBanner.heroMarginTop .workSingleContainer.sectionWrapper .topWrapper .imgContainer .belowHeader {
-          width: 100%; }
+        @media only screen and (max-width: 768px) {
+          .workSingleBanner.heroMarginTop .workSingleContainer.sectionWrapper .topWrapper .imgContainer {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 12rem;
+            margin-top: 0; } }
+        @media only screen and (max-width: 480px) {
+          .workSingleBanner.heroMarginTop .workSingleContainer.sectionWrapper .topWrapper .imgContainer {
+            width: 10rem; } }
+        @media only screen and (max-width: 1200px) {
+          .workSingleBanner.heroMarginTop .workSingleContainer.sectionWrapper .topWrapper .imgContainer .belowHeader {
+            width: 100%; } }
     .workSingleBanner.heroMarginTop .workSingleContainer.sectionWrapper .storiesContainer {
       border-radius: 6rem;
       background-image: linear-gradient(123deg, #992035 3%, #590a18 98%);
@@ -1848,6 +1934,13 @@ a {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 3.2rem; }
+    @media only screen and (max-width: 1200px) {
+      .workRelatedProjects .workRelatedContainer .listingsContainer {
+        gap: 2rem; } }
+    @media only screen and (max-width: 768px) {
+      .workRelatedProjects .workRelatedContainer .listingsContainer {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 6rem; } }
     .workRelatedProjects .workRelatedContainer .listingsContainer .slide .imgContainer {
       position: relative;
       margin-bottom: 1rem; }

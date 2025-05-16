@@ -7,6 +7,10 @@
   position: relative;
   z-index: 1;
 
+  @media only screen and (max-width: 768px) {
+    border-radius: 0 0 2.5rem 2.5rem;
+  }
+
   .bannerContainer {
     // Background image
     display: flex;
@@ -18,6 +22,13 @@
       width: 65%;
       height: 100%;
       //   object-fit: cover;
+
+      @media only screen and (max-width: 768px) {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: auto;
+      }
     }
 
     // Content container
@@ -29,6 +40,13 @@
       transform: translateY(-50%);
       width: 35%;
       margin-top: 2rem;
+
+      @media only screen and (max-width: 768px) {
+        position: unset;
+        width: 100%;
+        padding: 0 7.5vw;
+        margin-top: 12rem;
+      }
 
       h1 {
         font-family: var(--nunito);
@@ -62,6 +80,10 @@
         display: flex;
         align-items: center;
         gap: 0.6rem;
+
+        @media only screen and (max-width: 575px) {
+          flex-direction: column;
+        }
 
         input[type="email"] {
           padding: 1.6rem;
@@ -103,6 +125,13 @@
           cursor: pointer;
           transition: all 0.3s ease-in-out;
 
+          @media only screen and (max-width: 575px) {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+
           &:hover {
           }
         }
@@ -124,6 +153,15 @@
     width: auto;
     animation: rotate360 60s linear infinite;
     height: 50rem;
+
+    @media only screen and (max-width: 768px) {
+      height: 25rem;
+      right: -16%;
+      top: -10rem;
+    }
+    @media only screen and (max-width: 575px) {
+      height: 20rem;
+    }
   }
 
   .mainContainer {
@@ -266,9 +304,17 @@
     justify-content: space-between;
     margin: var(--padding8);
 
+    @media only screen and (max-width: 768px) {
+      flex-direction: column;
+    }
+
     .left {
       // Heading
       padding: 8rem 0 8rem 8rem;
+
+      @media only screen and (max-width: 768px) {
+        padding: 4rem 4rem 0 4rem;
+      }
 
       h2 {
         font-family: var(--nunito);
@@ -304,13 +350,29 @@
         align-items: center;
         gap: 0.8rem;
 
+        @media only screen and (max-width: 480px) {
+          flex-direction: column;
+        }
+
         .whiteBtn {
+          @media only screen and (max-width: 480px) {
+            width: 100%;
+          }
+
           &:hover {
           }
         }
 
         // Transparent white button
         .whiteTrBtn {
+          @media only screen and (max-width: 768px) {
+            flex: 1;
+          }
+
+          @media only screen and (max-width: 480px) {
+            width: 100%;
+          }
+
           &:hover {
           }
         }
@@ -319,6 +381,10 @@
 
     // Right image column
     .right {
+      @media only screen and (max-width: 768px) {
+        display: flex;
+      }
+
       img {
         height: 100%;
         width: 100%;

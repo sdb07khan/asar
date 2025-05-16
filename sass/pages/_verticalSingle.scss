@@ -30,9 +30,18 @@
             transition: all 0.3s ease-in-out;
             width: fit-content;
 
+            @media only screen and (max-width: 575px) {
+              gap: 1.2rem;
+              margin-bottom: 3.2rem;
+            }
+
             svg {
               height: 1.6rem;
               width: auto;
+
+              @media only screen and (max-width: 575px) {
+                height: 1.4rem;
+              }
 
               path {
               }
@@ -61,10 +70,22 @@
           justify-content: space-between;
           width: 100%;
 
+          @media only screen and (max-width: 1200px) {
+            gap: 4vw;
+          }
+
+          @media only screen and (max-width: 768px) {
+            position: relative;
+          }
+
           .headContainer {
             // Page title
             margin-bottom: 8rem;
             width: 100%;
+
+            @media only screen and (max-width: 768px) {
+              margin-bottom: 4rem;
+            }
 
             h2 {
               font-family: var(--nunito);
@@ -77,6 +98,10 @@
               text-align: left;
               color: #171a17;
               margin-bottom: 1.2rem;
+
+              @media only screen and (max-width: 768px) {
+                width: 65%;
+              }
             }
 
             h5 {
@@ -90,6 +115,10 @@
               text-align: left;
               color: rgba(23, 26, 23, 0.8);
               margin-bottom: 0.8rem;
+
+              @media only screen and (max-width: 768px) {
+                width: 65%;
+              }
             }
 
             // Description text
@@ -110,8 +139,24 @@
           .imgContainer {
             margin-top: 4rem;
 
+            @media only screen and (max-width: 768px) {
+              position: absolute;
+              right: 0;
+              top: 0;
+              width: 12rem;
+              margin-top: 0;
+            }
+
+            @media only screen and (max-width: 480px) {
+              width: 10rem;
+            }
+
             .belowHeader {
-              width: 100%;
+              // width: 100%;
+
+              @media only screen and (max-width: 1200px) {
+                width: 100%;
+              }
             }
           }
         }
@@ -356,6 +401,15 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 3.2rem;
+
+      @media only screen and (max-width: 1200px) {
+        gap: 2rem;
+      }
+
+      @media only screen and (max-width: 768px) {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 6rem;
+      }
 
       .slide {
         // Image container with clip path
