@@ -9,6 +9,15 @@
     height: 70rem;
     // z-index: 1;
     animation: rotate360 60s linear infinite;
+
+    @media only screen and (max-width: 768px) {
+      top: -15%;
+      height: 50rem;
+    }
+    @media only screen and (max-width: 768px) {
+      top: 0%;
+      height: 30rem;
+    }
   }
 
   .workRelatedContainer {
@@ -31,6 +40,14 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 3.2rem;
+
+      @media only screen and (max-width: 1200px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media only screen and (max-width: 575px) {
+        grid-template-columns: repeat(1, 1fr);
+      }
 
       .slide {
         // Image container with clip path

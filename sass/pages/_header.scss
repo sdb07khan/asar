@@ -8,7 +8,7 @@
   transition: all 0.3s ease-in-out;
   border-bottom: 0.5px solid rgba(23, 26, 23, 0.5);
 
-  //   @media only screen and (max-width: 769px) {
+  //   @media only screen and (max-width: 768px) {
   //     padding-top: 2.4rem;
   //   }
 
@@ -22,11 +22,11 @@
     padding-bottom: 2rem;
     background-color: #f1efee;
 
-    @media only screen and (max-width: 1100px) {
+    @media only screen and (max-width: 1200px) {
       gap: 2rem;
     }
 
-    @media only screen and (max-width: 769px) {
+    @media only screen and (max-width: 768px) {
       position: absolute;
       right: 0;
       top: 0;
@@ -44,7 +44,7 @@
     .headerLogo {
       //   margin-right: auto;
 
-      @media only screen and (max-width: 769px) {
+      @media only screen and (max-width: 768px) {
         margin-bottom: 4rem;
         display: flex;
         align-items: center;
@@ -60,7 +60,8 @@
           width: auto;
           display: block;
 
-          @media only screen and (max-width: 1100px) {
+          @media only screen and (max-width: 1200px) {
+            height: 2.5rem;
           }
         }
       }
@@ -68,7 +69,7 @@
       //   .closeIcon {
       //     display: none;
 
-      //     @media only screen and (max-width: 769px) {
+      //     @media only screen and (max-width: 768px) {
       //       display: block;
       //       height: 2.2rem;
       //       width: 2.2rem;
@@ -90,11 +91,11 @@
         align-items: center;
         gap: 3.2rem;
 
-        @media only screen and (max-width: 850px) {
-          gap: 2.4rem;
+        @media only screen and (max-width: 1200px) {
+          gap: 2rem;
         }
 
-        @media only screen and (max-width: 769px) {
+        @media only screen and (max-width: 768px) {
           flex-direction: column;
           align-items: flex-start;
         }
@@ -106,7 +107,7 @@
           cursor: pointer;
           position: relative; /* Ensure li is relative so the dropdown is positioned correctly */
 
-          @media only screen and (max-width: 769px) {
+          @media only screen and (max-width: 768px) {
             gap: 1rem;
           }
 
@@ -115,7 +116,7 @@
             align-items: center;
             gap: 5px;
 
-            @media only screen and (max-width: 769px) {
+            @media only screen and (max-width: 768px) {
               gap: 1rem;
             }
           }
@@ -132,14 +133,14 @@
             text-decoration: none;
             white-space: nowrap;
 
-            @media only screen and (max-width: 769px) {
+            @media only screen and (max-width: 768px) {
               font-size: 2.4rem;
             }
 
             &:hover {
               opacity: 0.6;
 
-              @media only screen and (max-width: 769px) {
+              @media only screen and (max-width: 768px) {
                 opacity: 1;
               }
             }
@@ -153,7 +154,7 @@
               height: 1.2rem;
               transition: all 0.3s ease-in-out;
 
-              @media only screen and (max-width: 769px) {
+              @media only screen and (max-width: 768px) {
                 width: 1.5rem;
                 height: 1.5rem;
               }
@@ -181,7 +182,7 @@
           //     align-items: flex-start;
           //     list-style: none;
 
-          //     @media only screen and (max-width: 769px) {
+          //     @media only screen and (max-width: 768px) {
           //       position: relative;
           //       opacity: 1;
           //       visibility: visible;
@@ -209,7 +210,7 @@
           //     padding: 1rem 2rem;
           //     white-space: nowrap;
 
-          //     @media only screen and (max-width: 769px) {
+          //     @media only screen and (max-width: 768px) {
           //       padding: 0;
           //     }
           //   }
@@ -226,7 +227,7 @@
           //     &:hover {
           //       opacity: 0.6;
 
-          //       @media only screen and (max-width: 769px) {
+          //       @media only screen and (max-width: 768px) {
           //         opacity: 1;
           //       }
           //     }
@@ -236,7 +237,7 @@
         li:hover .dropNav a {
           opacity: 0.6;
 
-          @media only screen and (max-width: 769px) {
+          @media only screen and (max-width: 768px) {
             opacity: 1;
           }
         }
@@ -245,7 +246,7 @@
           transform: rotate(180deg);
           opacity: 0.6;
 
-          @media only screen and (max-width: 769px) {
+          @media only screen and (max-width: 768px) {
             transform: none;
           }
         }
@@ -254,6 +255,11 @@
 
     // Contact button styles
     .contactBtn {
+      a {
+        @media only screen and (max-width: 1200px) {
+          padding: 1.6rem 2.4rem;
+        }
+      }
     }
   }
 }

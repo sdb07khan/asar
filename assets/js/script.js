@@ -66,6 +66,20 @@ document.addEventListener("DOMContentLoaded", function () {
     speed: 800,
     slidesToShow: 2.1,
     adaptiveHeight: true,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 1.5,
+        },
+      },
+      {
+        breakpoint: 768, // For screens smaller than 768px
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   });
 
   $(".homeStories .leftBtn").click(function () {
@@ -112,6 +126,20 @@ document.addEventListener("DOMContentLoaded", function () {
     speed: 800,
     slidesToShow: 2.7,
     adaptiveHeight: true,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 1.5,
+        },
+      },
+      {
+        breakpoint: 768, // For screens smaller than 768px
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   });
 
   $(".workSingleBanner .leftBtn").click(function () {
@@ -157,6 +185,24 @@ document.addEventListener("DOMContentLoaded", function () {
   $(".instagramListings .rightBtn").click(function () {
     $(".instagramListings .listingsWrapper").slick("slickNext");
   });
+
+  //spotlight section slider HIGHLIGHT
+  if (window.innerWidth <= 768) {
+    $(".homeSpotlight .cardsContainer").slick({
+      dots: false,
+      arrows: false,
+      infinite: false,
+      speed: 800,
+      slidesToShow: 1,
+      adaptiveHeight: true,
+    });
+    $(".homeSpotlight .leftBtn").click(function () {
+      $(".homeSpotlight .cardsContainer").slick("slickPrev");
+    });
+    $(".homeSpotlight .rightBtn").click(function () {
+      $(".homeSpotlight .cardsContainer").slick("slickNext");
+    });
+  }
 
   // Fade-in text  HIGHLIGHT
   gsap.utils.toArray(".fade-in").forEach((item, index) => {
@@ -429,10 +475,35 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Configure series tooltip
   var polygonTemplate = polygonSeries.mapPolygons.template;
+
+  if (window.innerWidth <= 768) {
+    // Remove hover state for mobile
+    polygonTemplate.events.off("over"); // Disable default hover behavior
+
+    // Optional: disable hover state fill (fallback)
+    polygonTemplate.events.on("over", function (ev) {
+      ev.target.isHover = false;
+    });
+
+    // Add click event for showing tooltip
+    polygonTemplate.events.on("hit", function (ev) {
+      ev.target.isHover = true;
+      chart.tooltipContainer.dispatchImmediately("over", { target: ev.target });
+    });
+  } else {
+    // Enable default hover for desktop
+    polygonTemplate.events.on("over", function (ev) {
+      ev.target.isHover = true;
+    });
+
+    polygonTemplate.events.on("out", function (ev) {
+      ev.target.isHover = false;
+    });
+  }
   // polygonTemplate.tooltipText = "{name}: {value}";
   // Use HTML instead of plain text
   polygonTemplate.tooltipHTML = `
-  <div style="background:#650F1C; padding:12px 16px; border-radius:15px; color:white; font-family:manrope; max-width:220px; white-space:normal; word-wrap:break-word; overflow-wrap:break-word;">
+  <div style="background:#650F1C; padding:12px 16px; border-radius:15px; color:white; font-family:manrope; max-width:200px; white-space:normal; word-wrap:break-word; overflow-wrap:break-word;">
     <div style="font-size:var(--font20); font-weight:300; margin-bottom:6px;">{name}</div>
     <div style="font-size:var(--font12); font-weight:normal; line-height:normal; white-space:normal; word-wrap:break-word; overflow-wrap:break-word;">{description}</div>
   </div>
