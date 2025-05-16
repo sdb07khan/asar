@@ -37,6 +37,24 @@ document.addEventListener("DOMContentLoaded", function () {
   // Update on resize
   window.addEventListener("resize", updateHeroMargins);
 
+  /////////////////////////////////////////////////////////////////////////////////////
+  // side nav open close function HIGHLIGHT
+  const hamburger = document.querySelector(".hamburger");
+  const closeBtn = document.querySelector(".closeBtn");
+  const nav = document.querySelector(".headerNav");
+
+  hamburger.addEventListener("click", () => {
+    nav.style.transform = "translateX(0)";
+    hamburger.style.display = "none";
+    closeBtn.style.display = "block";
+  });
+
+  closeBtn.addEventListener("click", () => {
+    nav.style.transform = "translateX(100%)";
+    hamburger.style.display = "block";
+    closeBtn.style.display = "none";
+  });
+
   // home marquee animation HIGHLIGHT
   // const marquees = document.querySelectorAll(".marqueeContent");
 

@@ -26,34 +26,23 @@
       gap: 2rem;
     }
 
-    @media only screen and (max-width: 768px) {
-      position: absolute;
-      right: 0;
-      top: 0;
-      height: 100vh;
-      width: 100%;
-      // display: none;
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 4rem;
-      border-radius: 0;
-      transform: translateX(100%);
-      transition: all 0.3s ease-in-out;
-    }
-
     .headerLogo {
       //   margin-right: auto;
 
       @media only screen and (max-width: 768px) {
-        margin-bottom: 4rem;
         display: flex;
         align-items: center;
         width: 100%;
         justify-content: space-between;
+        // position: relative;
+        // z-index: 100;
       }
 
       a {
         text-decoration: none;
+
+        .logoWhite {
+        }
 
         img {
           height: 3rem;
@@ -66,25 +55,77 @@
         }
       }
 
-      //   .closeIcon {
-      //     display: none;
+      .hamWrapper {
+        display: none;
 
-      //     @media only screen and (max-width: 768px) {
-      //       display: block;
-      //       height: 2.2rem;
-      //       width: 2.2rem;
-      //       cursor: pointer;
+        @media only screen and (max-width: 768px) {
+          display: block;
+        }
 
-      //       @media only screen and (max-width: 575px) {
-      //         height: 2rem;
-      //         width: 2rem;
-      //       }
-      //     }
-      //   }
+        .hamburger {
+          svg {
+            height: 3rem;
+            width: 3rem;
+            cursor: pointer;
+
+            @media only screen and (max-width: 575px) {
+              height: 2.8rem;
+              width: 2.8rem;
+            }
+          }
+        }
+
+        .closeBtn {
+          @media only screen and (max-width: 768px) {
+            display: none;
+          }
+
+          svg {
+            height: 3rem;
+            width: 3rem;
+            cursor: pointer;
+
+            @media only screen and (max-width: 575px) {
+              height: 2.8rem;
+              width: 2.8rem;
+            }
+          }
+        }
+      }
     }
 
     // Navigation styles
     .headerNav {
+      @media only screen and (max-width: 768px) {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        width: 100%;
+        // display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 2rem 7.5vw;
+        border-radius: 0;
+        transform: translateX(100%);
+        transition: all 0.3s ease-in-out;
+        background-image: linear-gradient(152deg, #992035 3%, #590a18 98%);
+      }
+
+      .headerLogo {
+        @media only screen and (max-width: 768px) {
+          margin-bottom: 4rem;
+        }
+
+        .logoWhite {
+          display: none;
+
+          @media only screen and (max-width: 768px) {
+            display: block;
+          }
+        }
+      }
+
       ul {
         list-style: none;
         display: flex;
@@ -98,6 +139,7 @@
         @media only screen and (max-width: 768px) {
           flex-direction: column;
           align-items: flex-start;
+          gap: 3.2rem;
         }
 
         li {
@@ -134,7 +176,11 @@
             white-space: nowrap;
 
             @media only screen and (max-width: 768px) {
-              font-size: 2.4rem;
+              font-size: 2rem;
+              color: #fff;
+            }
+            @media only screen and (max-width: 575px) {
+              font-size: 1.6rem;
             }
 
             &:hover {
@@ -251,10 +297,54 @@
           }
         }
       }
+
+      .sideContactWrapper {
+        display: none;
+
+        @media only screen and (max-width: 768px) {
+          display: block;
+        }
+
+        a.whiteBtn {
+          margin: 3.2rem 0;
+
+          @media only screen and (max-width: 575px) {
+            width: 100%;
+          }
+        }
+
+        .socialWrapper {
+          ul {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            align-items: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            li {
+              display: flex;
+              align-items: center;
+              gap: 0.8rem;
+
+              span {
+                svg {
+                  height: 2.4rem;
+                  width: 2.4rem;
+                }
+              }
+            }
+          }
+        }
+      }
     }
 
     // Contact button styles
     .contactBtn {
+      @media only screen and (max-width: 768px) {
+        display: none;
+      }
+
       a {
         @media only screen and (max-width: 1200px) {
           padding: 1.6rem 2.4rem;

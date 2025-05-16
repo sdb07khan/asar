@@ -301,21 +301,7 @@ a {
       .header .headerContainer {
         gap: 2rem; } }
     @media only screen and (max-width: 768px) {
-      .header .headerContainer {
-        position: absolute;
-        right: 0;
-        top: 0;
-        height: 100vh;
-        width: 100%;
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 4rem;
-        border-radius: 0;
-        transform: translateX(100%);
-        transition: all 0.3s ease-in-out; } }
-    @media only screen and (max-width: 768px) {
       .header .headerContainer .headerLogo {
-        margin-bottom: 4rem;
         display: flex;
         align-items: center;
         width: 100%;
@@ -329,6 +315,52 @@ a {
         @media only screen and (max-width: 1200px) {
           .header .headerContainer .headerLogo a img {
             height: 2.5rem; } }
+    .header .headerContainer .headerLogo .hamWrapper {
+      display: none; }
+      @media only screen and (max-width: 768px) {
+        .header .headerContainer .headerLogo .hamWrapper {
+          display: block; } }
+      .header .headerContainer .headerLogo .hamWrapper .hamburger svg {
+        height: 3rem;
+        width: 3rem;
+        cursor: pointer; }
+        @media only screen and (max-width: 575px) {
+          .header .headerContainer .headerLogo .hamWrapper .hamburger svg {
+            height: 2.8rem;
+            width: 2.8rem; } }
+      @media only screen and (max-width: 768px) {
+        .header .headerContainer .headerLogo .hamWrapper .closeBtn {
+          display: none; } }
+      .header .headerContainer .headerLogo .hamWrapper .closeBtn svg {
+        height: 3rem;
+        width: 3rem;
+        cursor: pointer; }
+        @media only screen and (max-width: 575px) {
+          .header .headerContainer .headerLogo .hamWrapper .closeBtn svg {
+            height: 2.8rem;
+            width: 2.8rem; } }
+    @media only screen and (max-width: 768px) {
+      .header .headerContainer .headerNav {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 2rem 7.5vw;
+        border-radius: 0;
+        transform: translateX(100%);
+        transition: all 0.3s ease-in-out;
+        background-image: linear-gradient(152deg, #992035 3%, #590a18 98%); } }
+    @media only screen and (max-width: 768px) {
+      .header .headerContainer .headerNav .headerLogo {
+        margin-bottom: 4rem; } }
+    .header .headerContainer .headerNav .headerLogo .logoWhite {
+      display: none; }
+      @media only screen and (max-width: 768px) {
+        .header .headerContainer .headerNav .headerLogo .logoWhite {
+          display: block; } }
     .header .headerContainer .headerNav ul {
       list-style: none;
       display: flex;
@@ -340,7 +372,8 @@ a {
       @media only screen and (max-width: 768px) {
         .header .headerContainer .headerNav ul {
           flex-direction: column;
-          align-items: flex-start; } }
+          align-items: flex-start;
+          gap: 3.2rem; } }
       .header .headerContainer .headerNav ul li {
         cursor: pointer;
         position: relative;
@@ -371,7 +404,11 @@ a {
           white-space: nowrap; }
           @media only screen and (max-width: 768px) {
             .header .headerContainer .headerNav ul li a {
-              font-size: 2.4rem; } }
+              font-size: 2rem;
+              color: #fff; } }
+          @media only screen and (max-width: 575px) {
+            .header .headerContainer .headerNav ul li a {
+              font-size: 1.6rem; } }
           .header .headerContainer .headerNav ul li a:hover {
             opacity: 0.6; }
             @media only screen and (max-width: 768px) {
@@ -398,6 +435,33 @@ a {
         @media only screen and (max-width: 768px) {
           .header .headerContainer .headerNav ul li:hover span svg {
             transform: none; } }
+    .header .headerContainer .headerNav .sideContactWrapper {
+      display: none; }
+      @media only screen and (max-width: 768px) {
+        .header .headerContainer .headerNav .sideContactWrapper {
+          display: block; } }
+      .header .headerContainer .headerNav .sideContactWrapper a.whiteBtn {
+        margin: 3.2rem 0; }
+        @media only screen and (max-width: 575px) {
+          .header .headerContainer .headerNav .sideContactWrapper a.whiteBtn {
+            width: 100%; } }
+      .header .headerContainer .headerNav .sideContactWrapper .socialWrapper ul {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap; }
+        .header .headerContainer .headerNav .sideContactWrapper .socialWrapper ul li {
+          display: flex;
+          align-items: center;
+          gap: 0.8rem; }
+          .header .headerContainer .headerNav .sideContactWrapper .socialWrapper ul li span svg {
+            height: 2.4rem;
+            width: 2.4rem; }
+    @media only screen and (max-width: 768px) {
+      .header .headerContainer .contactBtn {
+        display: none; } }
     @media only screen and (max-width: 1200px) {
       .header .headerContainer .contactBtn a {
         padding: 1.6rem 2.4rem; } }
