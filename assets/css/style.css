@@ -308,13 +308,13 @@ a {
         justify-content: space-between; } }
     .header .headerContainer .headerLogo a {
       text-decoration: none; }
-      .header .headerContainer .headerLogo a img {
-        height: 3rem;
-        width: auto;
+      .header .headerContainer .headerLogo a svg {
+        height: 3.5rem !important;
+        width: auto !important;
         display: block; }
         @media only screen and (max-width: 1200px) {
-          .header .headerContainer .headerLogo a img {
-            height: 2.5rem; } }
+          .header .headerContainer .headerLogo a svg {
+            height: 3rem !important; } }
     .header .headerContainer .headerLogo .hamWrapper {
       display: none; }
       @media only screen and (max-width: 768px) {
@@ -795,6 +795,8 @@ a {
         letter-spacing: -0.8px;
         text-align: left;
         color: #0d3b66; }
+        .homeBanner.heroMarginTop .homeBannerImage .bannerCard .pointsWrapper .point h4 span {
+          margin-right: 6px; }
     .homeBanner.heroMarginTop .homeBannerImage .bannerCard .btnWrapper a {
       width: 100%; }
 
@@ -1665,6 +1667,104 @@ a {
     object-fit: contain;
     object-position: bottom; }
 
+.contactUs .mainContainer h1 {
+  font-family: var(--nunito);
+  font-size: var(--font64);
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -1.28px;
+  text-align: left;
+  color: #171a17; }
+
+.contactUs .mainContainer h4 {
+  font-family: var(--manrope);
+  font-size: var(--font32);
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.64px;
+  text-align: left;
+  color: #171a17; }
+
+.contactUs .mainContainer .formContainer {
+  padding: 4rem 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 4vw; }
+  .contactUs .mainContainer .formContainer .contactForm {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem; }
+    .contactUs .mainContainer .formContainer .contactForm .formRow {
+      display: flex;
+      gap: 2.4rem; }
+      .contactUs .mainContainer .formContainer .contactForm .formRow .formGroup {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        width: 100%; }
+        .contactUs .mainContainer .formContainer .contactForm .formRow .formGroup label {
+          font-family: var(--manrope);
+          font-size: var(--font20);
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.5;
+          letter-spacing: normal;
+          text-align: left;
+          color: rgba(23, 26, 23, 0.8); }
+        .contactUs .mainContainer .formContainer .contactForm .formRow .formGroup .inputField {
+          padding: 2.4rem 1.6rem;
+          border-radius: 15px;
+          border: solid 0.5px rgba(23, 26, 23, 0.5);
+          background-color: #fff;
+          font-family: var(--manrope);
+          font-size: var(--font16);
+          font-weight: 300;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.5;
+          letter-spacing: normal;
+          text-align: left;
+          color: rgba(23, 26, 23, 0.6); }
+    .contactUs .mainContainer .formContainer .contactForm .checkMainGroup {
+      width: 60%; }
+      .contactUs .mainContainer .formContainer .contactForm .checkMainGroup label {
+        font-family: var(--manrope);
+        font-size: var(--font20);
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.5;
+        letter-spacing: normal;
+        text-align: left;
+        color: rgba(23, 26, 23, 0.8); }
+      .contactUs .mainContainer .formContainer .contactForm .checkMainGroup .checkboxGroup {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.2rem;
+        margin-top: 1rem; }
+        .contactUs .mainContainer .formContainer .contactForm .checkMainGroup .checkboxGroup label {
+          font-family: var(--manrope);
+          font-size: var(--font16);
+          font-weight: 300;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.5;
+          letter-spacing: normal;
+          text-align: left;
+          color: #000; }
+          .contactUs .mainContainer .formContainer .contactForm .checkMainGroup .checkboxGroup label input {
+            margin-right: 1rem; }
+  .contactUs .mainContainer .formContainer .rightImg img {
+    width: 100%;
+    height: auto; }
+
 .ourWork.sectionWrapper .ourWorkContainer .headContainer h2 {
   font-family: var(--nunito);
   font-size: var(--font64);
@@ -1692,7 +1792,8 @@ a {
   padding: var(--padding4);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2.4rem; }
+  gap: 2.4rem;
+  row-gap: 4.8rem; }
   @media only screen and (max-width: 768px) {
     .ourWork.sectionWrapper .ourWorkContainer .listingContainer {
       grid-template-columns: repeat(2, 1fr);

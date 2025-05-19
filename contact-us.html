@@ -17,9 +17,14 @@
     />
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.6/lottie.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="https://www.amcharts.com/lib/4/core.js"></script>
+    <script src="https://www.amcharts.com/lib/4/maps.js"></script>
+    <script src="https://www.amcharts.com/lib/4/geodata/india2019High.js"></script>
+    <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
 
     <script src="assets/js/script.js" defer></script>
 
@@ -28,23 +33,92 @@
   <body>
     <header class="header sectionWrapper">
       <div class="headerContainer">
-        <div class="headerLogo">
-          <a href="">
-            <img src="assets/images/home/logo.svg" alt="Asar Logo" />
-          </a>
+        <div class="headerLogo headerLogoDesktop">
+          <a href=""></a>
+
+          <div class="hamWrapper">
+            <div class="hamburger">
+              <svg
+                width="28"
+                height="28"
+                viewBox="0 0 28 28"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M23.3337 7L11.667 7"
+                  stroke="#171A17"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M23.3337 14L4.66699 14"
+                  stroke="#171A17"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M23.333 21H16.333"
+                  stroke="#171A17"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
         </div>
         <nav class="headerNav">
+          <div class="headerLogo">
+            <a href="">
+              <img
+                class="logoWhite"
+                src="assets/images/home/logoLight.svg"
+                alt="Asar Logo"
+              />
+            </a>
+
+            <div class="hamWrapper">
+              <div class="closeBtn">
+                <svg
+                  width="28"
+                  height="28"
+                  viewBox="0 0 28 28"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M21 7L7 21"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M7 7L21 21"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+
           <ul>
-            <li><a href="">About</a></li>
+            <li><a href="/about-us.html">About</a></li>
             <li><a href="/ourWork.html">Our work</a></li>
-            <li><a href="">Knowledge hub</a></li>
-            <li><a href="">Engage with us</a></li>
-            <li><a href="">Get involved</a></li>
-            <li><a href="">Careers</a></li>
+            <li><a href="/reports.html">Knowledge hub</a></li>
+            <li><a href="/connectWithUs.html">Engage with us</a></li>
+            <!-- <li><a href="">Get involved</a></li> -->
+            <!-- <li><a href="">Careers</a></li> -->
           </ul>
 
           <div class="sideContactWrapper">
-            <a href="" class="whiteBtn">Contact Us</a>
+            <a href="/contact-us.html" class="whiteBtn">Contact Us</a>
 
             <div class="socialWrapper">
               <ul>
@@ -111,262 +185,97 @@
       </div>
     </header>
 
-    <section class="contactBanner">
-      <div class="bannerContainer heroMarginTop">
-        <img
-          src="assets/images/contact/bannerImg.svg"
-          alt=""
-          class="bannerImg img-left"
-        />
-
-        <div class="bannerContent">
-          <h1 class="fade-in">Receive Insights That Matter</h1>
-          <p class="fade-in">
-            Be the first to hear about new initiatives, community voices, and
-            grounded climate solutions.
-          </p>
-          <div class="subscribeContainer fade-in">
-            <input type="email" placeholder="Enter your email" />
-            <button>Subscribe</button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="socialListing linkedInListings">
-      <img
-        src="assets/images/contact/contactShape.svg"
-        alt=""
-        class="bannerShape"
-      />
-      <div class="mainContainer fade-in">
-        <h2>LinkedIn</h2>
-
-        <div class="socialHandleContainer">
-          <div class="socialIconBox">
-            <img src="assets/images/contact/linkedIn.png" alt="" />
-          </div>
-          <div class="socialNameBox">
-            <h3>Asar</h3>
-            <p>1,345 Posts</p>
-          </div>
-
-          <a href="" class="maroonBtn">Follow Us</a>
-        </div>
-
-        <div class="postsListingContainer">
-          <div class="btnWrapper">
-            <svg
-              class="leftBtn"
-              width="40"
-              height="40"
-              viewBox="0 0 40 40"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g opacity="1">
-                <circle
-                  cx="20"
-                  cy="20"
-                  r="19.5"
-                  transform="rotate(-180 20 20)"
-                  stroke="#171a17"
-                />
-                <path
-                  d="M33 20.5C33.2761 20.5 33.5 20.2761 33.5 20C33.5 19.7239 33.2761 19.5 33 19.5V20.5ZM7.64645 19.6464C7.45119 19.8417 7.45119 20.1583 7.64645 20.3536L10.8284 23.5355C11.0237 23.7308 11.3403 23.7308 11.5355 23.5355C11.7308 23.3403 11.7308 23.0237 11.5355 22.8284L8.70711 20L11.5355 17.1716C11.7308 16.9763 11.7308 16.6597 11.5355 16.4645C11.3403 16.2692 11.0237 16.2692 10.8284 16.4645L7.64645 19.6464ZM33 20V19.5L8 19.5V20V20.5L33 20.5V20Z"
-                  fill="#171a17"
-                />
-              </g>
-            </svg>
-
-            <svg
-              class="rightBtn"
-              width="40"
-              height="40"
-              viewBox="0 0 40 40"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle cx="20" cy="20" r="19.5" stroke="#171a17" />
-              <path
-                d="M7 19.5C6.72386 19.5 6.5 19.7239 6.5 20C6.5 20.2761 6.72386 20.5 7 20.5V19.5ZM32.3536 20.3536C32.5488 20.1583 32.5488 19.8417 32.3536 19.6464L29.1716 16.4645C28.9763 16.2692 28.6597 16.2692 28.4645 16.4645C28.2692 16.6597 28.2692 16.9763 28.4645 17.1716L31.2929 20L28.4645 22.8284C28.2692 23.0237 28.2692 23.3403 28.4645 23.5355C28.6597 23.7308 28.9763 23.7308 29.1716 23.5355L32.3536 20.3536ZM7 20V20.5H32V20V19.5H7V20Z"
-                fill="#171a17"
-              />
-            </svg>
-          </div>
-
-          <div class="listingsWrapper">
-            <a href="">
-              <div class="block">
-                <img src="assets/images/contact/linkedInImg.webp" alt="" />
-              </div>
-            </a>
-            <a href="">
-              <div class="block">
-                <img src="assets/images/contact/linkedInImg.webp" alt="" />
-              </div>
-            </a>
-            <a href="">
-              <div class="block">
-                <img src="assets/images/contact/linkedInImg.webp" alt="" />
-              </div>
-            </a>
-            <a href="">
-              <div class="block">
-                <img src="assets/images/contact/linkedInImg.webp" alt="" />
-              </div>
-            </a>
-            <a href="">
-              <div class="block">
-                <img src="assets/images/contact/linkedInImg.webp" alt="" />
-              </div>
-            </a>
-            <a href="">
-              <div class="block">
-                <img src="assets/images/contact/linkedInImg.webp" alt="" />
-              </div>
-            </a>
-            <a href="">
-              <div class="block">
-                <img src="assets/images/contact/linkedInImg.webp" alt="" />
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="socialListing instagramListings">
-      <div class="mainContainer fade-in">
-        <h2>Instagram</h2>
-
-        <div class="socialHandleContainer">
-          <div class="socialIconBox">
-            <img src="assets/images/contact/Instagram.png" alt="" />
-          </div>
-          <div class="socialNameBox">
-            <h3>Asar</h3>
-            <p>1,345 Posts</p>
-          </div>
-
-          <a href="" class="maroonBtn">Follow Us</a>
-        </div>
-
-        <div class="postsListingContainer">
-          <div class="btnWrapper">
-            <svg
-              class="leftBtn"
-              width="40"
-              height="40"
-              viewBox="0 0 40 40"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g opacity="1">
-                <circle
-                  cx="20"
-                  cy="20"
-                  r="19.5"
-                  transform="rotate(-180 20 20)"
-                  stroke="#171a17"
-                />
-                <path
-                  d="M33 20.5C33.2761 20.5 33.5 20.2761 33.5 20C33.5 19.7239 33.2761 19.5 33 19.5V20.5ZM7.64645 19.6464C7.45119 19.8417 7.45119 20.1583 7.64645 20.3536L10.8284 23.5355C11.0237 23.7308 11.3403 23.7308 11.5355 23.5355C11.7308 23.3403 11.7308 23.0237 11.5355 22.8284L8.70711 20L11.5355 17.1716C11.7308 16.9763 11.7308 16.6597 11.5355 16.4645C11.3403 16.2692 11.0237 16.2692 10.8284 16.4645L7.64645 19.6464ZM33 20V19.5L8 19.5V20V20.5L33 20.5V20Z"
-                  fill="#171a17"
-                />
-              </g>
-            </svg>
-
-            <svg
-              class="rightBtn"
-              width="40"
-              height="40"
-              viewBox="0 0 40 40"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle cx="20" cy="20" r="19.5" stroke="#171a17" />
-              <path
-                d="M7 19.5C6.72386 19.5 6.5 19.7239 6.5 20C6.5 20.2761 6.72386 20.5 7 20.5V19.5ZM32.3536 20.3536C32.5488 20.1583 32.5488 19.8417 32.3536 19.6464L29.1716 16.4645C28.9763 16.2692 28.6597 16.2692 28.4645 16.4645C28.2692 16.6597 28.2692 16.9763 28.4645 17.1716L31.2929 20L28.4645 22.8284C28.2692 23.0237 28.2692 23.3403 28.4645 23.5355C28.6597 23.7308 28.9763 23.7308 29.1716 23.5355L32.3536 20.3536ZM7 20V20.5H32V20V19.5H7V20Z"
-                fill="#171a17"
-              />
-            </svg>
-          </div>
-
-          <div class="listingsWrapper">
-            <a href="">
-              <div class="block">
-                <img src="assets/images/contact/linkedInImg.webp" alt="" />
-              </div>
-            </a>
-            <a href="">
-              <div class="block">
-                <img src="assets/images/contact/linkedInImg.webp" alt="" />
-              </div>
-            </a>
-            <a href="">
-              <div class="block">
-                <img src="assets/images/contact/linkedInImg.webp" alt="" />
-              </div>
-            </a>
-            <a href="">
-              <div class="block">
-                <img src="assets/images/contact/linkedInImg.webp" alt="" />
-              </div>
-            </a>
-            <a href="">
-              <div class="block">
-                <img src="assets/images/contact/linkedInImg.webp" alt="" />
-              </div>
-            </a>
-            <a href="">
-              <div class="block">
-                <img src="assets/images/contact/linkedInImg.webp" alt="" />
-              </div>
-            </a>
-            <a href="">
-              <div class="block">
-                <img src="assets/images/contact/linkedInImg.webp" alt="" />
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="homeMarquee">
-      <div class="homeMarqueeContainer">
-        <div class="marquee">
-          <div class="marqueeContent">
-            <img src="assets/images/home/snowFlake.svg" alt="" />
-            <p>Networks</p>
-            <img src="assets/images/home/climate.svg" alt="" />
-            <p>Climate</p>
-            <img src="assets/images/home/community.svg" alt="" />
-            <p>Community</p>
-            <img src="assets/images/home/collaboration.svg" alt="" />
-            <p>Collaboration</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="contactCollaborate sectionWrapper fade-in">
+    <section class="contactUs sectionWrapper heroMarginTop">
       <div class="mainContainer">
-        <div class="left fade-in">
-          <h2>Collaborate for Lasting Impact</h2>
-          <p>
-            Change happens through collaboration. Partner with us to connect
-            knowledge, amplify voices, and drive grounded climate solutions.
-          </p>
-          <div class="btnBox">
-            <a href="" class="whiteBtn">Partner With Us</a>
-            <a href="" class="whiteTrBtn">About Us</a>
-          </div>
-        </div>
+        <h1>Contact us</h1>
+        <h4>General application form</h4>
 
-        <div class="right img-right">
-          <img src="assets/images/contact/collborate.webp" alt="" />
+        <div class="formContainer">
+          <form class="contactForm">
+            <div class="formRow">
+              <div class="formGroup">
+                <label for="firstName">First Name</label>
+                <input
+                  type="text"
+                  id="firstName"
+                  class="inputField"
+                  placeholder="Enter your first name"
+                />
+              </div>
+              <div class="formGroup">
+                <label for="lastName">Last Name</label>
+                <input
+                  type="text"
+                  id="lastName"
+                  class="inputField"
+                  placeholder="Enter your last name"
+                />
+              </div>
+            </div>
+
+            <div class="formRow">
+              <div class="formGroup">
+                <label for="emailAddress">Email Address</label>
+                <input
+                  type="email"
+                  id="emailAddress"
+                  class="inputField"
+                  placeholder="Enter your email address"
+                />
+              </div>
+              <div class="formGroup">
+                <label for="phoneNumber">Phone Number</label>
+
+                <input
+                  type="tel"
+                  id="phoneNumber"
+                  class="inputField"
+                  placeholder="Enter your phone number"
+                />
+              </div>
+            </div>
+
+            <div class="checkMainGroup">
+              <label>What Do You Need Help With?</label>
+              <div class="checkboxGroup">
+                <label
+                  ><input type="checkbox" class="checkboxInput" /> General
+                  Inquiries</label
+                >
+                <label
+                  ><input type="checkbox" class="checkboxInput" />
+                  Partnership</label
+                >
+                <label
+                  ><input type="checkbox" class="checkboxInput" /> Other</label
+                >
+                <label
+                  ><input type="checkbox" class="checkboxInput" /> Media</label
+                >
+                <label
+                  ><input type="checkbox" class="checkboxInput" />
+                  Volunteer</label
+                >
+              </div>
+            </div>
+
+            <div class="formGroup">
+              <label for="message">Your Message (If Any)</label>
+              <textarea
+                id="message"
+                class="textAreaField"
+                placeholder="Type your message"
+              ></textarea>
+            </div>
+
+            <div class="formGroup">
+              <button type="submit" class="submitButton">Submit</button>
+            </div>
+          </form>
+
+          <div class="rightImg">
+            <img src="assets/images/home/contactShape.svg" alt="" />
+          </div>
         </div>
       </div>
     </section>
@@ -395,18 +304,18 @@
         <div class="right">
           <div class="footerLinks">
             <ul>
-              <li><a href="">About us</a></li>
-              <li><a href="">Our work</a></li>
-              <li><a href="">Knowledge hub</a></li>
-              <li><a href="">Careers</a></li>
+              <li><a href="/about-us.html">About us</a></li>
+              <li><a href="/ourWork.html">Our work</a></li>
+              <li><a href="/reports.html">Knowledge hub</a></li>
+              <!-- <li><a href="">Careers</a></li> -->
             </ul>
           </div>
 
           <div class="footerLinks">
             <ul>
-              <li><a href="">Engage with us</a></li>
-              <li><a href="">Get involved</a></li>
-              <li><a href="">Contact us</a></li>
+              <li><a href="connectWithUs.html">Engage with us</a></li>
+              <!-- <li><a href="">Get involved</a></li> -->
+              <li><a href="/contact-us.html">Contact us</a></li>
             </ul>
           </div>
 
@@ -467,6 +376,10 @@
               </li>
             </ul>
           </div>
+        </div>
+
+        <div class="footerLogoPhone">
+          <img src="assets/images/home/footerLogo.svg" alt="Asar Logo" />
         </div>
 
         <div class="footerBottom">

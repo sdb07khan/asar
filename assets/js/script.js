@@ -1,6 +1,23 @@
 gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener("DOMContentLoaded", function () {
+  //Logo lottie animation HIGHLIGHT
+  var containers = document.querySelectorAll(".headerLogoDesktop a");
+
+  containers.forEach(function (container) {
+    // console.log(container);
+
+    // Initialize the Lottie animation for each container
+    var animation = bodymovin.loadAnimation({
+      container: container, // The container to display the animation in
+      renderer: "svg", // Type of renderer (SVG, canvas, or html)
+      loop: false, // Animation will loop
+      autoplay: true, // Animation will start automatically
+      // path: `${window.location.origin}/wp-content/themes/engenius/assets/img/homepage/headerLogoBlack.json`,
+      path: `/assets/lotties/Logo.json`,
+    });
+  });
+
   // header hide on scroll down HIGHLIGHT
   const header = document.querySelector(".header");
 
@@ -300,6 +317,36 @@ document.addEventListener("DOMContentLoaded", function () {
         },
       });
     });
+
+  // number counter animation HIGHLIGHT
+  gsap.utils.toArray(".animCounter").forEach((box) => {
+    let tler = gsap.from(box, {
+      textContent: "0",
+      duration: 1.5,
+      ease: "power1.inOut",
+      modifiers: {
+        textContent: (value) => {
+          return formatNumber(value, 0);
+        },
+      },
+      scrollTrigger: {
+        trigger: box,
+        start: "100px 90%",
+        end: "+=100",
+        toggleActions: "play none none none",
+        end: "top 100%",
+        // markers: true,
+      },
+    });
+  });
+
+  function formatNumber(value, decimals) {
+    let s = (+value).toLocaleString("en-US").split(".");
+    const returnValue = decimals
+      ? s[0] + "." + ((s[1] || "") + "00000000").substr(0, decimals)
+      : s[0];
+    return returnValue;
+  }
 
   ///////////////////////////////////////////////////////////////////////////////////////// Home Page Map code HIGHLIGHT
 

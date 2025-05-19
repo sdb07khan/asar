@@ -1,0 +1,154 @@
+// Contact Us Section
+.contactUs {
+  // Main container
+  .mainContainer {
+    // Headings
+    h1 {
+      font-family: var(--nunito);
+      font-size: var(--font64);
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: -1.28px;
+      text-align: left;
+      color: #171a17;
+    }
+
+    h4 {
+      font-family: var(--manrope);
+      font-size: var(--font32);
+      font-weight: 500;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: -0.64px;
+      text-align: left;
+      color: #171a17;
+    }
+
+    // Form container
+    .formContainer {
+      padding: 4rem 0;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      gap: 4vw;
+
+      // Form element
+      .contactForm {
+        // Form rows
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+
+        .formRow {
+          // Form groups
+          display: flex;
+          gap: 2.4rem;
+
+          .formGroup {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            width: 100%;
+
+            // Labels
+            label {
+              font-family: var(--manrope);
+              font-size: var(--font20);
+              font-weight: normal;
+              font-stretch: normal;
+              font-style: normal;
+              line-height: 1.5;
+              letter-spacing: normal;
+              text-align: left;
+              color: rgba(23, 26, 23, 0.8);
+            }
+
+            // Input fields
+            .inputField {
+              padding: 2.4rem 1.6rem;
+              border-radius: 15px;
+              border: solid 0.5px rgba(23, 26, 23, 0.5);
+              background-color: #fff;
+              font-family: var(--manrope);
+              font-size: var(--font16);
+              font-weight: 300;
+              font-stretch: normal;
+              font-style: normal;
+              line-height: 1.5;
+              letter-spacing: normal;
+              text-align: left;
+              color: rgba(23, 26, 23, 0.6);
+
+              &::placeholder {
+              }
+            }
+          }
+        }
+
+        .checkMainGroup {
+          width: 60%;
+
+          label {
+            font-family: var(--manrope);
+            font-size: var(--font20);
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.5;
+            letter-spacing: normal;
+            text-align: left;
+            color: rgba(23, 26, 23, 0.8);
+          }
+
+          .checkboxGroup {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.2rem;
+            margin-top: 1rem;
+
+            label {
+              font-family: var(--manrope);
+              font-size: var(--font16);
+              font-weight: 300;
+              font-stretch: normal;
+              font-style: normal;
+              line-height: 1.5;
+              letter-spacing: normal;
+              text-align: left;
+              color: #000;
+
+              input {
+                margin-right: 1rem;
+              }
+            }
+          }
+        }
+
+        // Checkbox group
+
+        // Textarea field
+        .textAreaField {
+          &::placeholder {
+          }
+        }
+
+        // Submit button
+        .submitButton {
+          &:hover {
+          }
+        }
+      }
+
+      .rightImg {
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+}
