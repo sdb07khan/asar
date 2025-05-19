@@ -13,6 +13,7 @@
       letter-spacing: -1.28px;
       text-align: left;
       color: #171a17;
+      margin-bottom: 1rem;
     }
 
     h4 {
@@ -128,16 +129,50 @@
           }
         }
 
-        // Checkbox group
+        .messageGroup {
+          // Textarea field
+          display: flex;
+          flex-direction: column;
+          gap: 6px;
+          width: 100%;
 
-        // Textarea field
-        .textAreaField {
-          &::placeholder {
+          label {
+            font-family: var(--manrope);
+            font-size: var(--font20);
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.5;
+            letter-spacing: normal;
+            text-align: left;
+            color: rgba(23, 26, 23, 0.8);
+          }
+
+          .textAreaField {
+            padding: 2.4rem 1.6rem;
+            border-radius: 15px;
+            border: solid 0.5px rgba(23, 26, 23, 0.5);
+            background-color: #fff;
+            font-family: var(--manrope);
+            font-size: var(--font16);
+            font-weight: 300;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.5;
+            letter-spacing: normal;
+            text-align: left;
+            color: rgba(23, 26, 23, 0.6);
+            &::placeholder {
+            }
           }
         }
 
         // Submit button
         .submitButton {
+          outline: none;
+          border: none;
+          cursor: pointer;
+
           &:hover {
           }
         }
