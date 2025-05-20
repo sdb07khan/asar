@@ -49,6 +49,10 @@
           display: flex;
           gap: 2.4rem;
 
+          @media only screen and (max-width: 650px) {
+            flex-direction: column;
+          }
+
           .formGroup {
             display: flex;
             flex-direction: column;
@@ -82,9 +86,14 @@
               line-height: 1.5;
               letter-spacing: normal;
               text-align: left;
-              color: rgba(23, 26, 23, 0.6);
+              color: #000;
+
+              @media only screen and (max-width: 768px) {
+                padding: 2rem 1.4rem;
+              }
 
               &::placeholder {
+                color: rgba(23, 26, 23, 0.6);
               }
             }
           }
@@ -92,6 +101,10 @@
 
         .checkMainGroup {
           width: 60%;
+
+          @media only screen and (max-width: 1200px) {
+            width: 70%;
+          }
 
           label {
             font-family: var(--manrope);
@@ -110,6 +123,10 @@
             grid-template-columns: repeat(2, 1fr);
             gap: 1.2rem;
             margin-top: 1rem;
+
+            @media only screen and (max-width: 575px) {
+              grid-template-columns: repeat(1, 1fr);
+            }
 
             label {
               font-family: var(--manrope);
@@ -161,8 +178,14 @@
             line-height: 1.5;
             letter-spacing: normal;
             text-align: left;
-            color: rgba(23, 26, 23, 0.6);
+            color: #000;
+
+            @media only screen and (max-width: 768px) {
+              padding: 2rem 1.4rem;
+            }
+
             &::placeholder {
+              color: rgba(23, 26, 23, 0.6);
             }
           }
         }
@@ -179,9 +202,58 @@
       }
 
       .rightImg {
+        @media only screen and (max-width: 768px) {
+          display: none;
+        }
+
         img {
           width: 100%;
           height: auto;
+        }
+      }
+    }
+
+    .generalInfoWrapper {
+      padding: 2rem 0;
+
+      h4 {
+        font-family: var(--manrope);
+        font-size: var(--font32);
+        font-weight: 500;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.4;
+        letter-spacing: -0.64px;
+        text-align: left;
+        color: #171a17;
+        margin-bottom: 2rem;
+      }
+
+      ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem;
+
+        li {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          font-family: var(--manrope);
+          font-size: var(--font16);
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.5;
+          letter-spacing: normal;
+          text-align: left;
+          color: #171a17;
+
+          span {
+            height: 2.4rem;
+            width: 2.4rem;
+            display: flex;
+          }
         }
       }
     }

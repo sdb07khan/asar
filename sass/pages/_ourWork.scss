@@ -59,11 +59,32 @@
               margin-bottom: 1rem;
               border-radius: 1.5rem;
               display: flex;
+              position: relative;
 
-              img {
+              .image {
                 height: auto;
                 width: 100%;
                 transition: all 0.3s ease-in-out;
+              }
+
+              .icon {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: auto;
+                height: 18rem;
+                z-index: 1;
+
+                @media only screen and (max-width: 1400px) {
+                  height: 14rem;
+                }
+                @media only screen and (max-width: 768px) {
+                  height: 10rem;
+                }
+                @media only screen and (max-width: 575px) {
+                  height: 8rem;
+                }
               }
             }
 
@@ -103,7 +124,7 @@
           }
         }
 
-        a:hover img {
+        a:hover .image {
           transform: scale(1.1);
         }
       }

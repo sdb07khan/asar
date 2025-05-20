@@ -1,7 +1,7 @@
 .reports_banner {
   position: relative;
-  padding: var(--padding8);
-  padding-top: 17rem;
+  padding-bottom: var(--paddingB8);
+  // padding-top: 17rem;
   overflow: hidden;
   .bg {
     position: absolute;
@@ -514,4 +514,398 @@
   }
 
   // !===========================
+}
+
+.youtubeListings {
+  position: relative;
+
+  .videoShape {
+    position: absolute;
+    top: -25%;
+    left: 65%;
+    width: auto;
+    height: 70rem;
+    // z-index: 1;
+    animation: rotate360 60s linear infinite;
+
+    @media only screen and (max-width: 768px) {
+      top: -15%;
+      height: 50rem;
+    }
+    @media only screen and (max-width: 575px) {
+      top: 0%;
+      height: 30rem;
+    }
+  }
+
+  .workRelatedContainer {
+    position: relative;
+
+    h2 {
+      font-family: var(--nunito);
+      font-size: var(--font48);
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: -0.96px;
+      text-align: left;
+      color: #171a17;
+      margin-bottom: 3.2rem;
+    }
+
+    .listingsContainer {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      row-gap: 6rem;
+      column-gap: 2rem;
+
+      @media only screen and (max-width: 1200px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media only screen and (max-width: 575px) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+      .slide {
+        // Image container with clip path
+        // margin: 0 1rem;
+
+        .imgContainer {
+          // SVG clip path
+          position: relative;
+          margin-bottom: 1rem;
+
+          .tagsContainer {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            z-index: 1;
+
+            .cardTag {
+              background-color: #f0e8e9;
+            }
+          }
+
+          .videoWrapper {
+            iframe {
+              width: 100%;
+              height: 100%;
+              border-radius: 1.5rem;
+              border: none;
+              overflow: hidden;
+              aspect-ratio: 16/9;
+
+              video {
+                width: 100%;
+                height: 100%;
+                border-radius: 1.5rem;
+              }
+            }
+          }
+        }
+
+        // Text content
+        .cardTextContent {
+          margin-bottom: 2rem;
+
+          h4 {
+            font-family: var(--manrope);
+            font-size: var(--font28);
+            font-weight: 600;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.2;
+            letter-spacing: normal;
+            text-align: left;
+            color: #171a17;
+            margin-bottom: 1rem;
+          }
+
+          p {
+            font-family: var(--manrope);
+            font-size: var(--font16);
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.5;
+            letter-spacing: normal;
+            text-align: left;
+            color: #171a17;
+          }
+        }
+
+        a {
+          width: 100%;
+        }
+      }
+    }
+
+    .viewMoreBox {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 4rem;
+      width: 100%;
+    }
+  }
+}
+
+// !===========================video Single
+
+// Video Single Banner Section
+.videoSingleBanner {
+  .mainContainer {
+    padding-bottom: var(--paddingB4);
+    // Back button
+    .backBtn {
+      a {
+        // Arrow icon
+        svg {
+          path {
+          }
+        }
+
+        // Text span
+        span {
+        }
+
+        // Hover state
+        &:hover {
+          svg path {
+          }
+          span {
+          }
+        }
+      }
+    }
+
+    // Top content wrapper
+    .topWrapper {
+      // Head container
+      .headContainer {
+        // Tags container
+        max-width: 60%;
+
+        @media only screen and (max-width: 768px) {
+          max-width: 90%;
+        }
+
+        @media only screen and (max-width: 575px) {
+          max-width: 100%;
+        }
+
+        .tagsContainer {
+          // Individual tag
+          display: flex;
+          align-items: center;
+          gap: 0.6rem;
+          margin-bottom: 1rem;
+
+          .cardTag {
+            p {
+              font-family: var(--manrope);
+              font-size: var(--font12);
+              color: #66101f;
+            }
+          }
+        }
+
+        // Title
+        h2 {
+          font-family: var(--nunito);
+          font-size: var(--font48);
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: normal;
+          letter-spacing: -0.96px;
+          text-align: left;
+          color: #171a17;
+          margin-bottom: 1rem;
+        }
+
+        // Description
+        p {
+          font-family: var(--manrope);
+          font-size: var(--font16);
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.5;
+          letter-spacing: normal;
+          text-align: left;
+          color: rgba(23, 26, 23, 0.8);
+        }
+      }
+    }
+
+    // Video container
+    .videoContainer {
+      padding: 4rem 0;
+      // Video wrapper
+      .videoWrapper {
+        // Responsive iframe
+
+        iframe {
+          width: 100%;
+          height: 100%;
+          border-radius: 1.5rem;
+          border: none;
+          overflow: hidden;
+          aspect-ratio: 16/9;
+          max-height: 90vh;
+        }
+      }
+    }
+  }
+}
+
+.relatedVideos {
+  position: relative;
+
+  .videoShape {
+    position: absolute;
+    top: 20%;
+    right: -20%;
+    width: auto;
+    height: 65rem;
+    // z-index: 1;
+    // animation: rotate360 60s linear infinite;
+
+    @media only screen and (max-width: 768px) {
+      top: 15%;
+      height: 50rem;
+    }
+    @media only screen and (max-width: 575px) {
+      top: 0%;
+      height: 30rem;
+    }
+  }
+
+  .workRelatedContainer {
+    position: relative;
+    padding-top: var(--paddingT8);
+    padding-bottom: var(--paddingB4);
+
+    h2 {
+      font-family: var(--nunito);
+      font-size: var(--font48);
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: -0.96px;
+      text-align: left;
+      color: #171a17;
+      margin-bottom: 3.2rem;
+    }
+
+    .listingsContainer {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      row-gap: 6rem;
+      column-gap: 2rem;
+
+      @media only screen and (max-width: 1200px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media only screen and (max-width: 768px) {
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 4rem;
+      }
+      @media only screen and (max-width: 575px) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+      .slide {
+        // Image container with clip path
+        // margin: 0 1rem;
+
+        .imgContainer {
+          // SVG clip path
+          position: relative;
+          margin-bottom: 1rem;
+
+          .tagsContainer {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            z-index: 1;
+
+            .cardTag {
+              background-color: #f0e8e9;
+            }
+          }
+
+          .videoWrapper {
+            iframe {
+              width: 100%;
+              height: 100%;
+              border-radius: 1.5rem;
+              border: none;
+              overflow: hidden;
+              aspect-ratio: 16/9;
+
+              video {
+                width: 100%;
+                height: 100%;
+                border-radius: 1.5rem;
+              }
+            }
+          }
+        }
+
+        // Text content
+        .cardTextContent {
+          margin-bottom: 2rem;
+
+          h4 {
+            font-family: var(--manrope);
+            font-size: var(--font28);
+            font-weight: 600;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.2;
+            letter-spacing: normal;
+            text-align: left;
+            color: #171a17;
+            margin-bottom: 1rem;
+          }
+
+          p {
+            font-family: var(--manrope);
+            font-size: var(--font16);
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.5;
+            letter-spacing: normal;
+            text-align: left;
+            color: #171a17;
+          }
+        }
+
+        a {
+          width: 100%;
+        }
+      }
+    }
+
+    .viewMoreBox {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 4rem;
+      width: 100%;
+    }
+  }
 }

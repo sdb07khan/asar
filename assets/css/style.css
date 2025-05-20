@@ -280,6 +280,35 @@ a {
   100% {
     transform: translateX(50%) rotate(360deg); } }
 
+.backBtn a {
+  font-family: var(--manrope);
+  font-size: var(--font20);
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-align: center;
+  color: #171a17;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  text-decoration: none;
+  margin-bottom: 4rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  width: fit-content; }
+  @media only screen and (max-width: 575px) {
+    .backBtn a {
+      gap: 1.2rem;
+      margin-bottom: 3.2rem; } }
+  .backBtn a svg {
+    height: 1.6rem;
+    width: auto; }
+    @media only screen and (max-width: 575px) {
+      .backBtn a svg {
+        height: 1.4rem; } }
+
 .header {
   width: 100%;
   position: fixed;
@@ -447,7 +476,6 @@ a {
             width: 100%; } }
       .header .headerContainer .headerNav .sideContactWrapper .socialWrapper ul {
         display: flex;
-        justify-content: space-between;
         width: 100%;
         align-items: center;
         flex-direction: row;
@@ -1704,6 +1732,9 @@ a {
     .contactUs .mainContainer .formContainer .contactForm .formRow {
       display: flex;
       gap: 2.4rem; }
+      @media only screen and (max-width: 650px) {
+        .contactUs .mainContainer .formContainer .contactForm .formRow {
+          flex-direction: column; } }
       .contactUs .mainContainer .formContainer .contactForm .formRow .formGroup {
         display: flex;
         flex-direction: column;
@@ -1732,9 +1763,17 @@ a {
           line-height: 1.5;
           letter-spacing: normal;
           text-align: left;
-          color: rgba(23, 26, 23, 0.6); }
+          color: #000; }
+          @media only screen and (max-width: 768px) {
+            .contactUs .mainContainer .formContainer .contactForm .formRow .formGroup .inputField {
+              padding: 2rem 1.4rem; } }
+          .contactUs .mainContainer .formContainer .contactForm .formRow .formGroup .inputField::placeholder {
+            color: rgba(23, 26, 23, 0.6); }
     .contactUs .mainContainer .formContainer .contactForm .checkMainGroup {
       width: 60%; }
+      @media only screen and (max-width: 1200px) {
+        .contactUs .mainContainer .formContainer .contactForm .checkMainGroup {
+          width: 70%; } }
       .contactUs .mainContainer .formContainer .contactForm .checkMainGroup label {
         font-family: var(--manrope);
         font-size: var(--font20);
@@ -1750,6 +1789,9 @@ a {
         grid-template-columns: repeat(2, 1fr);
         gap: 1.2rem;
         margin-top: 1rem; }
+        @media only screen and (max-width: 575px) {
+          .contactUs .mainContainer .formContainer .contactForm .checkMainGroup .checkboxGroup {
+            grid-template-columns: repeat(1, 1fr); } }
         .contactUs .mainContainer .formContainer .contactForm .checkMainGroup .checkboxGroup label {
           font-family: var(--manrope);
           font-size: var(--font16);
@@ -1790,14 +1832,58 @@ a {
         line-height: 1.5;
         letter-spacing: normal;
         text-align: left;
-        color: rgba(23, 26, 23, 0.6); }
+        color: #000; }
+        @media only screen and (max-width: 768px) {
+          .contactUs .mainContainer .formContainer .contactForm .messageGroup .textAreaField {
+            padding: 2rem 1.4rem; } }
+        .contactUs .mainContainer .formContainer .contactForm .messageGroup .textAreaField::placeholder {
+          color: rgba(23, 26, 23, 0.6); }
     .contactUs .mainContainer .formContainer .contactForm .submitButton {
       outline: none;
       border: none;
       cursor: pointer; }
+  @media only screen and (max-width: 768px) {
+    .contactUs .mainContainer .formContainer .rightImg {
+      display: none; } }
   .contactUs .mainContainer .formContainer .rightImg img {
     width: 100%;
     height: auto; }
+
+.contactUs .mainContainer .generalInfoWrapper {
+  padding: 2rem 0; }
+  .contactUs .mainContainer .generalInfoWrapper h4 {
+    font-family: var(--manrope);
+    font-size: var(--font32);
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.4;
+    letter-spacing: -0.64px;
+    text-align: left;
+    color: #171a17;
+    margin-bottom: 2rem; }
+  .contactUs .mainContainer .generalInfoWrapper ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem; }
+    .contactUs .mainContainer .generalInfoWrapper ul li {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-family: var(--manrope);
+      font-size: var(--font16);
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.5;
+      letter-spacing: normal;
+      text-align: left;
+      color: #171a17; }
+      .contactUs .mainContainer .generalInfoWrapper ul li span {
+        height: 2.4rem;
+        width: 2.4rem;
+        display: flex; }
 
 .ourWork.sectionWrapper .ourWorkContainer .headContainer h2 {
   font-family: var(--nunito);
@@ -1840,11 +1926,29 @@ a {
     overflow: hidden;
     margin-bottom: 1rem;
     border-radius: 1.5rem;
-    display: flex; }
-    .ourWork.sectionWrapper .ourWorkContainer .listingContainer a .block .imgBox img {
+    display: flex;
+    position: relative; }
+    .ourWork.sectionWrapper .ourWorkContainer .listingContainer a .block .imgBox .image {
       height: auto;
       width: 100%;
       transition: all 0.3s ease-in-out; }
+    .ourWork.sectionWrapper .ourWorkContainer .listingContainer a .block .imgBox .icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: auto;
+      height: 18rem;
+      z-index: 1; }
+      @media only screen and (max-width: 1400px) {
+        .ourWork.sectionWrapper .ourWorkContainer .listingContainer a .block .imgBox .icon {
+          height: 14rem; } }
+      @media only screen and (max-width: 768px) {
+        .ourWork.sectionWrapper .ourWorkContainer .listingContainer a .block .imgBox .icon {
+          height: 10rem; } }
+      @media only screen and (max-width: 575px) {
+        .ourWork.sectionWrapper .ourWorkContainer .listingContainer a .block .imgBox .icon {
+          height: 8rem; } }
   .ourWork.sectionWrapper .ourWorkContainer .listingContainer a .block h5 {
     font-family: var(--manrope);
     font-size: var(--font28);
@@ -1866,7 +1970,7 @@ a {
     letter-spacing: normal;
     text-align: left;
     color: #171a17; }
-  .ourWork.sectionWrapper .ourWorkContainer .listingContainer a:hover img {
+  .ourWork.sectionWrapper .ourWorkContainer .listingContainer a:hover .image {
     transform: scale(1.1); }
 
 .workSingleBanner {
@@ -2190,102 +2294,6 @@ a {
     align-items: center;
     margin-top: 4rem;
     width: 100%; }
-
-.youtubeListings {
-  position: relative; }
-  .youtubeListings .videoShape {
-    position: absolute;
-    top: -25%;
-    left: 65%;
-    width: auto;
-    height: 70rem;
-    animation: rotate360 60s linear infinite; }
-    @media only screen and (max-width: 768px) {
-      .youtubeListings .videoShape {
-        top: -15%;
-        height: 50rem; } }
-    @media only screen and (max-width: 768px) {
-      .youtubeListings .videoShape {
-        top: 0%;
-        height: 30rem; } }
-  .youtubeListings .workRelatedContainer {
-    position: relative; }
-    .youtubeListings .workRelatedContainer h2 {
-      font-family: var(--nunito);
-      font-size: var(--font48);
-      font-weight: normal;
-      font-stretch: normal;
-      font-style: normal;
-      line-height: normal;
-      letter-spacing: -0.96px;
-      text-align: left;
-      color: #171a17;
-      margin-bottom: 3.2rem; }
-    .youtubeListings .workRelatedContainer .listingsContainer {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 3.2rem; }
-      @media only screen and (max-width: 1200px) {
-        .youtubeListings .workRelatedContainer .listingsContainer {
-          grid-template-columns: repeat(2, 1fr); } }
-      @media only screen and (max-width: 575px) {
-        .youtubeListings .workRelatedContainer .listingsContainer {
-          grid-template-columns: repeat(1, 1fr); } }
-      .youtubeListings .workRelatedContainer .listingsContainer .slide .imgContainer {
-        position: relative;
-        margin-bottom: 1rem; }
-        .youtubeListings .workRelatedContainer .listingsContainer .slide .imgContainer .tagsContainer {
-          position: absolute;
-          top: 1rem;
-          left: 1rem;
-          display: flex;
-          align-items: center;
-          gap: 0.6rem;
-          z-index: 1; }
-          .youtubeListings .workRelatedContainer .listingsContainer .slide .imgContainer .tagsContainer .cardTag {
-            background-color: #f0e8e9; }
-        .youtubeListings .workRelatedContainer .listingsContainer .slide .imgContainer .videoWrapper iframe {
-          width: 100%;
-          height: 100%;
-          border-radius: 1.5rem;
-          border: none;
-          overflow: hidden;
-          aspect-ratio: 16/9; }
-          .youtubeListings .workRelatedContainer .listingsContainer .slide .imgContainer .videoWrapper iframe video {
-            width: 100%;
-            height: 100%;
-            border-radius: 1.5rem; }
-      .youtubeListings .workRelatedContainer .listingsContainer .slide .cardTextContent {
-        margin-bottom: 2rem; }
-        .youtubeListings .workRelatedContainer .listingsContainer .slide .cardTextContent h4 {
-          font-family: var(--manrope);
-          font-size: var(--font28);
-          font-weight: 600;
-          font-stretch: normal;
-          font-style: normal;
-          line-height: 1.2;
-          letter-spacing: normal;
-          text-align: left;
-          color: #171a17;
-          margin-bottom: 1rem; }
-        .youtubeListings .workRelatedContainer .listingsContainer .slide .cardTextContent p {
-          font-family: var(--manrope);
-          font-size: var(--font16);
-          font-weight: normal;
-          font-stretch: normal;
-          font-style: normal;
-          line-height: 1.5;
-          letter-spacing: normal;
-          text-align: left;
-          color: #171a17; }
-      .youtubeListings .workRelatedContainer .listingsContainer .slide a {
-        width: 100%; }
-    .youtubeListings .workRelatedContainer .viewMoreBox {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 4rem;
-      width: 100%; }
 
 .about_banner {
   display: flex;
@@ -3226,8 +3234,7 @@ a {
 
 .reports_banner {
   position: relative;
-  padding: var(--padding8);
-  padding-top: 17rem;
+  padding-bottom: var(--paddingB8);
   overflow: hidden; }
   .reports_banner .bg {
     position: absolute;
@@ -3587,3 +3594,253 @@ a {
     .reportSingle_relatedReports .sectionWrapper .container .block .content p {
       font-size: 1.2rem;
       margin-bottom: 2.4rem; } }
+
+.youtubeListings {
+  position: relative; }
+  .youtubeListings .videoShape {
+    position: absolute;
+    top: -25%;
+    left: 65%;
+    width: auto;
+    height: 70rem;
+    animation: rotate360 60s linear infinite; }
+    @media only screen and (max-width: 768px) {
+      .youtubeListings .videoShape {
+        top: -15%;
+        height: 50rem; } }
+    @media only screen and (max-width: 575px) {
+      .youtubeListings .videoShape {
+        top: 0%;
+        height: 30rem; } }
+  .youtubeListings .workRelatedContainer {
+    position: relative; }
+    .youtubeListings .workRelatedContainer h2 {
+      font-family: var(--nunito);
+      font-size: var(--font48);
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: -0.96px;
+      text-align: left;
+      color: #171a17;
+      margin-bottom: 3.2rem; }
+    .youtubeListings .workRelatedContainer .listingsContainer {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      row-gap: 6rem;
+      column-gap: 2rem; }
+      @media only screen and (max-width: 1200px) {
+        .youtubeListings .workRelatedContainer .listingsContainer {
+          grid-template-columns: repeat(2, 1fr); } }
+      @media only screen and (max-width: 575px) {
+        .youtubeListings .workRelatedContainer .listingsContainer {
+          grid-template-columns: repeat(1, 1fr); } }
+      .youtubeListings .workRelatedContainer .listingsContainer .slide .imgContainer {
+        position: relative;
+        margin-bottom: 1rem; }
+        .youtubeListings .workRelatedContainer .listingsContainer .slide .imgContainer .tagsContainer {
+          position: absolute;
+          top: 1rem;
+          left: 1rem;
+          display: flex;
+          align-items: center;
+          gap: 0.6rem;
+          z-index: 1; }
+          .youtubeListings .workRelatedContainer .listingsContainer .slide .imgContainer .tagsContainer .cardTag {
+            background-color: #f0e8e9; }
+        .youtubeListings .workRelatedContainer .listingsContainer .slide .imgContainer .videoWrapper iframe {
+          width: 100%;
+          height: 100%;
+          border-radius: 1.5rem;
+          border: none;
+          overflow: hidden;
+          aspect-ratio: 16/9; }
+          .youtubeListings .workRelatedContainer .listingsContainer .slide .imgContainer .videoWrapper iframe video {
+            width: 100%;
+            height: 100%;
+            border-radius: 1.5rem; }
+      .youtubeListings .workRelatedContainer .listingsContainer .slide .cardTextContent {
+        margin-bottom: 2rem; }
+        .youtubeListings .workRelatedContainer .listingsContainer .slide .cardTextContent h4 {
+          font-family: var(--manrope);
+          font-size: var(--font28);
+          font-weight: 600;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.2;
+          letter-spacing: normal;
+          text-align: left;
+          color: #171a17;
+          margin-bottom: 1rem; }
+        .youtubeListings .workRelatedContainer .listingsContainer .slide .cardTextContent p {
+          font-family: var(--manrope);
+          font-size: var(--font16);
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.5;
+          letter-spacing: normal;
+          text-align: left;
+          color: #171a17; }
+      .youtubeListings .workRelatedContainer .listingsContainer .slide a {
+        width: 100%; }
+    .youtubeListings .workRelatedContainer .viewMoreBox {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 4rem;
+      width: 100%; }
+
+.videoSingleBanner .mainContainer {
+  padding-bottom: var(--paddingB4); }
+  .videoSingleBanner .mainContainer .topWrapper .headContainer {
+    max-width: 60%; }
+    @media only screen and (max-width: 768px) {
+      .videoSingleBanner .mainContainer .topWrapper .headContainer {
+        max-width: 90%; } }
+    @media only screen and (max-width: 575px) {
+      .videoSingleBanner .mainContainer .topWrapper .headContainer {
+        max-width: 100%; } }
+    .videoSingleBanner .mainContainer .topWrapper .headContainer .tagsContainer {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-bottom: 1rem; }
+      .videoSingleBanner .mainContainer .topWrapper .headContainer .tagsContainer .cardTag p {
+        font-family: var(--manrope);
+        font-size: var(--font12);
+        color: #66101f; }
+    .videoSingleBanner .mainContainer .topWrapper .headContainer h2 {
+      font-family: var(--nunito);
+      font-size: var(--font48);
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: -0.96px;
+      text-align: left;
+      color: #171a17;
+      margin-bottom: 1rem; }
+    .videoSingleBanner .mainContainer .topWrapper .headContainer p {
+      font-family: var(--manrope);
+      font-size: var(--font16);
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.5;
+      letter-spacing: normal;
+      text-align: left;
+      color: rgba(23, 26, 23, 0.8); }
+  .videoSingleBanner .mainContainer .videoContainer {
+    padding: 4rem 0; }
+    .videoSingleBanner .mainContainer .videoContainer .videoWrapper iframe {
+      width: 100%;
+      height: 100%;
+      border-radius: 1.5rem;
+      border: none;
+      overflow: hidden;
+      aspect-ratio: 16/9;
+      max-height: 90vh; }
+
+.relatedVideos {
+  position: relative; }
+  .relatedVideos .videoShape {
+    position: absolute;
+    top: 20%;
+    right: -20%;
+    width: auto;
+    height: 65rem; }
+    @media only screen and (max-width: 768px) {
+      .relatedVideos .videoShape {
+        top: 15%;
+        height: 50rem; } }
+    @media only screen and (max-width: 575px) {
+      .relatedVideos .videoShape {
+        top: 0%;
+        height: 30rem; } }
+  .relatedVideos .workRelatedContainer {
+    position: relative;
+    padding-top: var(--paddingT8);
+    padding-bottom: var(--paddingB4); }
+    .relatedVideos .workRelatedContainer h2 {
+      font-family: var(--nunito);
+      font-size: var(--font48);
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: -0.96px;
+      text-align: left;
+      color: #171a17;
+      margin-bottom: 3.2rem; }
+    .relatedVideos .workRelatedContainer .listingsContainer {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      row-gap: 6rem;
+      column-gap: 2rem; }
+      @media only screen and (max-width: 1200px) {
+        .relatedVideos .workRelatedContainer .listingsContainer {
+          grid-template-columns: repeat(2, 1fr); } }
+      @media only screen and (max-width: 768px) {
+        .relatedVideos .workRelatedContainer .listingsContainer {
+          grid-template-columns: repeat(1, 1fr);
+          row-gap: 4rem; } }
+      @media only screen and (max-width: 575px) {
+        .relatedVideos .workRelatedContainer .listingsContainer {
+          grid-template-columns: repeat(1, 1fr); } }
+      .relatedVideos .workRelatedContainer .listingsContainer .slide .imgContainer {
+        position: relative;
+        margin-bottom: 1rem; }
+        .relatedVideos .workRelatedContainer .listingsContainer .slide .imgContainer .tagsContainer {
+          position: absolute;
+          top: 1rem;
+          left: 1rem;
+          display: flex;
+          align-items: center;
+          gap: 0.6rem;
+          z-index: 1; }
+          .relatedVideos .workRelatedContainer .listingsContainer .slide .imgContainer .tagsContainer .cardTag {
+            background-color: #f0e8e9; }
+        .relatedVideos .workRelatedContainer .listingsContainer .slide .imgContainer .videoWrapper iframe {
+          width: 100%;
+          height: 100%;
+          border-radius: 1.5rem;
+          border: none;
+          overflow: hidden;
+          aspect-ratio: 16/9; }
+          .relatedVideos .workRelatedContainer .listingsContainer .slide .imgContainer .videoWrapper iframe video {
+            width: 100%;
+            height: 100%;
+            border-radius: 1.5rem; }
+      .relatedVideos .workRelatedContainer .listingsContainer .slide .cardTextContent {
+        margin-bottom: 2rem; }
+        .relatedVideos .workRelatedContainer .listingsContainer .slide .cardTextContent h4 {
+          font-family: var(--manrope);
+          font-size: var(--font28);
+          font-weight: 600;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.2;
+          letter-spacing: normal;
+          text-align: left;
+          color: #171a17;
+          margin-bottom: 1rem; }
+        .relatedVideos .workRelatedContainer .listingsContainer .slide .cardTextContent p {
+          font-family: var(--manrope);
+          font-size: var(--font16);
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.5;
+          letter-spacing: normal;
+          text-align: left;
+          color: #171a17; }
+      .relatedVideos .workRelatedContainer .listingsContainer .slide a {
+        width: 100%; }
+    .relatedVideos .workRelatedContainer .viewMoreBox {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 4rem;
+      width: 100%; }

@@ -178,13 +178,63 @@
   }
 }
 
-
-
 @keyframes rotateTranslate {
   0% {
     transform: translateX(50%) rotate(0deg);
   }
   100% {
     transform: translateX(50%) rotate(360deg);
+  }
+}
+
+.backBtn {
+  a {
+    // Arrow icon
+    font-family: var(--manrope);
+    font-size: var(--font20);
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    text-align: center;
+    color: #171a17;
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+    text-decoration: none;
+    margin-bottom: 4rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    width: fit-content;
+
+    @media only screen and (max-width: 575px) {
+      gap: 1.2rem;
+      margin-bottom: 3.2rem;
+    }
+
+    svg {
+      height: 1.6rem;
+      width: auto;
+
+      @media only screen and (max-width: 575px) {
+        height: 1.4rem;
+      }
+
+      path {
+      }
+    }
+
+    // Text span
+    span {
+    }
+
+    // Hover state
+    &:hover {
+      svg path {
+      }
+      span {
+      }
+    }
   }
 }
