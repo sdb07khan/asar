@@ -767,6 +767,9 @@ a {
           width: 100%; } }
     .homeBanner.heroMarginTop .homeBannerContainer .homeBannerContent .maroonBtn {
       opacity: 0; }
+      @media only screen and (max-width: 575px) {
+        .homeBanner.heroMarginTop .homeBannerContainer .homeBannerContent .maroonBtn {
+          width: 100%; } }
 
 .homeBanner.heroMarginTop .homeBannerImage {
   position: relative;
