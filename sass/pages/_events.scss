@@ -1,23 +1,26 @@
-.test {
-  display: block;
-  position: relative; }
-
 .event_Banner {
   position: relative;
   display: flex;
-  flex-direction: column; }
-  .event_Banner.sectionWrapper {
-    position: relative; }
-  .event_Banner .head {
+  flex-direction: column;
+  &.sectionWrapper {
     position: relative;
-    margin-bottom: 2.4rem; }
-    .event_Banner .head .bg {
+  }
+
+  .head {
+    position: relative;
+
+    margin-bottom: 2.4rem;
+
+    .bg {
       position: absolute;
       top: 0;
       right: 0;
       object-fit: contain;
-      max-width: 74rem; }
-    .event_Banner .head h1 {
+      max-width: 74rem;
+      // width: 100%;
+    }
+
+    h1 {
       font-family: var(--nunito);
       font-size: var(--font48);
       font-weight: normal;
@@ -27,8 +30,9 @@
       letter-spacing: -0.96px;
       text-align: left;
       color: #171a17;
-      margin-bottom: 0.8rem; }
-    .event_Banner .head p {
+      margin-bottom: 0.8rem;
+    }
+    p {
       font-family: var(--manrope);
       font-size: var(--font16);
       font-weight: normal;
@@ -38,16 +42,20 @@
       letter-spacing: normal;
       text-align: left;
       color: rgba(23, 26, 23, 0.8);
-      max-width: 40%; }
-  .event_Banner .filter {
+      max-width: 40%;
+    }
+  }
+
+  .filter {
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
     row-gap: 1rem;
     align-items: center;
+    //   gap: 2rem;
     margin-bottom: 4rem;
-    transition: all 0.3s ease-in-out; }
-    .event_Banner .filter h1 {
+    transition: all 0.3s ease-in-out;
+    h1 {
       font-family: var(--manrope);
       font-size: var(--font16);
       font-weight: 600;
@@ -60,41 +68,56 @@
       padding: 2rem 4rem;
       border-radius: 4rem;
       cursor: pointer;
-      transition: all 0.3s ease-in-out; }
-      .event_Banner .filter h1.active {
+      transition: all 0.3s ease-in-out;
+      &.active {
         border-radius: 4rem;
         background-color: #0d3b66;
-        color: #f1efee; }
-  .event_Banner .container {
+        color: #f1efee;
+      }
+    }
+  }
+
+  .container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     row-gap: 6rem;
     column-gap: 2rem;
-    margin-bottom: 5rem; }
-    .event_Banner .container .block {
+    margin-bottom: 5rem;
+    .block {
       display: flex;
       flex-direction: column;
       background-color: #ffffff;
       padding: 3rem 1.6rem;
       border-radius: 1.5rem;
-      border: solid 0.5px rgba(23, 26, 23, 0.5); }
-      .event_Banner .container .block .image {
-        position: relative; }
-        .event_Banner .container .block .image .tag {
+      border: solid 0.5px rgba(23, 26, 23, 0.5);
+
+      .image {
+        position: relative;
+
+        .tag {
           display: flex;
           gap: 0.7rem;
-          margin-bottom: 2.5rem; }
-          .event_Banner .container .block .image .tag h1 {
-            background-color: #f0e8e9; }
-        .event_Banner .container .block .image img {
+          margin-bottom: 2.5rem;
+          h1 {
+            background-color: #f0e8e9;
+          }
+        }
+
+        img {
+          // width: 100%;
           height: auto;
+        //   border-radius: 1.5rem;
           object-fit: cover;
           margin-bottom: 2.8rem;
-          max-width: 8rem; }
-      .event_Banner .container .block .content {
+          max-width: 8rem;
+        }
+      }
+
+      .content {
         display: flex;
-        flex-direction: column; }
-        .event_Banner .container .block .content h1 {
+        flex-direction: column;
+
+        h1 {
           font-family: var(--manrope);
           font-size: var(--font28);
           font-weight: 600;
@@ -105,8 +128,10 @@
           text-align: left;
           color: #171a17;
           margin-bottom: 1rem;
-          max-width: 80%; }
-        .event_Banner .container .block .content h2 {
+          max-width: 80%;
+        }
+
+        h2 {
           font-family: var(--manrope);
           font-size: var(--font16);
           font-weight: 300;
@@ -117,8 +142,10 @@
           text-align: left;
           color: rgba(23, 26, 23, 0.8);
           margin-bottom: 1.4rem;
-          text-transform: uppercase; }
-        .event_Banner .container .block .content p {
+          text-transform: uppercase;
+        }
+
+        p {
           font-family: var(--manrope);
           font-size: var(--font16);
           font-weight: normal;
@@ -127,12 +154,20 @@
           line-height: 1.5;
           letter-spacing: normal;
           text-align: left;
-          color: rgba(23, 26, 23, 0.8);
+        color: rgba(23, 26, 23, 0.8);
           margin-bottom: 1.6rem;
-          max-width: 80%; }
-        .event_Banner .container .block .content a {
-          width: 100%; }
-  .event_Banner .viewMore {
+          max-width: 80%;
+        }
+        a {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .viewMore {
     align-self: center;
     cursor: pointer;
-    margin-bottom: 5rem; }
+    margin-bottom: 5rem;
+  }
+}
