@@ -37,4 +37,26 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
+    // !2nd phase code ========================
+
+    const copyUrl = document.getElementById("urlCopy");
+
+    copyUrl.addEventListener("click", function () {
+        const url = window.location.href;
+        navigator.clipboard.writeText(url).then(function () {
+            alert("URL copied to clipboard!");
+        }, function (err) {
+            console.error("Failed to copy: ", err);
+        });
+    });
+
+
+
+
+
+
+
+
+
+
 })
