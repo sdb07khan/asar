@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const copyUrl = document.getElementById("urlCopy");
 
-    copyUrl.addEventListener("click", function () {
+    copyUrl?.addEventListener("click", function () {
         const url = window.location.href;
         navigator.clipboard.writeText(url).then(function () {
             alert("URL copied to clipboard!");
@@ -51,8 +51,22 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
+    const grid = document.getElementById('dynamicGrid');
+    const blocks = grid.querySelectorAll('.block');
 
 
+    // let maxIndex = blocks.length;
+    // let gridSize = Math.max(4, maxIndex); // minimum 4x4
+
+    // grid.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
+    // grid.style.gridTemplateRows = `repeat(${gridSize}, 1fr)`;
+
+    // Place blocks diagonally
+    blocks.forEach((block, index) => {
+        const pos = index + 1;
+        block.style.gridColumn = pos;
+        block.style.gridRow = pos;
+    });
 
 
 

@@ -485,3 +485,502 @@
     .blogSingle_relatedBlogs .content .slideLink:hover .arrow path {
       fill: #fff;
       animation: moveDiagonal 1s ease-in-out infinite; }
+
+.eventSingle_banner {
+  position: relative;
+  padding-bottom: 5rem; }
+  .eventSingle_banner .container {
+    display: flex;
+    gap: 5%;
+    border-bottom: 1px solid rgba(23, 26, 23, 0.5);
+    padding-bottom: 6rem; }
+  .eventSingle_banner .c1 {
+    width: 45%;
+    display: flex;
+    flex-direction: column; }
+    .eventSingle_banner .c1 h1 {
+      font-family: var(--nunito);
+      font-size: var(--font48);
+      font-weight: 500;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: left;
+      color: #171a17;
+      margin-bottom: 1.6rem;
+      max-width: 85%; }
+    .eventSingle_banner .c1 p {
+      font-family: var(--manrope);
+      font-size: var(--font16);
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.5;
+      letter-spacing: normal;
+      text-align: left;
+      color: #171a17;
+      margin-bottom: 3.2rem;
+      max-width: 85%; }
+    .eventSingle_banner .c1 a {
+      font-family: var(--manrope);
+      font-size: var(--font16);
+      font-weight: 500;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.63;
+      letter-spacing: normal;
+      text-align: left;
+      color: #fff; }
+  .eventSingle_banner .c2 {
+    width: 45%;
+    display: flex;
+    flex-direction: column; }
+    .eventSingle_banner .c2 .eventInfo {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 4rem;
+      row-gap: 2.4rem;
+      margin-bottom: 2.4rem; }
+      .eventSingle_banner .c2 .eventInfo .box {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem; }
+        .eventSingle_banner .c2 .eventInfo .box h1 {
+          font-family: var(--manrope);
+          font-size: var(--font20);
+          font-weight: bold;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.4;
+          letter-spacing: normal;
+          text-align: left;
+          color: #171a17; }
+        .eventSingle_banner .c2 .eventInfo .box p {
+          font-family: var(--manrope);
+          font-size: var(--font16);
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.5;
+          letter-spacing: normal;
+          text-align: left;
+          color: #171a17; }
+    .eventSingle_banner .c2 .social {
+      display: flex;
+      gap: 2rem;
+      align-items: center; }
+      .eventSingle_banner .c2 .social a {
+        transition: all 0.3s ease-in-out; }
+        .eventSingle_banner .c2 .social a svg {
+          max-width: 3.6rem; }
+        .eventSingle_banner .c2 .social a:hover {
+          opacity: 0.7; }
+
+.eventSingle_agenda {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-top: 6rem;
+  padding-bottom: 5rem; }
+  .eventSingle_agenda .bg {
+    position: absolute;
+    right: 0;
+    top: -50%;
+    max-width: 83rem; }
+  .eventSingle_agenda .head {
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.6rem; }
+    .eventSingle_agenda .head h1 {
+      font-family: var(--manrope);
+      font-size: var(--font32);
+      font-weight: 500;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: -0.64px;
+      text-align: left;
+      color: #171a17; }
+    .eventSingle_agenda .head a {
+      background-color: #f1efee; }
+      .eventSingle_agenda .head a:hover {
+        background-color: #66101f; }
+  .eventSingle_agenda .filter {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    row-gap: 1rem;
+    align-items: center;
+    margin-bottom: 4rem;
+    transition: all 0.3s ease-in-out; }
+    .eventSingle_agenda .filter h1 {
+      font-family: var(--manrope);
+      font-size: var(--font20);
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.63;
+      letter-spacing: normal;
+      text-align: left;
+      color: rgba(13, 59, 102, 0.8);
+      padding: 2rem 4rem;
+      border-radius: 4rem;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out; }
+      .eventSingle_agenda .filter h1.active {
+        border-radius: 4rem;
+        background-color: #0d3b66;
+        color: #f1efee; }
+  .eventSingle_agenda .grid_container {
+    width: 100%;
+    height: 80vh;
+    overflow-x: auto;
+    border: 2px solid #ccc;
+    position: relative;
+    border-radius: 6rem;
+    border: transparent;
+    background-color: #fff; }
+    .eventSingle_agenda .grid_container .title {
+      position: sticky;
+      top: 3rem;
+      left: 4rem;
+      font-family: var(--manrope);
+      font-size: 2.4rem;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.4;
+      letter-spacing: normal;
+      text-align: left;
+      color: #171a17;
+      display: inline-flex;
+      background-color: #fff;
+      padding: 0.5rem;
+      border-radius: 1rem;
+      z-index: 5; }
+    .eventSingle_agenda .grid_container .grid {
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: 350px;
+      grid-gap: 10px;
+      position: relative;
+      margin: 8rem 4rem;
+      background-image: repeating-linear-gradient(to right, transparent, transparent 349px, #ccc 349px, #ccc 350px), repeating-linear-gradient(to bottom, transparent, transparent 149px, #ccc 149px, #ccc 150px);
+      background-size: 360px 100%, 100% 160px;
+      background-position: 0 0;
+      background-repeat: repeat; }
+      .eventSingle_agenda .grid_container .grid .block {
+        padding: 20px;
+        text-align: center;
+        font-weight: bold;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); }
+        .eventSingle_agenda .grid_container .grid .block:nth-child(odd) {
+          border: solid 1px #8f0707;
+          background-color: #ffc5c8; }
+        .eventSingle_agenda .grid_container .grid .block:nth-child(even) {
+          border: solid 1px #0d3b66;
+          background-color: #c1e1ff; }
+        .eventSingle_agenda .grid_container .grid .block h1 {
+          font-family: var(--manrope);
+          font-size: var(--font20);
+          font-weight: 500;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.5;
+          letter-spacing: normal;
+          text-align: left;
+          color: #171a17; }
+        .eventSingle_agenda .grid_container .grid .block p {
+          font-family: var(--manrope);
+          font-size: var(--font16);
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.5;
+          letter-spacing: normal;
+          text-align: left;
+          color: rgba(23, 26, 23, 0.8); }
+
+.eventSingle_mediaAndResources {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-top: 6rem;
+  padding-bottom: 5rem; }
+  .eventSingle_mediaAndResources .head {
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.6rem; }
+    .eventSingle_mediaAndResources .head h1 {
+      font-family: var(--manrope);
+      font-size: var(--font32);
+      font-weight: 500;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: -0.64px;
+      text-align: left;
+      color: #171a17; }
+    .eventSingle_mediaAndResources .head a {
+      background-color: #f1efee; }
+      .eventSingle_mediaAndResources .head a:hover {
+        background-color: #66101f; }
+  .eventSingle_mediaAndResources .filter {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    row-gap: 1rem;
+    align-items: center;
+    margin-bottom: 4rem;
+    transition: all 0.3s ease-in-out; }
+    .eventSingle_mediaAndResources .filter h1 {
+      font-family: var(--manrope);
+      font-size: var(--font20);
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.63;
+      letter-spacing: normal;
+      text-align: left;
+      color: rgba(13, 59, 102, 0.8);
+      padding: 2rem 4rem;
+      border-radius: 4rem;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out; }
+      .eventSingle_mediaAndResources .filter h1.active {
+        border-radius: 4rem;
+        background-color: #0d3b66;
+        color: #f1efee; }
+  .eventSingle_mediaAndResources .grid_container {
+    display: flex;
+    flex-direction: column;
+    position: relative; }
+    .eventSingle_mediaAndResources .grid_container .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      width: 100%; }
+      .eventSingle_mediaAndResources .grid_container .grid img {
+        width: 100%;
+        height: auto;
+        object-fit: cover; }
+    .eventSingle_mediaAndResources .grid_container .viewMore {
+      cursor: pointer;
+      align-self: center;
+      margin-top: 3.2rem; }
+
+.eventSingle_registerEvents .head {
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.6rem; }
+  .eventSingle_registerEvents .head h1 {
+    font-family: var(--manrope);
+    font-size: var(--font32);
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -0.64px;
+    text-align: left;
+    color: #171a17; }
+  .eventSingle_registerEvents .head a {
+    background-color: #f1efee; }
+    .eventSingle_registerEvents .head a:hover {
+      background-color: #66101f; }
+
+.eventSingle_registerEvents form {
+  position: relative;
+  width: 70%; }
+  .eventSingle_registerEvents form .submit {
+    cursor: pointer; }
+  .eventSingle_registerEvents form input:focus,
+  .eventSingle_registerEvents form select:focus,
+  .eventSingle_registerEvents form textarea:focus,
+  .eventSingle_registerEvents form button:focus {
+    outline: none; }
+  .eventSingle_registerEvents form .row {
+    display: flex;
+    width: 100%;
+    gap: 4rem; }
+    .eventSingle_registerEvents form .row.textarea {
+      width: 100%; }
+      .eventSingle_registerEvents form .row.textarea div {
+        width: 100%; }
+    .eventSingle_registerEvents form .row > div {
+      display: flex;
+      flex-direction: column;
+      width: 50%; }
+      .eventSingle_registerEvents form .row > div label {
+        font-family: var(--manrope);
+        font-size: var(--font20);
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.5;
+        letter-spacing: normal;
+        text-align: left;
+        color: rgba(23, 26, 23, 0.8);
+        margin-bottom: 0.8rem; }
+      .eventSingle_registerEvents form .row > div input {
+        font-family: var(--manrope);
+        font-size: var(--font16);
+        font-weight: 300;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.5;
+        letter-spacing: normal;
+        text-align: left;
+        color: rgba(23, 26, 23, 0.6);
+        margin-bottom: 2.4rem;
+        padding: 2rem 1.6rem;
+        border-radius: 1.5rem;
+        border: solid 0.5px rgba(23, 26, 23, 0.5);
+        background-color: #fff;
+        width: 100%; }
+      .eventSingle_registerEvents form .row > div select {
+        font-family: var(--manrope);
+        font-size: var(--font16);
+        font-weight: 300;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.5;
+        letter-spacing: normal;
+        text-align: left;
+        color: rgba(23, 26, 23, 0.6);
+        padding: 2rem 1.6rem;
+        border-radius: 1.5rem;
+        border: solid 0.5px rgba(23, 26, 23, 0.5);
+        background-color: #fff; }
+      .eventSingle_registerEvents form .row > div textarea {
+        width: 100%;
+        font-family: var(--manrope);
+        font-size: var(--font16);
+        font-weight: 300;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.5;
+        letter-spacing: normal;
+        text-align: left;
+        color: rgba(23, 26, 23, 0.6);
+        padding: 2rem 1.6rem;
+        border-radius: 1.5rem;
+        border: solid 0.5px rgba(23, 26, 23, 0.5);
+        background-color: #fff;
+        height: 24rem;
+        resize: none;
+        margin-bottom: 3.2rem; }
+      .eventSingle_registerEvents form .row > div .number {
+        display: flex;
+        align-items: center;
+        border: solid 0.5px rgba(23, 26, 23, 0.5);
+        background-color: #fff;
+        border-radius: 1.5rem; }
+        .eventSingle_registerEvents form .row > div .number > input,
+        .eventSingle_registerEvents form .row > div .number select {
+          border-radius: unset;
+          border: unset;
+          background-color: unset;
+          margin-bottom: unset; }
+          .eventSingle_registerEvents form .row > div .number > input:target,
+          .eventSingle_registerEvents form .row > div .number select:target {
+            outline: none; }
+
+.eventSingle_relatedEvents {
+  position: relative;
+  display: flex;
+  flex-direction: column; }
+  .eventSingle_relatedEvents.sectionWrapper {
+    position: relative; }
+  .eventSingle_relatedEvents .head {
+    position: relative;
+    margin-bottom: 2.4rem; }
+    .eventSingle_relatedEvents .head h1 {
+      font-family: var(--nunito);
+      font-size: var(--font48);
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: -0.96px;
+      text-align: left;
+      color: #171a17;
+      margin-bottom: 0.8rem; }
+  .eventSingle_relatedEvents .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 6rem;
+    column-gap: 2rem;
+    margin-bottom: 5rem; }
+    .eventSingle_relatedEvents .container .block {
+      display: flex;
+      flex-direction: column;
+      background-color: #ffffff;
+      padding: 3rem 1.6rem;
+      border-radius: 1.5rem;
+      border: solid 0.5px rgba(23, 26, 23, 0.5); }
+      .eventSingle_relatedEvents .container .block .image {
+        position: relative; }
+        .eventSingle_relatedEvents .container .block .image .tag {
+          display: flex;
+          gap: 0.7rem;
+          margin-bottom: 2.5rem; }
+          .eventSingle_relatedEvents .container .block .image .tag h1 {
+            background-color: #f0e8e9; }
+        .eventSingle_relatedEvents .container .block .image img {
+          height: auto;
+          object-fit: cover;
+          margin-bottom: 2.8rem;
+          max-width: 8rem; }
+      .eventSingle_relatedEvents .container .block .content {
+        display: flex;
+        flex-direction: column; }
+        .eventSingle_relatedEvents .container .block .content h1 {
+          font-family: var(--manrope);
+          font-size: var(--font28);
+          font-weight: 600;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.2;
+          letter-spacing: normal;
+          text-align: left;
+          color: #171a17;
+          margin-bottom: 1rem;
+          max-width: 80%; }
+        .eventSingle_relatedEvents .container .block .content h2 {
+          font-family: var(--manrope);
+          font-size: var(--font16);
+          font-weight: 300;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1;
+          letter-spacing: normal;
+          text-align: left;
+          color: rgba(23, 26, 23, 0.8);
+          margin-bottom: 1.4rem;
+          text-transform: uppercase; }
+        .eventSingle_relatedEvents .container .block .content p {
+          font-family: var(--manrope);
+          font-size: var(--font16);
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.5;
+          letter-spacing: normal;
+          text-align: left;
+          color: rgba(23, 26, 23, 0.8);
+          margin-bottom: 1.6rem;
+          max-width: 80%; }
+        .eventSingle_relatedEvents .container .block .content a {
+          width: 100%; }
+  .eventSingle_relatedEvents .viewMore {
+    align-self: center;
+    cursor: pointer;
+    margin-bottom: 5rem; }
