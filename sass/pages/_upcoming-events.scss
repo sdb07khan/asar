@@ -175,6 +175,11 @@
       border-radius: 4rem;
       cursor: pointer;
       transition: all 0.3s ease-in-out;
+
+      &:hover{
+        opacity: .7;
+      }
+
       &.active {
         border-radius: 4rem;
         background-color: #0d3b66;
@@ -340,6 +345,10 @@
       border-radius: 4rem;
       cursor: pointer;
       transition: all 0.3s ease-in-out;
+
+          &:hover{
+        opacity: .7;
+      }
       &.active {
         border-radius: 4rem;
         background-color: #0d3b66;

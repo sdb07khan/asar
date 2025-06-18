@@ -630,6 +630,8 @@
       border-radius: 4rem;
       cursor: pointer;
       transition: all 0.3s ease-in-out; }
+      .eventSingle_agenda .filter h1:hover {
+        opacity: .7; }
       .eventSingle_agenda .filter h1.active {
         border-radius: 4rem;
         background-color: #0d3b66;
@@ -753,6 +755,8 @@
       border-radius: 4rem;
       cursor: pointer;
       transition: all 0.3s ease-in-out; }
+      .eventSingle_mediaAndResources .filter h1:hover {
+        opacity: .7; }
       .eventSingle_mediaAndResources .filter h1.active {
         border-radius: 4rem;
         background-color: #0d3b66;
