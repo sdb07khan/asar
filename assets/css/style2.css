@@ -488,7 +488,8 @@
 
 .eventSingle_banner {
   position: relative;
-  padding-bottom: 5rem; }
+  padding-bottom: 5rem;
+  overflow: hidden; }
   @media only screen and (max-width: 768px) {
     .eventSingle_banner {
       padding-bottom: 3rem; } }
@@ -648,6 +649,7 @@
       width: 100%; }
 
 .eventSingle_agenda {
+  overflow: hidden;
   position: relative;
   display: flex;
   flex-direction: column;
