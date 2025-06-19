@@ -5,6 +5,18 @@
   @media only screen and (max-width: 768px) {
     padding-bottom: 3rem;
   }
+
+  .bg {
+    position: absolute;
+    right: 0;
+    top: 10%;
+    max-width: 83rem;
+
+    @media only screen and (max-width: 768px) {
+      max-width: 17rem;
+      right: -10%;
+    }
+  }
   .back {
     display: flex;
     align-items: center;
