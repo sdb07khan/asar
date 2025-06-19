@@ -882,12 +882,18 @@
           input {
             margin-bottom: 2.4rem;
           }
+
+          .number{
+            margin-bottom: 2.4rem;
+          }
         }
       }
     }
   }
 
   .eventSingle_relatedEvents {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
     .head {
       h1 {
         font-size: 2.4rem;

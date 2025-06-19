@@ -1174,25 +1174,30 @@
           width: 100%; }
           .eventSingle_registerEvents form .row > div input {
             margin-bottom: 2.4rem; }
-  .eventSingle_relatedEvents .head h1 {
-    font-size: 2.4rem;
-    margin-bottom: 0.8rem; }
-  .eventSingle_relatedEvents .head p {
-    font-size: 1.2rem;
-    margin-bottom: 1.6rem; }
-  .eventSingle_relatedEvents .container {
-    grid-template-columns: repeat(1, 1fr);
-    row-gap: 3.2rem; }
-    .eventSingle_relatedEvents .container .block .image .tag {
-      left: 1.6rem;
-      top: 1.6rem; }
-    .eventSingle_relatedEvents .container .block .image img {
-      max-width: 4.6rem;
-      margin-bottom: 1.6rem; }
-    .eventSingle_relatedEvents .container .block .content h1 {
-      font-size: 2rem; }
-    .eventSingle_relatedEvents .container .block .content p {
+          .eventSingle_registerEvents form .row > div .number {
+            margin-bottom: 2.4rem; }
+  .eventSingle_relatedEvents {
+    padding-top: 3rem;
+    padding-bottom: 3rem; }
+    .eventSingle_relatedEvents .head h1 {
+      font-size: 2.4rem;
+      margin-bottom: 0.8rem; }
+    .eventSingle_relatedEvents .head p {
       font-size: 1.2rem;
-      margin-bottom: 2.4rem; }
-  .eventSingle_relatedEvents h2 {
-    font-size: 1.2rem; } }
+      margin-bottom: 1.6rem; }
+    .eventSingle_relatedEvents .container {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 3.2rem; }
+      .eventSingle_relatedEvents .container .block .image .tag {
+        left: 1.6rem;
+        top: 1.6rem; }
+      .eventSingle_relatedEvents .container .block .image img {
+        max-width: 4.6rem;
+        margin-bottom: 1.6rem; }
+      .eventSingle_relatedEvents .container .block .content h1 {
+        font-size: 2rem; }
+      .eventSingle_relatedEvents .container .block .content p {
+        font-size: 1.2rem;
+        margin-bottom: 2.4rem; }
+    .eventSingle_relatedEvents h2 {
+      font-size: 1.2rem; } }
