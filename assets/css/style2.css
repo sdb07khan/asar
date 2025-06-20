@@ -1431,7 +1431,7 @@ ul {
     background-color: #fff;
     background-image: url("/assets/images/events/grid.png");
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: 100% 100%;
     background-position: 5rem 13rem; }
     @media only screen and (max-width: 768px) {
       .eventSingle_agenda .grid_container {
