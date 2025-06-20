@@ -1,6 +1,6 @@
 .lifeBanner {
   // Main container styles
-  display: flex;
+  //   display: flex;
 
   .homeBannerContainer {
     background: transparent;
@@ -21,7 +21,7 @@
         flex-direction: column;
 
         @media only screen and (max-width: 575px) {
-          gap: 2rem;
+          gap: 1rem;
         }
 
         h2 {
@@ -60,9 +60,19 @@
         width: 100%;
         gap: 4rem;
 
+        @media only screen and (max-width: 768px) {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 2rem;
+        }
+
         .left {
           // Main heading
           max-width: 80%;
+
+          @media only screen and (max-width: 575px) {
+            max-width: 90%;
+          }
 
           h1 {
             font-family: var(--nunito);
@@ -76,8 +86,16 @@
             color: #171a17;
             margin-bottom: 1.2rem;
 
+            @media only screen and (max-width: 575px) {
+              font-size: var(--font48);
+            }
+
             span {
               white-space: nowrap;
+
+              @media only screen and (max-width: 575px) {
+                // white-space: normal;
+              }
             }
           }
 
@@ -121,12 +139,34 @@
         position: relative;
         width: 100%;
 
-        img {
+        .btnWrapper {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translateX(-50%);
+          display: flex;
+          gap: 1.6rem;
+          z-index: 5;
+          width: 95%;
+          justify-content: space-between;
+
+          //   @media only screen and (max-width: 575px) {
+          //     bottom: 1rem;
+          //     gap: 1.2rem;
+          //   }
+        }
+
+        .imgSliderWrapper {
           width: 100%;
-          height: 100%;
-          object-fit: cover;
-          object-position: center;
-          position: relative;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            position: relative;
+            //   aspect-ratio: 16 / 9;
+          }
         }
       }
     }
@@ -177,6 +217,11 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 4.3rem;
 
+    @media only screen and (max-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3.2rem;
+    }
+
     .block {
       display: flex;
       flex-direction: column;
@@ -185,6 +230,13 @@
         width: fit-content;
         height: auto;
         margin-bottom: 3.2rem;
+
+        @media only screen and (max-width: 768px) {
+          margin-bottom: 2rem;
+        }
+        @media only screen and (max-width: 575px) {
+          width: 8rem;
+        }
       }
 
       h1 {
@@ -251,6 +303,9 @@
       padding: 4rem;
 
       @media only screen and (max-width: 768px) {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 2rem;
       }
 
       .left {
@@ -298,6 +353,9 @@
             grid-template-columns: repeat(2, 1fr);
             gap: 1rem;
           }
+          @media only screen and (max-width: 480px) {
+            grid-template-columns: repeat(1, 1fr);
+          }
 
           .card {
             // Impact icon
@@ -305,6 +363,10 @@
             border-radius: 1.5rem;
             border: solid 0.5px rgba(23, 26, 23, 0.5);
             background-color: #fff;
+
+            @media only screen and (max-width: 768px) {
+              padding: 1.6rem;
+            }
 
             @media only screen and (max-width: 575px) {
               padding: 1.2rem;
@@ -353,6 +415,13 @@
   .mainContainer {
     margin: var(--padding8);
     width: 35%;
+
+    @media only screen and (max-width: 768px) {
+      width: 60%;
+    }
+    @media only screen and (max-width: 480px) {
+      width: 75%;
+    }
 
     h1 {
       font-family: var(--nunito);

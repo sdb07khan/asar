@@ -185,6 +185,39 @@ document.addEventListener("DOMContentLoaded", function () {
     $(".workSingleBanner .slidesWrapper").slick("slickNext");
   });
 
+  // life at asar section slider HIGHLIGHT
+  $(".lifeBanner .imgSliderWrapper").slick({
+    dots: false,
+    arrows: false,
+    infinite: false,
+    speed: 800,
+    slidesToShow: 1,
+    fade: true,
+    cssEase: "linear",
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+      {
+        breakpoint: 768, // For screens smaller than 768px
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  });
+
+  $(".lifeBanner .leftBtn").click(function () {
+    $(".lifeBanner .imgSliderWrapper").slick("slickPrev");
+  });
+
+  $(".lifeBanner .rightBtn").click(function () {
+    $(".lifeBanner .imgSliderWrapper").slick("slickNext");
+  });
+
   // social section slider HIGHLIGHT
   $(".linkedInListings .listingsWrapper").slick({
     dots: false,
