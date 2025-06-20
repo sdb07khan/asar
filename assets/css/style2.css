@@ -1176,7 +1176,6 @@ ul {
       width: 100%; }
 
 .eventSingle_agenda {
-  overflow: hidden;
   position: relative;
   display: flex;
   flex-direction: column;
